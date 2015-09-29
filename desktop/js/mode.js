@@ -1,0 +1,205 @@
+
+/* This file is part of Jeedom.
+ *
+ * Jeedom is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Jeedom is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
+ */
+ $('#bt_addMode').on('click', function () {
+    bootbox.prompt("{{Nom du mode ?}}", function (result) {
+        if (result !== null && result != '') {
+            addMode({name: result});
+        }
+    });
+});
+
+ $('body').delegate('.rename', 'click', function () {
+    var el = $(this);
+    bootbox.prompt("{{Nouveau nom ?}}", function (result) {
+        if (result !== null && result != '') {
+            var previousName = el.text();
+            el.text(result);
+            el.closest('.panel.panel-default').find('span.name').text(result);
+        }
+    });
+});
+
+ $("body").delegate(".listCmdAction", 'click', function () {
+    var type = $(this).attr('data-type');
+    var el = $(this).closest('.' + type).find('.expressionAttr[data-l1key=cmd]');
+    jeedom.cmd.getSelectModal({cmd: {type: 'action'}}, function (result) {
+        el.value(result.human);
+        jeedom.cmd.displayActionOption(el.value(), '', function (html) {
+            el.closest('.' + type).find('.actionOptions').html(html);
+        });
+    });
+});
+
+ $("body").delegate('.bt_removeAction', 'click', function () {
+    var type = $(this).attr('data-type');
+    $(this).closest('.' + type).remove();
+});
+
+ $("#div_modes").delegate('.bt_addInAction', 'click', function () {
+    addAction({}, 'inAction', '{{Action d\'entrée}}', $(this).closest('.mode'));
+});
+
+ $("#div_modes").delegate('.bt_addOutAction', 'click', function () {
+    addAction({}, 'outAction', '{{Action de sortie}}', $(this).closest('.mode'));
+});
+
+ $('body').delegate('.cmdAction.expressionAttr[data-l1key=cmd]', 'focusout', function (event) {
+    var type = $(this).attr('data-type')
+    var expression = $(this).closest('.' + type).getValues('.expressionAttr');
+    var el = $(this);
+    jeedom.cmd.displayActionOption($(this).value(), init(expression[0].options), function (html) {
+        el.closest('.' + type).find('.actionOptions').html(html);
+    })
+});
+
+ $("#div_modes").delegate('.bt_removeMode', 'click', function () {
+    $(this).closest('.mode').remove();
+});
+
+ function printEqLogic(_eqLogic) {
+    $('#div_modes').empty();
+    if (isset(_eqLogic.configuration)) {
+        if (isset(_eqLogic.configuration.modes)) {
+            for (var i in _eqLogic.configuration.modes) {
+                addMode(_eqLogic.configuration.modes[i]);
+            }
+        }
+    }
+}
+
+function saveEqLogic(_eqLogic) {
+    if (!isset(_eqLogic.configuration)) {
+        _eqLogic.configuration = {};
+    }
+    _eqLogic.configuration.modes = [];
+    $('#div_modes .mode').each(function () {
+        var mode = $(this).getValues('.modeAttr')[0];
+        mode.inAction = $(this).find('.inAction').getValues('.expressionAttr');
+        mode.outAction = $(this).find('.outAction').getValues('.expressionAttr');
+        _eqLogic.configuration.modes.push(mode);
+    });
+    return _eqLogic;
+}
+
+
+function addMode(_mode) {
+    if (init(_mode.name) == '') {
+        return;
+    }
+    var random = Math.floor((Math.random() * 1000000) + 1);
+    var div = '<div class="mode panel panel-default">';
+    div += '<div class="panel-heading">';
+    div += '<h4 class="panel-title">';
+    div += '<a data-toggle="collapse" data-parent="#div_modes" href="#collapse' + random + '">';
+    div += '<span class="name">' + _mode.name + '</span>';
+    div += '</a>';
+    div += '</h4>';
+    div += '</div>';
+    div += '<div id="collapse' + random + '" class="panel-collapse collapse in">';
+    div += '<div class="panel-body">';
+
+    div += '<div class="well">';
+    div += '<form class="form-horizontal" role="form">';
+    div += '<div class="form-group">';
+    div += '<label class="col-sm-1 control-label">{{Nom du mode}}</label>';
+    div += '<div class="col-sm-2">';
+    div += '<span class="modeAttr label label-info rename cursor" data-l1key="name" style="font-size : 1em;" ></span>';
+    div += '</div>';
+    div += '<div class="col-sm-9">';
+    div += '<i class="fa fa-minus-circle pull-right cursor bt_removeMode"></i>';
+    div += '<a class="btn btn-sm bt_addInAction btn-warning  pull-right" style="margin-left : 5px;"><i class="fa fa-plus-circle"></i> {{Action d\'entrée}}</a>';
+    div += '<a class="btn btn-danger btn-sm bt_addOutAction pull-right" style="margin-left : 5px;"><i class="fa fa-plus-circle"></i> {{Action de sortie}}</a>';
+    div += '<a class="btn btn-sm bt_duplicateMode btn-default pull-right"><i class="fa fa-files-o"></i> {{Dupliquer}}</a>';
+    div += '</div>';
+    div += '</div>';
+    div += '<hr/>';
+    div += '<div class="div_inAction"></div>';
+    div += '<hr/>';
+    div += '<div class="div_outAction"></div>';
+    div += '</form>';
+    div += '</div>';
+    div += '</div>';
+    div += '</div>';
+    div += '</div>';
+
+    $('#div_modes').append(div);
+    $('#div_modes .mode:last').setValues(_mode, '.modeAttr');
+    if (is_array(_mode.inAction)) {
+        for (var i in _mode.inAction) {
+            addAction(_mode.inAction[i], 'inAction', '{{Action d\'entrée}}', $('#div_modes .mode:last'));
+        }
+    } else {
+        if ($.trim(_mode.inAction) != '') {
+            addAction(_mode.inAction[i], 'inAction', '{{Action d\'entrée}}', $('#div_modes .mode:last'));
+        }
+    }
+
+    if (is_array(_mode.outAction)) {
+        for (var i in _mode.outAction) {
+            addAction(_mode.outAction[i], 'outAction', '{{Action de sortie}}', $('#div_modes .mode:last'));
+        }
+    } else {
+        if ($.trim(_mode.outAction) != '') {
+            addAction(_mode.outAction, 'outAction', '{{Action de sortie}}', $('#div_modes .mode:last'));
+        }
+    }
+    $('.collapse').collapse();
+}
+
+function addAction(_action, _type, _name, _el) {
+    if (!isset(_action)) {
+        _action = {};
+    }
+    if (!isset(_action.options)) {
+        _action.options = {};
+    }
+    var input = '';
+    var button = 'btn-default';
+    if (_type == 'outAction') {
+        input = 'has-error';
+        button = 'btn-danger';
+    }
+    if (_type == 'inAction') {
+        input = 'has-warning';
+        button = 'btn-warning';
+    }
+    var div = '<div class="' + _type + '">';
+    div += '<div class="form-group ">';
+    div += '<label class="col-sm-1 control-label">' + _name + '</label>';
+    div += '<div class="col-sm-3 ' + input + '">';
+    div += '<div class="input-group">';
+    div += '<input class="expressionAttr form-control input-sm cmdAction" data-l1key="cmd" data-type="' + _type + '" />';
+    div += '<span class="input-group-btn">';
+    div += '<a class="btn ' + button + ' btn-sm listCmdAction" data-type="' + _type + '"><i class="fa fa-list-alt"></i></a>';
+    div += '</span>';
+    div += '</div>';
+    div += '</div>';
+    div += '<div class="col-sm-7 actionOptions">';
+    div += jeedom.cmd.displayActionOption(init(_action.cmd, ''), _action.options);
+    div += '</div>';
+    div += '<div class="col-sm-1">';
+    div += '<i class="fa fa-minus-circle pull-right cursor bt_removeAction" data-type="' + _type + '"></i>';
+    div += '</div>';
+    div += '</div>';
+    if (isset(_el)) {
+        _el.find('.div_' + _type).append(div);
+        _el.find('.' + _type + ':last').setValues(_action, '.expressionAttr');
+    } else {
+        $('#div_' + _type).append(div);
+        $('#div_' + _type + ' .' + _type + ':last').setValues(_action, '.expressionAttr');
+    }
+}

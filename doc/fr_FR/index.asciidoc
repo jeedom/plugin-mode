@@ -1,0 +1,5 @@
+= Mode
+
+Plugin permettant de gerer differents mode d'un appartement mais aussi des ambiances
+
+include::configuration.asciidoc[]
