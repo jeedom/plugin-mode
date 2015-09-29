@@ -111,7 +111,6 @@ function addMode(_mode) {
     div += '</div>';
     div += '<div id="collapse' + random + '" class="panel-collapse collapse in">';
     div += '<div class="panel-body">';
-
     div += '<div class="well">';
     div += '<form class="form-horizontal" role="form">';
     div += '<div class="form-group">';
@@ -120,10 +119,12 @@ function addMode(_mode) {
     div += '<span class="modeAttr label label-info rename cursor" data-l1key="name" style="font-size : 1em;" ></span>';
     div += '</div>';
     div += '<div class="col-sm-9">';
-    div += '<i class="fa fa-minus-circle pull-right cursor bt_removeMode"></i>';
-    div += '<a class="btn btn-sm bt_addInAction btn-warning  pull-right" style="margin-left : 5px;"><i class="fa fa-plus-circle"></i> {{Action d\'entrée}}</a>';
-    div += '<a class="btn btn-danger btn-sm bt_addOutAction pull-right" style="margin-left : 5px;"><i class="fa fa-plus-circle"></i> {{Action de sortie}}</a>';
-    div += '<a class="btn btn-sm bt_duplicateMode btn-default pull-right"><i class="fa fa-files-o"></i> {{Dupliquer}}</a>';
+    div += '<div class="btn-group pull-right" role="group">';
+    div += '<a class="btn btn-sm bt_removeMode btn-primary"><i class="fa fa-minus-circle"></i> {{Supprimer}}</a>';
+    div += '<a class="btn btn-sm bt_addInAction btn-success"><i class="fa fa-plus-circle"></i> {{Action d\'entrée}}</a>';
+    div += '<a class="btn btn-danger btn-sm bt_addOutAction"><i class="fa fa-plus-circle"></i> {{Action de sortie}}</a>';
+    div += '<a class="btn btn-sm bt_duplicateMode btn-default"><i class="fa fa-files-o"></i> {{Dupliquer}}</a>';
+    div += '</div>';
     div += '</div>';
     div += '</div>';
     div += '<hr/>';
@@ -174,14 +175,17 @@ function addAction(_action, _type, _name, _el) {
         button = 'btn-danger';
     }
     if (_type == 'inAction') {
-        input = 'has-warning';
-        button = 'btn-warning';
+        input = 'has-success';
+        button = 'btn-success';
     }
     var div = '<div class="' + _type + '">';
     div += '<div class="form-group ">';
     div += '<label class="col-sm-1 control-label">' + _name + '</label>';
-    div += '<div class="col-sm-3 ' + input + '">';
+    div += '<div class="col-sm-4 ' + input + '">';
     div += '<div class="input-group">';
+    div += '<span class="input-group-btn">';
+    div += '<a class="btn btn-default bt_removeAction btn-sm" data-type="' + _type + '"><i class="fa fa-minus-circle"></i></a>';
+    div += '</span>';
     div += '<input class="expressionAttr form-control input-sm cmdAction" data-l1key="cmd" data-type="' + _type + '" />';
     div += '<span class="input-group-btn">';
     div += '<a class="btn ' + button + ' btn-sm listCmdAction" data-type="' + _type + '"><i class="fa fa-list-alt"></i></a>';
@@ -190,9 +194,6 @@ function addAction(_action, _type, _name, _el) {
     div += '</div>';
     div += '<div class="col-sm-7 actionOptions">';
     div += jeedom.cmd.displayActionOption(init(_action.cmd, ''), _action.options);
-    div += '</div>';
-    div += '<div class="col-sm-1">';
-    div += '<i class="fa fa-minus-circle pull-right cursor bt_removeAction" data-type="' + _type + '"></i>';
     div += '</div>';
     div += '</div>';
     if (isset(_el)) {
