@@ -65,6 +65,62 @@ class mode extends eqLogic {
 		}
 	}
 
+	public function toHtml($_version = 'dashboard') {
+		if ($this->getIsEnable() != 1) {
+			return '';
+		}
+		if (!$this->hasRight('r')) {
+			return '';
+		}
+		$_version = jeedom::versionAlias($_version);
+		if ($this->getDisplay('hideOn' . $_version) == 1) {
+			return '';
+		}
+		$vcolor = 'cmdColor';
+		if ($_version == 'mobile') {
+			$vcolor = 'mcmdColor';
+		}
+		$parameters = $this->getDisplay('parameters');
+		$cmdColor = ($this->getPrimaryCategory() == '') ? jeedom::getConfiguration('eqLogic:category:default:' . $vcolor) : jeedom::getConfiguration('eqLogic:category:' . $this->getPrimaryCategory() . ':' . $vcolor);
+		if (is_array($parameters) && isset($parameters['background_cmd_color'])) {
+			$cmdColor = $parameters['background_cmd_color'];
+		}
+		$replace = array(
+			'#name#' => $this->getName(),
+			'#id#' => $this->getId(),
+			'#background_color#' => $this->getBackgroundColor($_version),
+			'#eqLink#' => $this->getLinkToConfiguration(),
+			'#cmdColor#' => $cmdColor,
+			'#color#' => '',
+			'#clear#' => '',
+			'#select_mode#' => '',
+			'#uid#' => 'mode' . $this->getId() . self::UIDDELIMITER . mt_rand() . self::UIDDELIMITER,
+		);
+		$currentMode = $this->getCmd(null, 'currentMode');
+		$currentSelectMode = '';
+		if (is_object($currentMode)) {
+			$currentSelectMode = $currentMode->execCmd(null, 2);
+		}
+
+		foreach ($this->getCmd('action') as $cmd) {
+			if ($cmd->getIsVisible() == 1 && $cmd->getDisplay('hideOn' . $_version) != 1 && $cmd->getLogicalId() != 'color' && $cmd->getLogicalId() != 'clear') {
+				if ($currentSelectMode == $cmd->getName()) {
+					$replace['#select_mode#'] .= '<option value="' . $cmd->getId() . '" selected>' . $cmd->getName() . '</option>';
+				} else {
+					$replace['#select_mode#'] .= '<option value="' . $cmd->getId() . '">' . $cmd->getName() . '</option>';
+				}
+			}
+		}
+		if (is_array($parameters)) {
+			foreach ($parameters as $key => $value) {
+				$replace['#' . $key . '#'] = $value;
+			}
+		}
+
+		$html = template_replace($replace, getTemplate('core', $_version, 'mode', 'mode'));
+		return $html;
+	}
+
 	public function doAction($_mode, $_type) {
 		if (!is_array($this->getConfiguration('modes'))) {
 			return;
