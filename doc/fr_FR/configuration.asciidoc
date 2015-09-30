@@ -23,13 +23,13 @@ image::../images/mode4.PNG[]
 
 Vous retrouvez ici toute la configuration de votre équipement : 
 
-* *Nom de l'équipement Ambilight* : nom de votre équipement Ambilights,
+* *Nom de l'équipement Mode* : nom de votre équipement Mode,
 * *Objet parent* : indique l'objet parent auquel appartient l'équipement,
 * *Activer* : permet de rendre votre équipement actif,
 * *Visible* : rend votre équipement visible sur le dashboard,
 * *Catégorie* : les catégories de l'équipement (il peut appartenir à plusieurs catégories).
 * *Ajouter mode* : bouton permettant d'ajouter un nouveau mode
 
-En-dessous vous retrouvez la liste des modes en cliquant dessus vous allez pouvoir choisir les actions à faire lors de l'entrée dans ce mode et lors de la sortie : 
+En-dessous vous retrouvez la liste des modes, en cliquant dessus vous allez pouvoir choisir les actions à faire lors de l'entrée dans ce mode et lors de la sortie : 
 
 image::../images/mode5.PNG[]
