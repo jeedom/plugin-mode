@@ -155,6 +155,40 @@ class modeCmd extends cmd {
 
 	/*     * *********************Methode d'instance************************* */
 
+	public function imperihomeGenerate($ISSStructure) {
+		$eqLogic = $this->getEqLogic();
+		$object = $eqLogic->getObject();
+		$type = 'DevMultiSwitch';
+		$info_device = array(
+			'id' => $this->getId(),
+			'name' => $eqLogic->getName(),
+			'room' => (is_object($object)) ? $object->getId() : 99999,
+			'type' => $type,
+			'params' => array(),
+		);
+		$info_device['params'] = $ISSStructure[$info_device['type']]['params'];
+		$info_device['params'][0]['value'] = '#' . $eqLogic->getCmd('info', 'currentMode')->getId() . '#';
+		foreach ($eqLogic->getCmd('action') as $cmd) {
+			$info_device['params'][1]['value'] .= $cmd->getName() . ',';
+		}
+		$info_device['params'][1]['value'] = trim($info_device['params'][1]['value'], ',');
+		return $info_device;
+	}
+
+	public function imperihomeAction($_action, $_value) {
+		if ($_action == 'setChoice') {
+			$eqLogic = $this->getEqLogic();
+			$eqLogic->getCmd('action', $_value)->execCmd();
+		}
+	}
+
+	public function imperihomeCmd() {
+		if ($this->getLogicalId() == 'currentMode') {
+			return true;
+		}
+		return false;
+	}
+
 	public function dontRemoveCmd() {
 		return true;
 	}
