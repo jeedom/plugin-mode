@@ -29,7 +29,7 @@ class mode extends eqLogic {
 	public function postSave() {
 		$currentMode = $this->getCmd(null, 'currentMode');
 		if (!is_object($currentMode)) {
-			$currentMode = new alarmCmd();
+			$currentMode = new modeCmd();
 		}
 		$currentMode->setName(__('Mode', __FILE__));
 		$currentMode->setEqLogic_id($this->id);
