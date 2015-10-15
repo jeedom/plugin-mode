@@ -207,6 +207,7 @@ class modeCmd extends cmd {
 		$eqLogic->doAction($mode, 'outAction');
 		$eqLogic->doAction($newMode, 'inAction');
 		$currentMode->event($newMode);
+		$eqLogic->refreshWidget();
 		return;
 	}
 
