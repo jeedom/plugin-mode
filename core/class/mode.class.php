@@ -150,6 +150,7 @@ class modeCmd extends cmd {
 		}
 		$eqLogic->doAction($mode, 'outAction');
 		$eqLogic->doAction($newMode, 'inAction');
+		$currentMode->setCollectDate('');
 		$currentMode->event($newMode);
 		return;
 	}
