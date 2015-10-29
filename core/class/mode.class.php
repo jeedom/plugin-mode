@@ -72,21 +72,21 @@ class mode extends eqLogic {
 		$actions = array();
 		foreach ($this->getConfiguration('modes') as $key => $value) {
 			if ($value['name'] == $_mode) {
-				$actions = $value[$_type];
+				foreach ($value[$_type] as $action) {
+					try {
+						$options = array();
+						if (isset($action['options'])) {
+							$options = $action['options'];
+						}
+						scenarioExpression::createAndExec('action', $action['cmd'], $options);
+					} catch (Exception $e) {
+						log::add('alarm', 'error', __('Erreur lors de l\'éxecution de ', __FILE__) . $action['cmd'] . __('. Détails : ', __FILE__) . $e->getMessage());
+					}
+				}
 				break;
 			}
 		}
-		foreach ($actions as $action) {
-			try {
-				$options = array();
-				if (isset($action['options'])) {
-					$options = $action['options'];
-				}
-				scenarioExpression::createAndExec('action', $action['cmd'], $options);
-			} catch (Exception $e) {
-				log::add('alarm', 'error', __('Erreur lors de l\'éxecution de ', __FILE__) . $action['cmd'] . __('. Détails : ', __FILE__) . $e->getMessage());
-			}
-		}
+
 	}
 
 	/*     * **********************Getteur Setteur*************************** */
