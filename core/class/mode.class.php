@@ -83,7 +83,7 @@ class mode extends eqLogic {
 						log::add('alarm', 'error', __('Erreur lors de l\'éxecution de ', __FILE__) . $action['cmd'] . __('. Détails : ', __FILE__) . $e->getMessage());
 					}
 				}
-				break;
+				return;
 			}
 		}
 
