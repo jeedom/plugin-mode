@@ -159,6 +159,8 @@ function addMode(_mode) {
         }
     }
     $('.collapse').collapse();
+    $("#div_modes .mode:last .div_inAction").sortable({axis: "y", cursor: "move", items: ".inAction", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
+    $("#div_modes .mode:last .div_outAction").sortable({axis: "y", cursor: "move", items: ".outAction", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
 }
 
 function addAction(_action, _type, _name, _el) {
