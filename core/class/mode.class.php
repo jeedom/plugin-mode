@@ -38,6 +38,7 @@ class mode extends eqLogic {
 		$currentMode->setOrder(1);
 		$currentMode->setEventOnly(1);
 		$currentMode->setSubType('string');
+		$currentMode->setDisplay('generic_type', 'MODE_STATE');
 		$currentMode->save();
 
 		$existing_mode = array();
@@ -54,6 +55,7 @@ class mode extends eqLogic {
 				$cmd->setSubType('other');
 				$cmd->setOrder(2);
 				$cmd->setLogicalId($value['name']);
+				$cmd->setDisplay('generic_type', 'MODE_SET_STATE');
 				$cmd->save();
 			}
 		}
