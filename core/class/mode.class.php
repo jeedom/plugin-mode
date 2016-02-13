@@ -145,7 +145,7 @@ class modeCmd extends cmd {
 		if (!is_object($currentMode)) {
 			throw new Exception(__('La commande de mode courant est introuvable', __FILE__));
 		}
-		$mode = $currentMode->execCmd(null, 2);
+		$mode = $currentMode->execCmd();
 		$newMode = $this->getLogicalId();
 		if ($mode == $newMode) {
 			return;
