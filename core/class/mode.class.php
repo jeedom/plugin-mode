@@ -36,7 +36,6 @@ class mode extends eqLogic {
 		$currentMode->setLogicalId('currentMode');
 		$currentMode->setType('info');
 		$currentMode->setOrder(1);
-		$currentMode->setEventOnly(1);
 		$currentMode->setSubType('string');
 		$currentMode->setDisplay('generic_type', 'MODE_STATE');
 		$currentMode->save();
