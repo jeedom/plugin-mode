@@ -30,6 +30,8 @@ class mode extends eqLogic {
 		$currentMode = $this->getCmd(null, 'currentMode');
 		if (!is_object($currentMode)) {
 			$currentMode = new modeCmd();
+			$currentMode->setTemplate('dashboard', 'tile');
+			$currentMode->setTemplate('mobile', 'tile');
 		}
 		$currentMode->setName(__('Mode', __FILE__));
 		$currentMode->setEqLogic_id($this->id);
