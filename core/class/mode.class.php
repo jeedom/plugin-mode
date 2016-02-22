@@ -148,10 +148,9 @@ class modeCmd extends cmd {
 		}
 		$mode = $currentMode->execCmd();
 		$newMode = $this->getLogicalId();
-		if ($mode == $newMode) {
-			return;
+		if ($mode != $newMode) {
+			$eqLogic->doAction($mode, 'outAction');
 		}
-		$eqLogic->doAction($mode, 'outAction');
 		$eqLogic->doAction($newMode, 'inAction');
 		$currentMode->setCollectDate('');
 		$currentMode->event($newMode);
