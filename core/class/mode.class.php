@@ -57,6 +57,11 @@ class mode extends eqLogic {
 				$cmd->setOrder(2);
 				$cmd->setLogicalId($value['name']);
 				$cmd->setDisplay('generic_type', 'MODE_SET_STATE');
+				if (isset($value['icon'])) {
+					$cmd->setDisplay('icon', $value['icon']);
+				} else {
+					$cmd->setDisplay('icon', '');
+				}
 				$cmd->save();
 			}
 		}
@@ -138,6 +143,18 @@ class modeCmd extends cmd {
 
 	public function dontRemoveCmd() {
 		return true;
+	}
+
+	public function formatValueWidget($_mode) {
+		$eqLogic = $this->getEqLogic();
+		foreach ($eqLogic->getConfiguration('modes') as $key => $value) {
+			if ($value['name'] == $_mode) {
+				if (isset($value['icon']) && $value['icon'] != '') {
+					return $value['icon'];
+				}
+			}
+		}
+		return $_mode;
 	}
 
 	public function execute($_options = array()) {

@@ -70,6 +70,17 @@
     $(this).closest('.mode').remove();
 });
 
+ $('body').undelegate('.mode .modeAction[data-l1key=chooseIcon]', 'click').delegate('.mode .modeAction[data-l1key=chooseIcon]', 'click', function () {
+    var mode = $(this).closest('.mode');
+    chooseIcon(function (_icon) {
+        mode.find('.modeAttr[data-l1key=icon]').empty().append(_icon);
+    });
+});
+
+ $('body').undelegate('.mode .modeAttr[data-l1key=icon]', 'click').delegate('.mode .modeAttr[data-l1key=icon]', 'click', function () {
+    $(this).empty();
+});
+
  function printEqLogic(_eqLogic) {
     $('#div_modes').empty();
     if (isset(_eqLogic.configuration)) {
@@ -95,7 +106,6 @@ function saveEqLogic(_eqLogic) {
     return _eqLogic;
 }
 
-
 function addMode(_mode) {
     if (init(_mode.name) == '') {
         return;
@@ -118,7 +128,12 @@ function addMode(_mode) {
     div += '<div class="col-sm-2">';
     div += '<span class="modeAttr label label-info rename cursor" data-l1key="name" style="font-size : 1em;" ></span>';
     div += '</div>';
-    div += '<div class="col-sm-9">';
+    div += '<label class="col-sm-1 control-label">{{Icône}}</label>';
+    div += '<div class="col-sm-2">';
+    div += '<a class="modeAction btn btn-default btn-sm" data-l1key="chooseIcon"><i class="fa fa-flag"></i> {{Icône}}</a>';
+    div += ' <span class="modeAttr label label-info cursor" data-l1key="icon" style="font-size : 1em;" ></span>';
+    div += '</div>';
+    div += '<div class="col-sm-6">';
     div += '<div class="btn-group pull-right" role="group">';
     div += '<a class="btn btn-sm bt_removeMode btn-primary"><i class="fa fa-minus-circle"></i> {{Supprimer}}</a>';
     div += '<a class="btn btn-sm bt_addInAction btn-success"><i class="fa fa-plus-circle"></i> {{Action d\'entrée}}</a>';
