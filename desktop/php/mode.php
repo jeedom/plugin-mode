@@ -23,7 +23,7 @@ foreach ($eqLogics as $eqLogic) {
    </div>
 
    <div class="col-lg-10 col-md-9 col-sm-8 eqLogicThumbnailDisplay" style="border-left: solid 1px #EEE; padding-left: 25px;">
-    <legend>{{Mes mode}}
+    <legend><i class="fa fa-th-large"></i>  {{Mes Modes}}
     </legend>
     <div class="eqLogicThumbnailContainer">
       <div class="cursor eqLogicAction" data-action="add" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >
@@ -95,7 +95,7 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
 </fieldset>
 </form>
 
-<legend>{{Modes}} <a class="btn btn-success btn-xs pull-right" id="bt_addMode" style="margin-top: 5px;"><i class="fa fa-plus-circle"></i> {{Ajouter mode}}</a></legend>
+<legend><i class="fa fa-list-alt"></i>  {{Modes}} <a class="btn btn-success btn-xs pull-right" id="bt_addMode" style="margin-top: 5px;"><i class="fa fa-plus-circle"></i> {{Ajouter mode}}</a></legend>
 
 <br/><br/>
 <div id="div_modes"></div>
