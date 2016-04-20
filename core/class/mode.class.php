@@ -189,10 +189,10 @@ class modeCmd extends cmd {
 			throw new Exception(__('La commande de mode courant est introuvable', __FILE__));
 		}
 		$mode = $currentMode->execCmd();
-		$eqLogic->setConfiguration('previousMode', $mode);
-		$eqLogic->save(true);
 		$newMode = $this->getLogicalId();
 		if ($mode != $newMode) {
+			$eqLogic->setConfiguration('previousMode', $mode);
+			$eqLogic->save(true);
 			$eqLogic->doAction($mode, 'outAction');
 		}
 		$eqLogic->doAction($newMode, 'inAction');
