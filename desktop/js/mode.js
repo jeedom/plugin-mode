@@ -115,7 +115,7 @@ function addMode(_mode) {
     div += '<div class="panel-heading">';
     div += '<h4 class="panel-title">';
     div += '<a data-toggle="collapse" data-parent="#div_modes" href="#collapse' + random + '">';
-    div += '<span class="name"><span class="modeAttr" data-l1key="icon" style="font-size : 1em;" ></span>  ' + _mode.name + '</span>';
+    div += '<span class="name">' + _mode.name + '</span>';
     div += '</a>';
     div += '</h4>';
     div += '</div>';
