@@ -42,6 +42,20 @@ class mode extends eqLogic {
 		$currentMode->setDisplay('generic_type', 'MODE_STATE');
 		$currentMode->save();
 
+		$returnPreviousMode = $this->getCmd(null, 'returnPreviousMode');
+		if (!is_object($returnPreviousMode)) {
+			$returnPreviousMode = new modeCmd();
+		}
+		$returnPreviousMode->setName(__('Retour mode précedent', __FILE__));
+		$returnPreviousMode->setEqLogic_id($this->id);
+		$returnPreviousMode->setLogicalId('returnPreviousMode');
+		$returnPreviousMode->setType('action');
+		$returnPreviousMode->setOrder(3);
+		$returnPreviousMode->setSubType('other');
+		$returnPreviousMode->setDisplay('generic_type', 'MODE_SET_STATE');
+		$returnPreviousMode->setDisplay('icon', '<i class="fa fa-reply"></i>');
+		$returnPreviousMode->save();
+
 		$existing_mode = array();
 		if (is_array($this->getConfiguration('modes'))) {
 			foreach ($this->getConfiguration('modes') as $key => $value) {
@@ -54,7 +68,7 @@ class mode extends eqLogic {
 				$cmd->setEqLogic_id($this->id);
 				$cmd->setType('action');
 				$cmd->setSubType('other');
-				$cmd->setOrder(2);
+				$cmd->setOrder(3);
 				$cmd->setLogicalId($value['name']);
 				$cmd->setDisplay('generic_type', 'MODE_SET_STATE');
 				if (isset($value['icon'])) {
@@ -67,7 +81,7 @@ class mode extends eqLogic {
 		}
 
 		foreach ($this->getCmd() as $cmd) {
-			if ($cmd->getType() == 'action' && !in_array($cmd->getName(), $existing_mode)) {
+			if ($cmd->getType() == 'action' && !in_array($cmd->getName(), $existing_mode) && $cmd->getLogicalId() != 'returnPreviousMode') {
 				$cmd->remove();
 			}
 		}
@@ -159,11 +173,24 @@ class modeCmd extends cmd {
 
 	public function execute($_options = array()) {
 		$eqLogic = $this->getEqLogic();
+		if ($this->getLogicalId() == 'returnPreviousMode') {
+			if ($eqLogic->getConfiguration('previousMode') == '') {
+				return;
+			}
+			$cmd = $eqLogic->getCmd('action', $eqLogic->getConfiguration('previousMode'));
+			if (!is_object($cmd)) {
+				return;
+			}
+			$cmd->execCmd();
+			return;
+		}
 		$currentMode = $eqLogic->getCmd(null, 'currentMode');
 		if (!is_object($currentMode)) {
 			throw new Exception(__('La commande de mode courant est introuvable', __FILE__));
 		}
 		$mode = $currentMode->execCmd();
+		$eqLogic->setConfiguration('previousMode', $mode);
+		$eqLogic->save(true);
 		$newMode = $this->getLogicalId();
 		if ($mode != $newMode) {
 			$eqLogic->doAction($mode, 'outAction');
