@@ -152,10 +152,7 @@ class modeCmd extends cmd {
 	}
 
 	public function imperihomeCmd() {
-		if ($this->getLogicalId() == 'currentMode') {
-			return true;
-		}
-		return false;
+		return ($this->getLogicalId() == 'currentMode');
 	}
 
 	public function dontRemoveCmd() {
