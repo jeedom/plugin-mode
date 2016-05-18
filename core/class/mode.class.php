@@ -135,6 +135,9 @@ class modeCmd extends cmd {
 		$info_device['params'] = $ISSStructure[$info_device['type']]['params'];
 		$info_device['params'][0]['value'] = '#' . $eqLogic->getCmd('info', 'currentMode')->getId() . '#';
 		foreach ($eqLogic->getCmd('action') as $cmd) {
+			if ($cmd->getLogicalId() == 'returnPreviousMode') {
+				continue;
+			}
 			$info_device['params'][1]['value'] .= $cmd->getName() . ',';
 		}
 		$info_device['params'][1]['value'] = trim($info_device['params'][1]['value'], ',');
