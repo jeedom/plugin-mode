@@ -81,6 +81,21 @@
     $(this).empty();
 });
 
+  $('#div_modes').delegate('.bt_duplicateMode', 'click', function () {
+    var mode = $(this).closest('.mode').clone();
+    bootbox.prompt("{{Nom du mode ?}}", function (result) {
+        if (result !== null) {
+            var random = Math.floor((Math.random() * 1000000) + 1);
+            mode.find('a[data-toggle=collapse]').attr('href', '#collapse' + random);
+            mode.find('.panel-collapse.collapse').attr('id', 'collapse' + random);
+            mode.find('.modeAttr[data-l1key=name]').html(result);
+            mode.find('.name').html(result);
+            $('#div_modes').append(mode);
+            $('.collapse').collapse();
+        }
+    });
+});
+
  function printEqLogic(_eqLogic) {
     $('#div_modes').empty();
     if (isset(_eqLogic.configuration)) {
