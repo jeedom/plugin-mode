@@ -1,0 +1,9 @@
+{
+	"id" : "mode",
+	"name" : "Mode",
+	"description" : "Plugin pour gerer different mode de sa maison/son appartement",
+	"licence" : "AGPL",
+	"author" : "Loïc",
+	"require" : "2.3",
+	"category" : "organization"
+}
