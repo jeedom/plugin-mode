@@ -3,3 +3,7 @@
 Plugin permettant de gérer différents modes d'un appartement mais aussi des ambiances.
 
 include::configuration.asciidoc[]
+
+'''
+
+include::changelog.asciidoc[]
