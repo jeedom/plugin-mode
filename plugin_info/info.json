@@ -4,6 +4,6 @@
 	"description" : "Plugin pour gerer different mode de sa maison/son appartement",
 	"licence" : "AGPL",
 	"author" : "Loïc",
-	"require" : "2.3",
+	"require" : "2.4",
 	"category" : "organization"
 }
