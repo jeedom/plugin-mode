@@ -1,0 +1,45 @@
+{
+    "plugins\/mode\/plugin_info\/info.xml": {
+        "Plugin pour gerer different mode de sa maison\/son appartement": "Plugin pour gerer different mode de sa maison\/son appartement",
+        "Aucune": "Aucune"
+    },
+    "plugins\/mode\/desktop\/php\/mode.php": {
+        "Ajouter un mode": "Ajouter un mode",
+        "Rechercher": "Rechercher",
+        "Mes mode": "Mes mode",
+        "Général": "Général",
+        "Nom de l'équipement mode": "Nom de l'équipement mode",
+        "Objet parent": "Objet parent",
+        "Aucun": "Aucun",
+        "Activer": "Activer",
+        "Visible": "Visible",
+        "Modes": "Modes",
+        "Ajouter mode": "Ajouter mode",
+        "Supprimer": "Supprimer",
+        "Sauvegarder": "Sauvegarder",
+        "Catégorie": "Catégorie",
+        "Mes Modes": "Mes Modes",
+        "Configuration avancée": "Configuration avancée",
+        "Equipement": "Equipement"
+    },
+    "plugins\/mode\/desktop\/js\/mode.js": {
+        "Afficher": "Afficher",
+        "Tester": "Tester",
+        "Nom du mode ?": "Nom du mode ?",
+        "Nom du mode": "Nom du mode",
+        "Action d\\'entrée": "Action d\\'entrée",
+        "Action de sortie": "Action de sortie",
+        "Déclencheur": "Déclencheur",
+        "Dupliquer": "Dupliquer",
+        "Nouveau nom ?": "Nouveau nom ?",
+        "Supprimer": "Supprimer",
+        "Icône": "Icône"
+    },
+    "plugins\/mode\/core\/class\/mode.class.php": {
+        "Mode": "Mode",
+        "Retour mode précedent": "Retour mode précedent"
+    },
+    "plugins\/mode\/plugin_info\/info.json": {
+        "Plugin pour gerer different mode de sa maison\/son appartement": "Plugin pour gerer different mode de sa maison\/son appartement"
+    }
+}

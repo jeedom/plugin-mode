@@ -1,0 +1,37 @@
+{
+    "plugins/mode/plugin_info/info.xml": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin para gestionar diferentes modos de su casa/apartamiento",
+        "Aucune": "Ninguna"
+    },
+    "plugins/mode/desktop/php/mode.php": {
+        "Ajouter un mode": "Añadir un modo",
+        "Rechercher": "Buscar",
+        "Mes mode": "Mis modos",
+        "Général": "General",
+        "Nom de l'équipement mode": "Nombre del equipamiento modo",
+        "Objet parent": "Objeto padre",
+        "Aucun": "Ninguno",
+        "Activer": "Activar",
+        "Visible": "Visible",
+        "Modes": "Modos",
+        "Ajouter mode": "Añadir modo",
+        "Supprimer": "Borrar",
+        "Sauvegarder": "Guardar",
+        "Catégorie": "Categoría"
+    },
+    "plugins/mode/desktop/js/mode.js": {
+        "Afficher": "Mostrar",
+        "Tester": "Probar",
+        "Nom du mode ?": "¿Nombre del modo?",
+        "Nom du mode": "Nombre del modo",
+        "Action d\\'entrée": "Acción de entrada",
+        "Action de sortie": "Acción de salida",
+        "Déclencheur": "Disparador",
+        "Dupliquer": "Duplicar",
+        "Nouveau nom ?": "¿ Nuevo nombre ?",
+        "Supprimer": "Borrar"
+    },
+    "plugins/mode/core/class/mode.class.php": {
+        "Mode": "Modo"
+    }
+}

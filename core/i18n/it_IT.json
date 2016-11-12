@@ -1,0 +1,37 @@
+{
+    "plugins/mode/plugin_info/info.xml": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin pour gerer different mode de sa maison/son appartement",
+        "Aucune": "Nessuno"
+    },
+    "plugins/mode/desktop/php/mode.php": {
+        "Ajouter un mode": "Ajouter un mode",
+        "Rechercher": "Cerca",
+        "Mes mode": "Mes mode",
+        "Général": "Generale",
+        "Nom de l'équipement mode": "Nom de l'équipement mode",
+        "Objet parent": "Objet parent",
+        "Aucun": "Nessuno",
+        "Activer": "Attiva",
+        "Visible": "Visibile",
+        "Modes": "Modes",
+        "Ajouter mode": "Ajouter mode",
+        "Supprimer": "Elimina",
+        "Sauvegarder": "Salva",
+        "Catégorie": "Categoria"
+    },
+    "plugins/mode/desktop/js/mode.js": {
+        "Afficher": "Mostra",
+        "Tester": "Tester",
+        "Nom du mode ?": "Nom du mode ?",
+        "Nom du mode": "Nom du mode",
+        "Action d\\'entrée": "Action d\\'entrée",
+        "Action de sortie": "Action de sortie",
+        "Déclencheur": "Déclencheur",
+        "Dupliquer": "Duplica",
+        "Nouveau nom ?": "Nouveau nom ?",
+        "Supprimer": "Elimina"
+    },
+    "plugins/mode/core/class/mode.class.php": {
+        "Mode": "Mode"
+    }
+}
