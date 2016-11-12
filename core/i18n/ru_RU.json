@@ -17,7 +17,10 @@
         "Ajouter mode": "Добавить режим",
         "Supprimer": "Удалить",
         "Sauvegarder": "Сохранить",
-        "Catégorie": "Категория"
+        "Catégorie": "Категория",
+        "Mes Modes": "Mes Modes",
+        "Configuration avancée": "Расширенные настройки",
+        "Equipement": "Оборудование"
     },
     "plugins/mode/desktop/js/mode.js": {
         "Afficher": "Отобразить",
@@ -29,9 +32,14 @@
         "Déclencheur": "Триггер",
         "Dupliquer": "Дублировать",
         "Nouveau nom ?": "Новое имя?",
-        "Supprimer": "Удалить"
+        "Supprimer": "Удалить",
+        "Icône": "Иконка"
     },
     "plugins/mode/core/class/mode.class.php": {
-        "Mode": "Режим"
+        "Mode": "Режим",
+        "Retour mode précedent": "Retour mode précedent"
+    },
+    "plugins/mode/plugin_info/info.json": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin pour gerer different mode de sa maison/son appartement"
     }
 }

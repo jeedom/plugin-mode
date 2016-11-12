@@ -1,14 +1,14 @@
 {
     "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin pour gerer different mode de sa maison/son appartement",
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin to manage different modes in house/flat",
         "Aucune": "None"
     },
     "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "Ajouter un mode",
+        "Ajouter un mode": "Add a Mode",
         "Rechercher": "Search",
-        "Mes mode": "Mes mode",
+        "Mes mode": "My Modes",
         "Général": "Main",
-        "Nom de l'équipement mode": "Nom de l'équipement mode",
+        "Nom de l'équipement mode": "Mode equipment name",
         "Objet parent": "Parent object",
         "Aucun": "None",
         "Activer": "Enabled",
@@ -17,21 +17,29 @@
         "Ajouter mode": "Add mode",
         "Supprimer": "Delete",
         "Sauvegarder": "Save",
-        "Catégorie": "Category"
+        "Catégorie": "Category",
+        "Mes Modes": "My Modes",
+        "Configuration avancée": "Advanced configuration",
+        "Equipement": "Device"
     },
     "plugins/mode/desktop/js/mode.js": {
         "Afficher": "Show",
         "Tester": "Test",
         "Nom du mode ?": "Mode name ?",
         "Nom du mode": "Mode name",
-        "Action d\\'entrée": "Action d\\'entrée",
-        "Action de sortie": "Action de sortie",
+        "Action d\\'entrée": "Input action",
+        "Action de sortie": "Output action",
         "Déclencheur": "Trigger",
         "Dupliquer": "Duplicate",
         "Nouveau nom ?": "New name ?",
-        "Supprimer": "Delete"
+        "Supprimer": "Delete",
+        "Icône": "Icon"
     },
     "plugins/mode/core/class/mode.class.php": {
-        "Mode": "Mode"
+        "Mode": "Mode",
+        "Retour mode précedent": "Go to previous mode"
+    },
+    "plugins/mode/plugin_info/info.json": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin to manage different modes in house/flat"
     }
 }

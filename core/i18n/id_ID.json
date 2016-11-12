@@ -17,7 +17,10 @@
         "Ajouter mode": "Ajouter mode",
         "Supprimer": "Menghapus",
         "Sauvegarder": "Menyimpan",
-        "Catégorie": "Kategori"
+        "Catégorie": "Kategori",
+        "Mes Modes": "Mes Modes",
+        "Configuration avancée": "Configuration avancée",
+        "Equipement": "Peralatan"
     },
     "plugins/mode/desktop/js/mode.js": {
         "Afficher": "Memenitikan",
@@ -29,9 +32,14 @@
         "Déclencheur": "Déclencheur",
         "Dupliquer": "Duplikat",
         "Nouveau nom ?": "Nouveau nom ?",
-        "Supprimer": "Menghapus"
+        "Supprimer": "Menghapus",
+        "Icône": "Icon"
     },
     "plugins/mode/core/class/mode.class.php": {
-        "Mode": "Mode"
+        "Mode": "Mode",
+        "Retour mode précedent": "Retour mode précedent"
+    },
+    "plugins/mode/plugin_info/info.json": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin pour gerer different mode de sa maison/son appartement"
     }
 }

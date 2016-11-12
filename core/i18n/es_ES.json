@@ -8,7 +8,7 @@
         "Rechercher": "Buscar",
         "Mes mode": "Mis modos",
         "Général": "General",
-        "Nom de l'équipement mode": "Nombre del equipamiento modo",
+        "Nom de l'équipement mode": "Nombre del dispositivo modo",
         "Objet parent": "Objeto padre",
         "Aucun": "Ninguno",
         "Activer": "Activar",
@@ -17,7 +17,10 @@
         "Ajouter mode": "Añadir modo",
         "Supprimer": "Borrar",
         "Sauvegarder": "Guardar",
-        "Catégorie": "Categoría"
+        "Catégorie": "Categoría",
+        "Mes Modes": "Mis modos",
+        "Configuration avancée": "Configuración avanzada",
+        "Equipement": "Dispositivos"
     },
     "plugins/mode/desktop/js/mode.js": {
         "Afficher": "Mostrar",
@@ -29,9 +32,14 @@
         "Déclencheur": "Disparador",
         "Dupliquer": "Duplicar",
         "Nouveau nom ?": "¿ Nuevo nombre ?",
-        "Supprimer": "Borrar"
+        "Supprimer": "Borrar",
+        "Icône": "Icono"
     },
     "plugins/mode/core/class/mode.class.php": {
-        "Mode": "Modo"
+        "Mode": "Modo",
+        "Retour mode précedent": "Volver al modo anterior"
+    },
+    "plugins/mode/plugin_info/info.json": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin para gestionar diferentes modos de su casa/apartamiento"
     }
 }

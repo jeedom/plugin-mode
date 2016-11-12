@@ -1,14 +1,14 @@
 {
     "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin pour gerer different mode de sa maison/son appartement",
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin, um mit verschiedenen Methoden  sein Haus/seine Wohnung zu verwalten",
         "Aucune": "Ohne"
     },
     "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "Ajouter un mode",
+        "Ajouter un mode": "Modus hinzufügen",
         "Rechercher": "Suchen nach",
-        "Mes mode": "Mes mode",
+        "Mes mode": "Mein Modus",
         "Général": "Allgemein",
-        "Nom de l'équipement mode": "Nom de l'équipement mode",
+        "Nom de l'équipement mode": "Modus Gerätename",
         "Objet parent": "Eltern-Objekt",
         "Aucun": "Ohne",
         "Activer": "aktivieren",
@@ -17,21 +17,29 @@
         "Ajouter mode": "Modus hinzufügen",
         "Supprimer": "Löschen",
         "Sauvegarder": "Speichern",
-        "Catégorie": "Kategorie"
+        "Catégorie": "Kategorie",
+        "Mes Modes": "Meine Modi",
+        "Configuration avancée": "Erweiterte Konfiguration",
+        "Equipement": "Gerät"
     },
     "plugins/mode/desktop/js/mode.js": {
         "Afficher": "anzeigen",
         "Tester": "Test",
         "Nom du mode ?": "Modus Name",
         "Nom du mode": "Modus Name",
-        "Action d\\'entrée": "Action d\\'entrée",
-        "Action de sortie": "Action de sortie",
+        "Action d\\'entrée": "Eingangs Aktion",
+        "Action de sortie": "Ausgangs Aktion",
         "Déclencheur": "Auslöser",
         "Dupliquer": "Kopieren",
         "Nouveau nom ?": "Neuer Name",
-        "Supprimer": "Löschen"
+        "Supprimer": "Löschen",
+        "Icône": "Symbol"
     },
     "plugins/mode/core/class/mode.class.php": {
-        "Mode": "Modus"
+        "Mode": "Modus",
+        "Retour mode précedent": "Vorherigen Modus zurück"
+    },
+    "plugins/mode/plugin_info/info.json": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin, um mit verschiedenen Methoden  sein Haus/seine Wohnung zu verwalten"
     }
 }

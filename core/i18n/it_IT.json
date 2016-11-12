@@ -1,37 +1,45 @@
 {
     "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin pour gerer different mode de sa maison/son appartement",
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin per gestire le differenti modalità della sua casa/appartamento",
         "Aucune": "Nessuno"
     },
     "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "Ajouter un mode",
+        "Ajouter un mode": "Aggiungi modalità",
         "Rechercher": "Cerca",
-        "Mes mode": "Mes mode",
+        "Mes mode": "Le mie modalit",
         "Général": "Generale",
         "Nom de l'équipement mode": "Nom de l'équipement mode",
-        "Objet parent": "Objet parent",
+        "Objet parent": "Oggetto padre",
         "Aucun": "Nessuno",
         "Activer": "Attiva",
         "Visible": "Visibile",
-        "Modes": "Modes",
-        "Ajouter mode": "Ajouter mode",
+        "Modes": "Modalità",
+        "Ajouter mode": "Aggiungi modalità",
         "Supprimer": "Elimina",
         "Sauvegarder": "Salva",
-        "Catégorie": "Categoria"
+        "Catégorie": "Categoria",
+        "Mes Modes": "Mes Modes",
+        "Configuration avancée": "Configurazione avanzata",
+        "Equipement": "Dispositivo"
     },
     "plugins/mode/desktop/js/mode.js": {
         "Afficher": "Mostra",
-        "Tester": "Tester",
-        "Nom du mode ?": "Nom du mode ?",
-        "Nom du mode": "Nom du mode",
-        "Action d\\'entrée": "Action d\\'entrée",
-        "Action de sortie": "Action de sortie",
-        "Déclencheur": "Déclencheur",
+        "Tester": "Prova",
+        "Nom du mode ?": "Nome modalità ?",
+        "Nom du mode": "Nome modalità",
+        "Action d\\'entrée": "Azione d\\'ingresso",
+        "Action de sortie": "Azione d'\\uscita",
+        "Déclencheur": "Innesco",
         "Dupliquer": "Duplica",
-        "Nouveau nom ?": "Nouveau nom ?",
-        "Supprimer": "Elimina"
+        "Nouveau nom ?": "Nuovo nome ?",
+        "Supprimer": "Elimina",
+        "Icône": "Icona"
     },
     "plugins/mode/core/class/mode.class.php": {
-        "Mode": "Mode"
+        "Mode": "Modalità",
+        "Retour mode précedent": "Retour mode précedent"
+    },
+    "plugins/mode/plugin_info/info.json": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin per gestire le differenti modalità della sua casa/appartamento"
     }
 }
