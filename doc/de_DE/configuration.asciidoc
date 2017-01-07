@@ -6,7 +6,7 @@ image::../images/mode.PNG[]
 
 == Geräte Konfiguration
 
-La configuration des équipements mode est accessible à partir du menu plugin : 
+Die Konfiguration von Modus ist in dem Plugin-Menü verfügbar : 
 
 image::../images/mode2.PNG[]
 
