@@ -81,7 +81,7 @@
     $(this).empty();
 });
 
-  $('#div_modes').delegate('.bt_duplicateMode', 'click', function () {
+ $('#div_modes').delegate('.bt_duplicateMode', 'click', function () {
     var mode = $(this).closest('.mode').clone();
     bootbox.prompt("{{Nom du mode ?}}", function (result) {
         if (result !== null) {
@@ -216,6 +216,7 @@ function addAction(_action, _type, _name, _el) {
     div += '<div class="col-sm-4 ' + input + '">';
     div += '<div class="input-group">';
     div += '<span class="input-group-btn">';
+    div += '<input type="checkbox" class="expressionAttr" data-l1key="enable" checked />';
     div += '<a class="btn btn-default bt_removeAction btn-sm" data-type="' + _type + '"><i class="fa fa-minus-circle"></i></a>';
     div += '</span>';
     div += '<input class="expressionAttr form-control input-sm cmdAction" data-l1key="cmd" data-type="' + _type + '" />';

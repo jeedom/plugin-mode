@@ -95,6 +95,9 @@ class mode extends eqLogic {
 		foreach ($this->getConfiguration('modes') as $key => $value) {
 			if ($value['name'] == $_mode) {
 				foreach ($value[$_type] as $action) {
+					if (isset($action['enable']) && $action['enable'] == 0) {
+						continue;
+					}
 					try {
 						$options = array();
 						if (isset($action['options'])) {
