@@ -96,6 +96,8 @@
     });
 });
 
+$("#div_modes").sortable({axis: "y", cursor: "move", items: ".mode", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
+
  function printEqLogic(_eqLogic) {
     $('#div_modes').empty();
     if (isset(_eqLogic.configuration)) {
