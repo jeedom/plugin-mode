@@ -119,6 +119,7 @@
         }
         jeedom.cmd.displayActionsOption({
             params : actionOptions,
+            async : false,
             error: function (error) {
               $('#div_alert').showAlert({message: error.message, level: 'danger'});
           },
