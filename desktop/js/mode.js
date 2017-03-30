@@ -113,8 +113,8 @@
     $('#div_modes').empty();
     if (isset(_eqLogic.configuration)) {
         if (isset(_eqLogic.configuration.modes)) {
-         actionOptions = []
-         for (var i in _eqLogic.configuration.modes) {
+           actionOptions = []
+           for (var i in _eqLogic.configuration.modes) {
             addMode(_eqLogic.configuration.modes[i]);
         }
         jeedom.cmd.displayActionsOption({
@@ -125,9 +125,7 @@
           },
           success : function(data){
             for(var i in data){
-                if(data[i].html != ''){
-                    $('#'+data[i].id).append(data[i].html.html);
-                }
+                $('#'+data[i].id).append(data[i].html.html);
             }
         }
     });
