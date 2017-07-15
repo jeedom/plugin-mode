@@ -113,6 +113,29 @@ class mode extends eqLogic {
 		}
 
 	}
+	
+	public static function deadCmd() {
+		$return = array();
+		foreach (eqLogic::byType('mode') as $mode){
+			foreach ($mode->getConfiguration('modes') as $key => $value) {
+				foreach ($value['inAction'] as $inAction) {
+					if ($inAction['cmd'] != '' && strpos($inAction['cmd'],'#') !== false) {
+						if (!cmd::byId(str_replace('#','',$inAction['cmd']))){
+							$return[]= array('detail' => 'Mode ' . $value['name'] . ' dans l\'équipement ' . $mode->getName(),'help' => 'Action d\'entrée','who'=>$inAction['cmd']);
+						}
+					}
+				}
+				foreach ($value['outAction'] as $outAction) {
+					if ($outAction['cmd'] != '' && strpos($outAction['cmd'],'#') !== false) {
+						if (!cmd::byId(str_replace('#','',$outAction['cmd']))){
+							$return[]= array('detail' => 'Mode ' . $value['name'] . ' dans l\'équipement ' . $mode->getName(),'help' => 'Action de sortie','who'=>$outAction['cmd']);
+						}
+					}
+				}
+			}
+		}
+		return $return;
+	}
 
 	/*     * **********************Getteur Setteur*************************** */
 }
