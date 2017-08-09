@@ -2,24 +2,9 @@
 
 Après téléchargement du plugin, il vous suffit juste d'activer celui-ci, il n'y a aucune configuration à ce niveau.
 
-image::../images/mode.PNG[]
-
 == Geräte Konfiguration
 
-Die Konfiguration von Modus ist in dem Plugin-Menü verfügbar : 
-
-image::../images/mode2.PNG[]
-
-Voilà à quoi ressemble la page du plugin mode (ici avec déjà 1 équipement) : 
-
-image::../images/mode3.PNG[]
-
-[TIP]
-Wie an vielen Stellen in Jeedom kann mit dem Mauszeiger ganz links, ein Menü mit Schnellzugriff aufgerufen werden (Sie können in Ihrem Profil immer sichtbar einstellen).  
-
-Sobald Sie eines davon anklicken, erhalten Sie : 
-
-image::../images/mode4.PNG[]
+La configuration des équipements mode est accessible à partir du menu plugin puis organisation : 
 
 Hier finden sie die ganze Konfiguration Ihrer Geräte: 
 
@@ -30,6 +15,4 @@ Hier finden sie die ganze Konfiguration Ihrer Geräte:
 * *Catégorie* : les catégories de l'équipement (il peut appartenir à plusieurs catégories).
 * *Ajouter mode* : bouton permettant d'ajouter un nouveau mode
 
-En-dessous vous retrouvez la liste des modes, en cliquant dessus vous allez pouvoir choisir les actions à faire lors de l'entrée dans ce mode et lors de la sortie : 
-
-image::../images/mode5.PNG[]
+En-dessous vous retrouvez la liste des modes, en cliquant dessus vous allez pouvoir choisir les actions à faire lors de l'entrée dans ce mode et lors de la sortie.
