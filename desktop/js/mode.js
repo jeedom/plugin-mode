@@ -40,6 +40,7 @@
         el.value(result.human);
         jeedom.cmd.displayActionOption(el.value(), '', function (html) {
             el.closest('.' + type).find('.actionOptions').html(html);
+            taAutosize();
         });
     });
 });
@@ -51,6 +52,7 @@
     el.value(result.human);
     jeedom.cmd.displayActionOption(el.value(), '', function (html) {
       el.closest('.' + type).find('.actionOptions').html(html);
+      taAutosize();
   });
 });
 });
@@ -74,6 +76,7 @@
     var el = $(this);
     jeedom.cmd.displayActionOption($(this).value(), init(expression[0].options), function (html) {
         el.closest('.' + type).find('.actionOptions').html(html);
+        taAutosize();
     })
 });
 
@@ -127,6 +130,7 @@
             for(var i in data){
                 $('#'+data[i].id).append(data[i].html.html);
             }
+            taAutosize();
         }
     });
     }
