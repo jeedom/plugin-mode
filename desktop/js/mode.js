@@ -111,10 +111,18 @@
 });
 
  $('.nav-tabs li a').on('click',function(){
-     setTimeout(function(){ 
-        taAutosize();
-    }, 50);
- })
+   setTimeout(function(){ 
+    taAutosize();
+}, 50);
+})
+
+ $('#div_modes').on('click','.panel-heading',function(){
+   setTimeout(function(){ 
+    taAutosize();
+}, 50);
+})
+
+
 
  $("#div_modes").sortable({axis: "y", cursor: "move", items: ".mode", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
 
@@ -122,8 +130,8 @@
     $('#div_modes').empty();
     if (isset(_eqLogic.configuration)) {
         if (isset(_eqLogic.configuration.modes)) {
-         actionOptions = []
-         for (var i in _eqLogic.configuration.modes) {
+           actionOptions = []
+           for (var i in _eqLogic.configuration.modes) {
             addMode(_eqLogic.configuration.modes[i]);
         }
         jeedom.cmd.displayActionsOption({
