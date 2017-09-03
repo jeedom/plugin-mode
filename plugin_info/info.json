@@ -4,6 +4,8 @@
 	"description" : "Plugin pour gerer different mode de sa maison/son appartement",
 	"licence" : "AGPL",
 	"author" : "Loïc",
-	"require" : "2.4",
-	"category" : "organization"
+	"require" : "3.0",
+	"category" : "organization",
+	"changelog" : "https://github.com/jeedom/plugin-mode/blob/stable/doc/#language#/changelog.asciidoc",
+	"documentation" : "https://github.com/jeedom/plugin-mode/blob/stable/doc/#language#/index.asciidoc"
 }
