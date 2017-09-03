@@ -1,6 +1,6 @@
 = Mode
 
-Plugin permettant de gérer différents modes d'un appartement mais aussi des ambiances.
+Plugin permettant de gérer différents modes d'un appartement/maison/piece mais aussi des ambiances.
 
 include::configuration.asciidoc[]
 
