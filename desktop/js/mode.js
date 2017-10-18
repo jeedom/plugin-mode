@@ -235,6 +235,7 @@ function addMode(_mode) {
     $('.collapse').collapse();
     $("#div_modes .mode:last .div_inAction").sortable({axis: "y", cursor: "move", items: ".inAction", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
     $("#div_modes .mode:last .div_outAction").sortable({axis: "y", cursor: "move", items: ".outAction", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
+    updateSelectMode();
 }
 
 function addAction(_action, _type, _name, _el) {
@@ -257,11 +258,20 @@ function addAction(_action, _type, _name, _el) {
     var div = '<div class="' + _type + '">';
     div += '<div class="form-group ">';
     div += '<label class="col-sm-1 control-label">' + _name + '</label>';
+    div += '<div class="col-sm-2  ' + input + '">';
+    div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="enable" checked title="{{Décocher pour desactiver l\'action}}" />';
+    div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="background" title="{{Cocher pour que la commande s\'éxecute en parrallele des autres actions}}" />';
+    div += '<select class="expressionAttr form-control input-sm selectMode" data-l1key="onlyIfMode" style="width:calc(100% - 50px);display:inline-block" title="{{Entrée : Ne faire cette action que si l\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode}}">';
+    div += '<option value="all">{{Tous les modes}}</option>';
+    $('#div_modes .mode').each(function () {
+        var mode = $(this).getValues('.modeAttr')[0];
+        div += '<option value="'+mode.name+'">'+mode.name+'</option>';
+    });
+    div += '</select>';
+    div += '</div>';
     div += '<div class="col-sm-4 ' + input + '">';
     div += '<div class="input-group">';
     div += '<span class="input-group-btn">';
-    div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="enable" checked title="{{Décocher pour desactiver l\'action}}" />';
-    div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="background" title="{{Cocher pour que la commande s\'éxecute en parrallele des autres actions}}" />';
     div += '<a class="btn btn-default bt_removeAction btn-sm" data-type="' + _type + '"><i class="fa fa-minus-circle"></i></a>';
     div += '</span>';
     div += '<input class="expressionAttr form-control input-sm cmdAction" data-l1key="cmd" data-type="' + _type + '" />';
@@ -272,7 +282,7 @@ function addAction(_action, _type, _name, _el) {
     div += '</div>';
     div += '</div>';
     var actionOption_id = uniqId();
-    div += '<div class="col-sm-7 actionOptions" id="'+actionOption_id+'">';
+    div += '<div class="col-sm-5 actionOptions" id="'+actionOption_id+'">';
     div += '</div>';
     div += '</div>';
     if (isset(_el)) {
@@ -286,5 +296,19 @@ function addAction(_action, _type, _name, _el) {
         expression : init(_action.cmd, ''),
         options : _action.options,
         id : actionOption_id
+    });
+}
+
+function updateSelectMode(){
+    $('select.selectMode').each(function () {
+        var value = $(this).val();
+        $(this).empty();
+        var options = '<option value="all">{{Tous les modes}}</option>';
+        $('#div_modes .mode').each(function () {
+            var mode = $(this).getValues('.modeAttr')[0];
+            options += '<option value="'+mode.name+'">'+mode.name+'</option>';
+        });
+        $(this).append(options);
+        $(this).val(value);
     });
 }

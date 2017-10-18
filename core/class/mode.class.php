@@ -87,28 +87,33 @@ class mode extends eqLogic {
 		}
 	}
 
-	public function doAction($_mode, $_type) {
+	public function doAction($_mode, $_type, $_previousMode = '') {
 		if (!is_array($this->getConfiguration('modes'))) {
 			return;
 		}
-		$actions = array();
-		foreach ($this->getConfiguration('modes') as $key => $value) {
-			if ($value['name'] == $_mode) {
-				foreach ($value[$_type] as $action) {
-					try {
-						$options = array();
-						if (isset($action['options'])) {
-							$options = $action['options'];
-						}
-						scenarioExpression::createAndExec('action', $action['cmd'], $options);
-					} catch (Exception $e) {
-						log::add('mode', 'error', __('Erreur lors de l\'éxecution de ', __FILE__) . $action['cmd'] . __('. Détails : ', __FILE__) . $e->getMessage());
-					}
-				}
-				return;
-			}
+		if ($_previousMode == '') {
+			$_previousMode = $this->getConfiguration('previousMode');
 		}
-
+		foreach ($this->getConfiguration('modes') as $key => $value) {
+			if ($value['name'] != $_mode) {
+				continue;
+			}
+			foreach ($value[$_type] as $action) {
+				if (isset($action['onlyIfMode']) && $action['onlyIfMode'] != 'all' && $action['onlyIfMode'] != $_previousMode) {
+					continue;
+				}
+				try {
+					$options = array();
+					if (isset($action['options'])) {
+						$options = $action['options'];
+					}
+					scenarioExpression::createAndExec('action', $action['cmd'], $options);
+				} catch (Exception $e) {
+					log::add('mode', 'error', __('Erreur lors de l\'éxecution de ', __FILE__) . $action['cmd'] . __('. Détails : ', __FILE__) . $e->getMessage());
+				}
+			}
+			return;
+		}
 	}
 
 	public static function deadCmd() {
@@ -216,10 +221,10 @@ class modeCmd extends cmd {
 		if ($mode != $newMode) {
 			$eqLogic->setConfiguration('previousMode', $mode);
 			$eqLogic->save(true);
-			$eqLogic->doAction($mode, 'outAction');
+			$eqLogic->doAction($mode, 'outAction', $newMode);
 		}
 		$currentMode->event($newMode);
-		$eqLogic->doAction($newMode, 'inAction');
+		$eqLogic->doAction($newMode, 'inAction', $mode);
 		return;
 	}
 
