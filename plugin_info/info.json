@@ -5,7 +5,7 @@
 	"licence" : "AGPL",
 	"author" : "Loïc",
 	"require" : "3.0",
-	"category" : "organization",
-	"changelog" : "https://github.com/jeedom/plugin-mode/blob/stable/doc/#language#/changelog.asciidoc",
-	"documentation" : "https://github.com/jeedom/plugin-mode/blob/stable/doc/#language#/index.asciidoc"
+        "category" : "organization",
+        "changelog" : "https://jeedom.github.io/plugin-mode/#language#/changelog",
+        "documentation" : "https://jeedom.github.io/plugin-mode/#language#/"
 }
