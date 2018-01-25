@@ -13,30 +13,30 @@
         "Aucun": "Tak ada",
         "Activer": "Mengaktifkan",
         "Visible": "Terlihat",
-        "Modes": "Modes",
-        "Ajouter mode": "Ajouter mode",
+        "Modes": "mode",
+        "Ajouter mode": "menambahkan mode",
         "Supprimer": "Menghapus",
         "Sauvegarder": "Menyimpan",
         "Catégorie": "Kategori",
         "Mes Modes": "Mes Modes",
-        "Configuration avancée": "Configuration avancée",
+        "Configuration avancée": "konfigurasi lanjutan",
         "Equipement": "Peralatan"
     },
     "plugins/mode/desktop/js/mode.js": {
         "Afficher": "Memenitikan",
         "Tester": "Coba",
-        "Nom du mode ?": "Nom du mode ?",
-        "Nom du mode": "Nom du mode",
+        "Nom du mode ?": "nama profil?",
+        "Nom du mode": "Nama Mode",
         "Action d\\'entrée": "Action d\\'entrée",
         "Action de sortie": "Action de sortie",
-        "Déclencheur": "Déclencheur",
+        "Déclencheur": "pelatuk",
         "Dupliquer": "Duplikat",
-        "Nouveau nom ?": "Nouveau nom ?",
+        "Nouveau nom ?": "nama baru?",
         "Supprimer": "Menghapus",
         "Icône": "Icon"
     },
     "plugins/mode/core/class/mode.class.php": {
-        "Mode": "Mode",
+        "Mode": "mode",
         "Retour mode précedent": "Retour mode précedent"
     },
     "plugins/mode/plugin_info/info.json": {

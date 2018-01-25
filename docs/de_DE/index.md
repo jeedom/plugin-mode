@@ -13,7 +13,7 @@ Configuration des équipements
 La configuration des équipements mode est accessible à partir du menu
 plugin puis organisation :
 
-Vous retrouvez ici toute la configuration de votre équipement :
+Hier finden sie die ganze Konfiguration Ihrer Geräte:
 
 -   **Nom de l’équipement Mode** : nom de votre équipement Mode,
 
