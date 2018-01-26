@@ -1,14 +1,14 @@
 {
     "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin pour gerer different mode de sa maison/son appartement",
+        "Plugin pour gerer different mode de sa maison/son appartement": "Плагин для управления различных мод своего дома / его квартира",
         "Aucune": "Нет"
     },
     "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "Ajouter un mode",
+        "Ajouter un mode": "Добавить форму",
         "Rechercher": "Искать",
-        "Mes mode": "Mes mode",
+        "Mes mode": "моя мода",
         "Général": "Главная",
-        "Nom de l'équipement mode": "Nom de l'équipement mode",
+        "Nom de l'équipement mode": "Наименование способа оборудование",
         "Objet parent": "Родительский объект",
         "Aucun": "Нет",
         "Activer": "Активировать",
@@ -18,7 +18,7 @@
         "Supprimer": "Удалить",
         "Sauvegarder": "Сохранить",
         "Catégorie": "Категория",
-        "Mes Modes": "Mes Modes",
+        "Mes Modes": "мои методы",
         "Configuration avancée": "Расширенные настройки",
         "Equipement": "Оборудование"
     },
@@ -27,8 +27,8 @@
         "Tester": "Тест",
         "Nom du mode ?": "Название режима?",
         "Nom du mode": "Название режима",
-        "Action d\\'entrée": "Action d\\'entrée",
-        "Action de sortie": "Action de sortie",
+        "Action d\\'entrée": "запись действий \\ «s",
+        "Action de sortie": "выходное воздействие",
         "Déclencheur": "Триггер",
         "Dupliquer": "Дублировать",
         "Nouveau nom ?": "Новое имя?",
@@ -37,9 +37,9 @@
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "Режим",
-        "Retour mode précedent": "Retour mode précedent"
+        "Retour mode précedent": "Предыдущий режим Назад"
     },
     "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin pour gerer different mode de sa maison/son appartement"
+        "Plugin pour gerer different mode de sa maison/son appartement": "Плагин для управления различных мод своего дома / его квартира"
     }
 }

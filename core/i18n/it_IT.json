@@ -8,7 +8,7 @@
         "Rechercher": "Cerca",
         "Mes mode": "Le mie modalit",
         "Général": "Generale",
-        "Nom de l'équipement mode": "Nom de l'équipement mode",
+        "Nom de l'équipement mode": "apparecchiature di moda Nome",
         "Objet parent": "Oggetto padre",
         "Aucun": "Nessuno",
         "Activer": "Attiva",
@@ -18,7 +18,7 @@
         "Supprimer": "Elimina",
         "Sauvegarder": "Salva",
         "Catégorie": "Categoria",
-        "Mes Modes": "Mes Modes",
+        "Mes Modes": "i miei metodi",
         "Configuration avancée": "Configurazione avanzata",
         "Equipement": "Dispositivo"
     },
@@ -37,7 +37,7 @@
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "Modalità",
-        "Retour mode précedent": "Retour mode précedent"
+        "Retour mode précedent": "modalità precedente Indietro"
     },
     "plugins/mode/plugin_info/info.json": {
         "Plugin pour gerer different mode de sa maison/son appartement": "Plugin per gestire le differenti modalità della sua casa/appartamento"

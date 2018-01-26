@@ -1,14 +1,14 @@
 {
     "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin pour gerer different mode de sa maison/son appartement",
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin untuk mengelola mode yang berbeda rumahnya / apartemennya",
         "Aucune": "Tak ada"
     },
     "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "Ajouter un mode",
+        "Ajouter un mode": "Tambahkan bentuk",
         "Rechercher": "Mencari",
-        "Mes mode": "Mes mode",
+        "Mes mode": "mode saya",
         "Général": "Umum",
-        "Nom de l'équipement mode": "Nom de l'équipement mode",
+        "Nom de l'équipement mode": "Nama peralatan busana",
         "Objet parent": "Objek induk",
         "Aucun": "Tak ada",
         "Activer": "Mengaktifkan",
@@ -18,7 +18,7 @@
         "Supprimer": "Menghapus",
         "Sauvegarder": "Menyimpan",
         "Catégorie": "Kategori",
-        "Mes Modes": "Mes Modes",
+        "Mes Modes": "metode saya",
         "Configuration avancée": "konfigurasi lanjutan",
         "Equipement": "Peralatan"
     },
@@ -27,8 +27,8 @@
         "Tester": "Coba",
         "Nom du mode ?": "nama profil?",
         "Nom du mode": "Nama Mode",
-        "Action d\\'entrée": "Action d\\'entrée",
-        "Action de sortie": "Action de sortie",
+        "Action d\\'entrée": "Aksi \\ 's entri",
+        "Action de sortie": "Output Aksi",
         "Déclencheur": "pelatuk",
         "Dupliquer": "Duplikat",
         "Nouveau nom ?": "nama baru?",
@@ -37,9 +37,9 @@
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "mode",
-        "Retour mode précedent": "Retour mode précedent"
+        "Retour mode précedent": "mode sebelumnya Kembali"
     },
     "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin pour gerer different mode de sa maison/son appartement"
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin untuk mengelola mode yang berbeda rumahnya / apartemennya"
     }
 }
