@@ -20,7 +20,8 @@
         "Catégorie": "Categoría",
         "Mes Modes": "Mis modos",
         "Configuration avancée": "Configuración avanzada",
-        "Equipement": "Dispositivos"
+        "Equipement": "Dispositivos",
+        "Gestion": "Administración"
     },
     "plugins/mode/desktop/js/mode.js": {
         "Afficher": "Mostrar",
@@ -33,7 +34,13 @@
         "Dupliquer": "Duplicar",
         "Nouveau nom ?": "¿ Nuevo nombre ?",
         "Supprimer": "Borrar",
-        "Icône": "Icono"
+        "Icône": "Icono",
+        "Sélectionner un mot-clé": "Seleccionar una palabra clave",
+        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "Cocher pour que la commande s\\'éxecute en parrallele des autres actions",
+        "Décocher pour desactiver l\\'action": "Décocher pour desactiver l\\'action",
+        "Tous les modes": "Tous les modes",
+        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "Modo",

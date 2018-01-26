@@ -20,7 +20,8 @@
         "Catégorie": "カテゴリ",
         "Mes Modes": "私の方法",
         "Configuration avancée": "高度な設定",
-        "Equipement": "設備"
+        "Equipement": "設備",
+        "Gestion": "管理"
     },
     "plugins/mode/desktop/js/mode.js": {
         "Afficher": "ディスプレイ",
@@ -33,7 +34,13 @@
         "Dupliquer": "複写",
         "Nouveau nom ?": "新しい名前は？",
         "Supprimer": "取り除きます",
-        "Icône": "アイコン"
+        "Icône": "アイコン",
+        "Sélectionner un mot-clé": "キーワードを選択",
+        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "Cocher pour que la commande s\\'éxecute en parrallele des autres actions",
+        "Décocher pour desactiver l\\'action": "Décocher pour desactiver l\\'action",
+        "Tous les modes": "Tous les modes",
+        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "モード",
