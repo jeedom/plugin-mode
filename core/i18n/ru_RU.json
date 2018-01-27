@@ -36,8 +36,8 @@
         "Supprimer": "Удалить",
         "Icône": "Иконка",
         "Sélectionner un mot-clé": "Выберите ключевое слово",
-        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "Cocher pour que la commande s\\'éxecute en parrallele des autres actions",
-        "Décocher pour desactiver l\\'action": "Décocher pour desactiver l\\'action",
+        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "Проверьте порядок \\ «s выполняться параллельно с другими действиями",
+        "Décocher pour desactiver l\\'action": "Снимите флажок, чтобы отключить Action \\ «ы",
         "Tous les modes": "Tous les modes",
         "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
         "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
