@@ -20,7 +20,8 @@
         "Catégorie": "Category",
         "Mes Modes": "My Modes",
         "Configuration avancée": "Advanced configuration",
-        "Equipement": "Device"
+        "Equipement": "Device",
+        "Gestion": "Management"
     },
     "plugins/mode/desktop/js/mode.js": {
         "Afficher": "Show",
@@ -33,7 +34,13 @@
         "Dupliquer": "Duplicate",
         "Nouveau nom ?": "New name?",
         "Supprimer": "Delete",
-        "Icône": "Icon"
+        "Icône": "Icon",
+        "Sélectionner un mot-clé": "Select a keyword",
+        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "Check for the order to be executed in parallel with other actions",
+        "Décocher pour desactiver l\\'action": "Uncheck to disable the action",
+        "Tous les modes": "Tous les modes",
+        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "Mode",

@@ -111,16 +111,16 @@
 });
 
  $('.nav-tabs li a').on('click',function(){
-   setTimeout(function(){ 
-    taAutosize();
-}, 50);
-})
+     setTimeout(function(){ 
+        taAutosize();
+    }, 50);
+ })
 
  $('#div_modes').on('click','.panel-heading',function(){
-   setTimeout(function(){ 
-    taAutosize();
-}, 50);
-})
+     setTimeout(function(){ 
+        taAutosize();
+    }, 50);
+ })
 
 
 
@@ -130,8 +130,8 @@
     $('#div_modes').empty();
     if (isset(_eqLogic.configuration)) {
         if (isset(_eqLogic.configuration.modes)) {
-           actionOptions = []
-           for (var i in _eqLogic.configuration.modes) {
+         actionOptions = []
+         for (var i in _eqLogic.configuration.modes) {
             addMode(_eqLogic.configuration.modes[i]);
         }
         jeedom.cmd.displayActionsOption({
@@ -272,8 +272,6 @@ function addAction(_action, _type, _name, _el) {
     div += '<div class="col-sm-4 ' + input + '">';
     div += '<div class="input-group">';
     div += '<span class="input-group-btn">';
-    div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="enable" checked title="{{Décocher pour désactiver l\'action}}" />';
-    div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="background" title="{{Cocher pour que la commande s\'exécute en parallèle des autres actions}}" />';
     div += '<a class="btn btn-default bt_removeAction btn-sm" data-type="' + _type + '"><i class="fa fa-minus-circle"></i></a>';
     div += '</span>';
     div += '<input class="expressionAttr form-control input-sm cmdAction" data-l1key="cmd" data-type="' + _type + '" />';

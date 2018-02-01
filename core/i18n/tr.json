@@ -1,0 +1,52 @@
+{
+    "plugins/mode/plugin_info/info.xml": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "Evinin/dairesinin değişik modlarını yönetmek için eklenti",
+        "Aucune": "Hiçbir"
+    },
+    "plugins/mode/desktop/php/mode.php": {
+        "Ajouter un mode": "Mod ekle",
+        "Rechercher": "Arayın",
+        "Mes mode": "Modlarım",
+        "Général": "Genel",
+        "Nom de l'équipement mode": "Mode cihazımın ismi",
+        "Objet parent": "Üst nesne",
+        "Aucun": "Hiçbir",
+        "Activer": "Etkinleştirmek",
+        "Visible": "Görülebilir",
+        "Modes": "Modlar",
+        "Ajouter mode": "Mod ekle",
+        "Supprimer": "Sil",
+        "Sauvegarder": "Kaydet",
+        "Catégorie": "Kategori",
+        "Mes Modes": "Modlarım",
+        "Configuration avancée": "Gelişmiş ayarlar",
+        "Equipement": "Cihaz",
+        "Gestion": "Yönetim"
+    },
+    "plugins/mode/desktop/js/mode.js": {
+        "Afficher": "Göster",
+        "Tester": "Dene",
+        "Nom du mode ?": "Mod ismi ?",
+        "Nom du mode": "Mod ismi",
+        "Action d\\'entrée": "Giriş eylemi",
+        "Action de sortie": "Çıkış eylemi",
+        "Déclencheur": "Tetikleyici",
+        "Dupliquer": "Kopyala",
+        "Nouveau nom ?": "Yeni isim ?",
+        "Supprimer": "Sil",
+        "Icône": "Icon",
+        "Sélectionner un mot-clé": "Anahtar kelime seçin",
+        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "denetleyin diğer eylemlere ilişkin olarak yürütülen sipariş \\ 'ın",
+        "Décocher pour desactiver l\\'action": "\\ 'ın Eylem devre dışı bırakmak için işaretini kaldırın",
+        "Tous les modes": "Tous les modes",
+        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
+    },
+    "plugins/mode/core/class/mode.class.php": {
+        "Mode": "Mod",
+        "Retour mode précedent": "Önceki moda dönüş"
+    },
+    "plugins/mode/plugin_info/info.json": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "Evinin/dairesinin değişik modlarını yönetmek için eklenti"
+    }
+}

@@ -8,7 +8,7 @@
         "Rechercher": "Cerca",
         "Mes mode": "Le mie modalit",
         "Général": "Generale",
-        "Nom de l'équipement mode": "Nom de l'équipement mode",
+        "Nom de l'équipement mode": "apparecchiature di moda Nome",
         "Objet parent": "Oggetto padre",
         "Aucun": "Nessuno",
         "Activer": "Attiva",
@@ -18,9 +18,10 @@
         "Supprimer": "Elimina",
         "Sauvegarder": "Salva",
         "Catégorie": "Categoria",
-        "Mes Modes": "Mes Modes",
+        "Mes Modes": "i miei metodi",
         "Configuration avancée": "Configurazione avanzata",
-        "Equipement": "Dispositivo"
+        "Equipement": "Dispositivo",
+        "Gestion": "Gestione"
     },
     "plugins/mode/desktop/js/mode.js": {
         "Afficher": "Mostra",
@@ -33,11 +34,17 @@
         "Dupliquer": "Duplica",
         "Nouveau nom ?": "Nuovo nome ?",
         "Supprimer": "Elimina",
-        "Icône": "Icona"
+        "Icône": "Icona",
+        "Sélectionner un mot-clé": "Seleziona una parola chiave",
+        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "Controllare l'ordine di 's \\ eseguiti in parallelo ad altre azioni",
+        "Décocher pour desactiver l\\'action": "Deselezionare per disabilitare azione \\ 's",
+        "Tous les modes": "Tous les modes",
+        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "Modalità",
-        "Retour mode précedent": "Retour mode précedent"
+        "Retour mode précedent": "modalità precedente Indietro"
     },
     "plugins/mode/plugin_info/info.json": {
         "Plugin pour gerer different mode de sa maison/son appartement": "Plugin per gestire le differenti modalità della sua casa/appartamento"
