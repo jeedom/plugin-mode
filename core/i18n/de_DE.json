@@ -20,7 +20,8 @@
         "Catégorie": "Kategorie",
         "Mes Modes": "Meine Modi",
         "Configuration avancée": "Erweiterte Konfiguration",
-        "Equipement": "Gerät"
+        "Equipement": "Gerät",
+        "Gestion": "Verwaltung"
     },
     "plugins/mode/desktop/js/mode.js": {
         "Afficher": "anzeigen",
@@ -33,7 +34,13 @@
         "Dupliquer": "Kopieren",
         "Nouveau nom ?": "Neuer Name",
         "Supprimer": "Löschen",
-        "Icône": "Symbol"
+        "Icône": "Symbol",
+        "Sélectionner un mot-clé": "Schlüsselwort auswählen",
+        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "Überprüfen Sie, ob der Befehl parallel zu den anderen Aktionen ausgeführt wird",
+        "Décocher pour desactiver l\\'action": "Deaktivieren Sie diese Option, um die Aktion zu deaktivieren",
+        "Tous les modes": "Alle Modi",
+        "Ne faire cette action que si l\\'on vient du mode": "Führen Sie diese Aktion nur aus, wenn Sie aus dem Modus kommen",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Eingabe : führen Sie diese Aktion nur aus, wenn eine aus dem Modus kommt. Ausgabe : Führen Sie die Aktionen nur aus, wenn Sie in den Modus wechseln"
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "Modus",

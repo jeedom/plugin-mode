@@ -1,0 +1,52 @@
+{
+    "plugins/mode/plugin_info/info.xml": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "さまざまなファッション彼の家を管理するためのプラグイン/彼のアパート",
+        "Aucune": "何でもありません"
+    },
+    "plugins/mode/desktop/php/mode.php": {
+        "Ajouter un mode": "フォームを追加",
+        "Rechercher": "検索する",
+        "Mes mode": "私のファッション",
+        "Général": "コモン",
+        "Nom de l'équipement mode": "名前ファッション機器",
+        "Objet parent": "親オブジェクト",
+        "Aucun": "何でもありません",
+        "Activer": "アクティブにし",
+        "Visible": "目に見えます",
+        "Modes": "モード",
+        "Ajouter mode": "ファッションを追加",
+        "Supprimer": "取り除きます",
+        "Sauvegarder": "セーブ",
+        "Catégorie": "カテゴリ",
+        "Mes Modes": "私の方法",
+        "Configuration avancée": "高度な設定",
+        "Equipement": "設備",
+        "Gestion": "管理"
+    },
+    "plugins/mode/desktop/js/mode.js": {
+        "Afficher": "ディスプレイ",
+        "Tester": "テスト",
+        "Nom du mode ?": "プロフィールの名前は？",
+        "Nom du mode": "モード名",
+        "Action d\\'entrée": "アクション\\「sのエントリー",
+        "Action de sortie": "出力アクション",
+        "Déclencheur": "トリガー",
+        "Dupliquer": "複写",
+        "Nouveau nom ?": "新しい名前は？",
+        "Supprimer": "取り除きます",
+        "Icône": "アイコン",
+        "Sélectionner un mot-clé": "キーワードを選択",
+        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "他のアクションを並列に実行するための\\「sのチェック",
+        "Décocher pour desactiver l\\'action": "\\「sのアクションを無効にするにはチェックを外し",
+        "Tous les modes": "Tous les modes",
+        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
+    },
+    "plugins/mode/core/class/mode.class.php": {
+        "Mode": "モード",
+        "Retour mode précedent": "前のモードへ戻ります"
+    },
+    "plugins/mode/plugin_info/info.json": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "さまざまなファッション彼の家を管理するためのプラグイン/彼のアパート"
+    }
+}

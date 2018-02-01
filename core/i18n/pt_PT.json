@@ -1,0 +1,52 @@
+{
+    "plugins/mode/plugin_info/info.xml": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin para gerenciar diferentes fashion sua casa / apartamento dele",
+        "Aucune": "Nenhum"
+    },
+    "plugins/mode/desktop/php/mode.php": {
+        "Ajouter un mode": "Adicionar formulário",
+        "Rechercher": "Pesquisar",
+        "Mes mode": "minha moda",
+        "Général": "Geral",
+        "Nom de l'équipement mode": "equipamentos moda nome",
+        "Objet parent": "objeto pai",
+        "Aucun": "Nemhum",
+        "Activer": "Ativar",
+        "Visible": "Visivél",
+        "Modes": "modos",
+        "Ajouter mode": "adicionar moda",
+        "Supprimer": "remover",
+        "Sauvegarder": "Salvar",
+        "Catégorie": "categoria",
+        "Mes Modes": "meus métodos",
+        "Configuration avancée": "configuração avançada",
+        "Equipement": "Equipamento",
+        "Gestion": "gestão"
+    },
+    "plugins/mode/desktop/js/mode.js": {
+        "Afficher": "display",
+        "Tester": "teste",
+        "Nom du mode ?": "Nome do perfil?",
+        "Nom du mode": "Nome modo",
+        "Action d\\'entrée": "entrada Ação \\ 's",
+        "Action de sortie": "Ação de saída",
+        "Déclencheur": "gatilho",
+        "Dupliquer": "duplicar",
+        "Nouveau nom ?": "Novo nome?",
+        "Supprimer": "remover",
+        "Icône": "ícone",
+        "Sélectionner un mot-clé": "Selecione uma palavra-chave",
+        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "Verifique a ordem \\ 's executadas em paralelo com outras acções",
+        "Décocher pour desactiver l\\'action": "Desmarque para desativar Ação 's \\",
+        "Tous les modes": "Tous les modes",
+        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
+    },
+    "plugins/mode/core/class/mode.class.php": {
+        "Mode": "modo",
+        "Retour mode précedent": "modo anterior Voltar"
+    },
+    "plugins/mode/plugin_info/info.json": {
+        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin para gerenciar diferentes fashion sua casa / apartamento dele"
+    }
+}
