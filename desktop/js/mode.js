@@ -14,6 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
  */
+
+ MODE_LIST = null;
+
  $('#bt_addMode').on('click', function () {
     bootbox.prompt("{{Nom du mode ?}}", function (result) {
         if (result !== null && result != '') {
@@ -29,6 +32,7 @@
             var previousName = el.text();
             el.text(result);
             el.closest('.panel.panel-default').find('span.name').text(result);
+            updateSelectMode({[previousName] : result});
         }
     });
 });
@@ -122,32 +126,33 @@
     }, 50);
  })
 
-
-
  $("#div_modes").sortable({axis: "y", cursor: "move", items: ".mode", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
 
  function printEqLogic(_eqLogic) {
     $('#div_modes').empty();
-    if (isset(_eqLogic.configuration)) {
-        if (isset(_eqLogic.configuration.modes)) {
-         actionOptions = []
-         for (var i in _eqLogic.configuration.modes) {
-            addMode(_eqLogic.configuration.modes[i]);
-        }
-        jeedom.cmd.displayActionsOption({
-            params : actionOptions,
-            async : false,
-            error: function (error) {
-              $('#div_alert').showAlert({message: error.message, level: 'danger'});
-          },
-          success : function(data){
-            for(var i in data){
-                $('#'+data[i].id).append(data[i].html.html);
-            }
-            taAutosize();
-        }
-    });
+    MODE_LIST = [];
+    if (isset(_eqLogic.configuration) && isset(_eqLogic.configuration.modes)) {
+     actionOptions = []
+     for (var i in _eqLogic.configuration.modes) {
+        MODE_LIST.push(_eqLogic.configuration.modes[i].name)
     }
+    for (var i in _eqLogic.configuration.modes) {
+        addMode(_eqLogic.configuration.modes[i],false);
+    }
+    MODE_LIST = null
+    jeedom.cmd.displayActionsOption({
+        params : actionOptions,
+        async : false,
+        error: function (error) {
+          $('#div_alert').showAlert({message: error.message, level: 'danger'});
+      },
+      success : function(data){
+        for(var i in data){
+            $('#'+data[i].id).append(data[i].html.html);
+        }
+        taAutosize();
+    }
+});
 }
 }
 
@@ -165,7 +170,7 @@ function saveEqLogic(_eqLogic) {
     return _eqLogic;
 }
 
-function addMode(_mode) {
+function addMode(_mode,_updateMode) {
     if (init(_mode.name) == '') {
         return;
     }
@@ -263,10 +268,15 @@ function addAction(_action, _type, _name, _el) {
     div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="background" title="{{Cocher pour que la commande s\'éxecute en parrallele des autres actions}}" />';
     div += '<select class="expressionAttr form-control input-sm selectMode" data-l1key="onlyIfMode" style="width:calc(100% - 50px);display:inline-block" title="{{Entrée : Ne faire cette action que si l\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode}}">';
     div += '<option value="all">{{Tous les modes}}</option>';
-    $('#div_modes .mode').each(function () {
-        var mode = $(this).getValues('.modeAttr')[0];
-        div += '<option value="'+mode.name+'">'+mode.name+'</option>';
-    });
+    if(MODE_LIST != null){
+        for(var i in MODE_LIST){
+            div += '<option value="'+MODE_LIST[i]+'">'+MODE_LIST[i]+'</option>';
+        }
+    }else{
+        $('#div_modes .mode').each(function () {
+            div += '<option value="'+$(this).getValues('.modeAttr')[0].name+'">'+$(this).getValues('.modeAttr')[0].name+'</option>';
+        });
+    }
     div += '</select>';
     div += '</div>';
     div += '<div class="col-sm-4 ' + input + '">';
@@ -298,16 +308,24 @@ function addAction(_action, _type, _name, _el) {
         id : actionOption_id
     });
 }
-function updateSelectMode(){
+function updateSelectMode(_convert){
     $('select.selectMode').each(function () {
         var value = $(this).val();
         $(this).empty();
         var options = '<option value="all">{{Tous les modes}}</option>';
-        $('#div_modes .mode').each(function () {
-            var mode = $(this).getValues('.modeAttr')[0];
-            options += '<option value="'+mode.name+'">'+mode.name+'</option>';
-        });
+        if(MODE_LIST != null){
+            for(var i in MODE_LIST){
+                options += '<option value="'+MODE_LIST[i]+'">'+MODE_LIST[i]+'</option>';
+            }
+        }else{
+            $('#div_modes .mode').each(function () {
+                options += '<option value="'+$(this).getValues('.modeAttr')[0].name+'">'+$(this).getValues('.modeAttr')[0].name+'</option>';
+            });
+        }
         $(this).append(options);
+        if(isset(_convert) && isset(_convert[value])){
+           value = _convert[value];
+        }
         $(this).val(value);
     });
 }
