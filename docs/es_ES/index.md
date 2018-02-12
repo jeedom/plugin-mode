@@ -1,21 +1,21 @@
-Plugin permettant de gérer différents modes d’un
-appartement/maison/piece mais aussi des ambiances.
+Plugin para la gestión de los diferentes modos de
+apto / casa / habitación, pero también los estados de ánimo.
 
 configuración del plugin
 =======================
 
-Après téléchargement du plugin, il vous suffit juste d’activer celui-ci,
-il n’y a aucune configuration à ce niveau.
+Después de descargar el plugin, sólo hay que activarlo,
+no hay ninguna configuración a este nivel.
 
-Configuration des équipements 
+Configuración del dispositivo
 =============================
 
-La configuration des équipements mode est accessible à partir du menu
-plugin puis organisation :
+El equipo de modo de configuración está disponible en el menú
+plugin y organización:
 
 Aquí encontrará toda la configuración de su dispositivo:
 
--   **Nom de l’équipement Mode** : nom de votre équipement Mode,
+-   ** ** Nombre del dispositivo Modo: Modo nombre de su equipo,
 
 -   **Objeto padre** : especifica el objeto padre al que pertenece
     equipos,
@@ -24,14 +24,14 @@ Aquí encontrará toda la configuración de su dispositivo:
 
 -   ** ** visible hace que su equipo visible en el salpicadero,
 
--   **Catégorie** : les catégories de l’équipement (il peut appartenir à
-    plusieurs catégories).
+-   ** ** Categoría: categorías de equipos (que pueden pertenecer a
+    la mayoría de categorías).
 
--   **Ajouter mode** : bouton permettant d’ajouter un nouveau mode
+-   ** ** Añadir la moda: el botón para añadir una nueva forma
 
-En-dessous vous retrouvez la liste des modes, en cliquant dessus vous
-allez pouvoir choisir les actions à faire lors de l’entrée dans ce mode
-et lors de la sortie.
+A continuación encontrará la lista de perfiles, haga clic en él se
+será capaz de elegir las acciones que hacer al entrar en este modo de
+y en la salida.
 
-Changelog détaillé :
-<https://github.com/jeedom/plugin-mode/commits/stable>
+Changelog detallada:
+<Https://github.com/jeedom/plugin-mode/commits/stable>
