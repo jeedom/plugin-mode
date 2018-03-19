@@ -38,9 +38,9 @@
         "Sélectionner un mot-clé": "Seleccionar una palabra clave",
         "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "Compruebe que la orden \\ 's ejecutado en paralelo a otras acciones",
         "Décocher pour desactiver l\\'action": "Desactive la casilla para desactivar Acción 's \\",
-        "Tous les modes": "Tous les modes",
-        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
+        "Tous les modes": "Todos los modos",
+        "Ne faire cette action que si l\\'on vient du mode": "Realice esta acción sólo si sale del modo",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrada: Realice esta acción sólo si sale del modo. Salir: realiza las acciones sólo si vas al modo"
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "Modo",
