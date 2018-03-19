@@ -32,6 +32,3 @@ Vous retrouvez ici toute la configuration de votre équipement :
 En-dessous vous retrouvez la liste des modes, en cliquant dessus vous
 allez pouvoir choisir les actions à faire lors de l’entrée dans ce mode
 et lors de la sortie.
-
-Changelog détaillé :
-<https://github.com/jeedom/plugin-mode/commits/stable>
