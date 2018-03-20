@@ -17,7 +17,7 @@
 
  MODE_LIST = null;
 
- $('#bt_addMode').on('click', function () {
+ $('#bt_addMode').off('click').on('click', function () {
     bootbox.prompt("{{Nom du mode ?}}", function (result) {
         if (result !== null && result != '') {
             addMode({name: result});
@@ -25,7 +25,7 @@
     });
 });
 
- $('body').delegate('.rename', 'click', function () {
+ $('body').off('click').on('click','.rename',  function () {
     var el = $(this);
     bootbox.prompt("{{Nouveau nom ?}}", function (result) {
         if (result !== null && result != '') {
@@ -37,7 +37,7 @@
     });
 });
 
- $("body").delegate(".listCmdAction", 'click', function () {
+ $("body").off('click').on( 'click',".listCmdAction", function () {
     var type = $(this).attr('data-type');
     var el = $(this).closest('.' + type).find('.expressionAttr[data-l1key=cmd]');
     jeedom.cmd.getSelectModal({cmd: {type: 'action'}}, function (result) {
@@ -49,7 +49,7 @@
     });
 });
 
- $("body").delegate(".listAction", 'click', function () {
+ $("body").off('click').on( 'click', ".listAction",function () {
   var type = $(this).attr('data-type');
   var el = $(this).closest('.' + type).find('.expressionAttr[data-l1key=cmd]');
   jeedom.getSelectActionModal({}, function (result) {
@@ -61,20 +61,20 @@
 });
 });
 
- $("body").delegate('.bt_removeAction', 'click', function () {
+ $("body").off('click').on( 'click', '.bt_removeAction',function () {
     var type = $(this).attr('data-type');
     $(this).closest('.' + type).remove();
 });
 
- $("#div_modes").delegate('.bt_addInAction', 'click', function () {
+ $("#div_modes").off('click').on('click','.bt_addInAction',  function () {
     addAction({}, 'inAction', '{{Action d\'entrée}}', $(this).closest('.mode'));
 });
 
- $("#div_modes").delegate('.bt_addOutAction', 'click', function () {
+ $("#div_modes").off('click').on( 'click','.bt_addOutAction',function () {
     addAction({}, 'outAction', '{{Action de sortie}}', $(this).closest('.mode'));
 });
 
- $('body').delegate('.cmdAction.expressionAttr[data-l1key=cmd]', 'focusout', function (event) {
+ $('body').off('focusout','.cmdAction.expressionAttr[data-l1key=cmd]').on( 'focusout', '.cmdAction.expressionAttr[data-l1key=cmd]',function (event) {
     var type = $(this).attr('data-type')
     var expression = $(this).closest('.' + type).getValues('.expressionAttr');
     var el = $(this);
@@ -84,22 +84,22 @@
     })
 });
 
- $("#div_modes").delegate('.bt_removeMode', 'click', function () {
+ $("#div_modes").off('click','.bt_removeMode').on('click', '.bt_removeMode',function () {
     $(this).closest('.mode').remove();
 });
 
- $('body').undelegate('.mode .modeAction[data-l1key=chooseIcon]', 'click').delegate('.mode .modeAction[data-l1key=chooseIcon]', 'click', function () {
+ $('body').off('click','.mode .modeAction[data-l1key=chooseIcon]').on('click','.mode .modeAction[data-l1key=chooseIcon]',  function () {
     var mode = $(this).closest('.mode');
     chooseIcon(function (_icon) {
         mode.find('.modeAttr[data-l1key=icon]').empty().append(_icon);
     });
 });
 
- $('body').undelegate('.mode .modeAttr[data-l1key=icon]', 'click').delegate('.mode .modeAttr[data-l1key=icon]', 'click', function () {
+ $('body').off('click','.mode .modeAttr[data-l1key=icon]').on( 'click','.mode .modeAttr[data-l1key=icon]', function () {
     $(this).empty();
 });
 
- $('#div_modes').delegate('.bt_duplicateMode', 'click', function () {
+ $('#div_modes').off('click','.bt_duplicateMode').on('click','.bt_duplicateMode',  function () {
     var mode = $(this).closest('.mode').clone();
     bootbox.prompt("{{Nom du mode ?}}", function (result) {
         if (result !== null) {
@@ -114,13 +114,13 @@
     });
 });
 
- $('.nav-tabs li a').on('click',function(){
+ $('.nav-tabs li a').off('click').on('click',function(){
      setTimeout(function(){ 
         taAutosize();
     }, 50);
  })
 
- $('#div_modes').on('click','.panel-heading',function(){
+ $('#div_modes').off('click','.panel-heading').on('click','.panel-heading',function(){
      setTimeout(function(){ 
         taAutosize();
     }, 50);
