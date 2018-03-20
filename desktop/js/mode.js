@@ -25,7 +25,7 @@
     });
 });
 
- $('body').off('click').on('click','.rename',  function () {
+ $('body').off('click','.rename').on('click','.rename',  function () {
     var el = $(this);
     bootbox.prompt("{{Nouveau nom ?}}", function (result) {
         if (result !== null && result != '') {
@@ -37,7 +37,7 @@
     });
 });
 
- $("body").off('click').on( 'click',".listCmdAction", function () {
+ $("body").off('click','.listCmdAction').on( 'click','.listCmdAction', function () {
     var type = $(this).attr('data-type');
     var el = $(this).closest('.' + type).find('.expressionAttr[data-l1key=cmd]');
     jeedom.cmd.getSelectModal({cmd: {type: 'action'}}, function (result) {
@@ -49,7 +49,7 @@
     });
 });
 
- $("body").off('click').on( 'click', ".listAction",function () {
+ $("body").off('click','.listAction').on( 'click','.listAction',function () {
   var type = $(this).attr('data-type');
   var el = $(this).closest('.' + type).find('.expressionAttr[data-l1key=cmd]');
   jeedom.getSelectActionModal({}, function (result) {
@@ -61,16 +61,16 @@
 });
 });
 
- $("body").off('click').on( 'click', '.bt_removeAction',function () {
+ $("body").off('click', '.bt_removeAction').on( 'click', '.bt_removeAction',function () {
     var type = $(this).attr('data-type');
     $(this).closest('.' + type).remove();
 });
 
- $("#div_modes").off('click').on('click','.bt_addInAction',  function () {
+ $("#div_modes").off('click','.bt_addInAction').on('click','.bt_addInAction',  function () {
     addAction({}, 'inAction', '{{Action d\'entrée}}', $(this).closest('.mode'));
 });
 
- $("#div_modes").off('click').on( 'click','.bt_addOutAction',function () {
+ $("#div_modes").off('click','.bt_addOutAction').on( 'click','.bt_addOutAction',function () {
     addAction({}, 'outAction', '{{Action de sortie}}', $(this).closest('.mode'));
 });
 
