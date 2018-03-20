@@ -1,5 +1,5 @@
-Plugin für die Verwaltung der verschiedenen Modi
-Wohnung / Haus / Zimmer, sondern auch Stimmungen.
+Plugin permettant de gérer différents modes d’un
+appartement/maison/pièce, mais aussi des ambiances.
 
 Plugin-Konfiguration
 =======================
@@ -32,6 +32,3 @@ Sie werden hier alle die Konfiguration Ihrer Geräte finden:
 Weiter unten finden Sie die Liste der Profile finden, indem Sie darauf klicken Sie
 in der Lage, die Aktionen zu wählen, zu tun, wenn Sie diesen Modus eintritt
 und am Ausgang.
-
-Detaillierte Changelog:
-<Https://github.com/jeedom/plugin-mode/commits/stable>

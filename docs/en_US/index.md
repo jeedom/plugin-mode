@@ -1,5 +1,5 @@
-Plugin to manage different modes of a
-apartment / house / room but also atmospheres.
+Plugin permettant de gérer différents modes d’un
+appartement/maison/pièce, mais aussi des ambiances.
 
 == Plugin configuration
 
@@ -31,6 +31,3 @@ You can find here the full configuration of your device :
 Below you find the list of modes, by clicking on them
 you will be able to choose the actions to be done when entering this mode
 and at the exit.
-
-Changelog detailed:
-<Https://github.com/jeedom/plugin-mode/commits/stable>

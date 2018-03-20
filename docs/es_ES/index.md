@@ -1,5 +1,5 @@
-Plugin para la gestión de los diferentes modos de
-apto / casa / habitación, pero también los estados de ánimo.
+Plugin permettant de gérer différents modes d’un
+appartement/maison/pièce, mais aussi des ambiances.
 
 configuración del plugin
 =======================
@@ -32,6 +32,3 @@ Aquí encontrará toda la configuración de su dispositivo:
 A continuación encontrará la lista de perfiles, haga clic en él se
 será capaz de elegir las acciones que hacer al entrar en este modo de
 y en la salida.
-
-Changelog detallada:
-<Https://github.com/jeedom/plugin-mode/commits/stable>
