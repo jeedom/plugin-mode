@@ -14,7 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
  */
- $('#bt_addMode').on('click', function () {
+
+ MODE_LIST = null;
+
+ $('#bt_addMode').off('click').on('click', function () {
     bootbox.prompt("{{Nom du mode ?}}", function (result) {
         if (result !== null && result != '') {
             addMode({name: result});
@@ -22,18 +25,19 @@
     });
 });
 
- $('body').delegate('.rename', 'click', function () {
+ $('body').off('click','.rename').on('click','.rename',  function () {
     var el = $(this);
     bootbox.prompt("{{Nouveau nom ?}}", function (result) {
         if (result !== null && result != '') {
             var previousName = el.text();
             el.text(result);
             el.closest('.panel.panel-default').find('span.name').text(result);
+            updateSelectMode({[previousName] : result});
         }
     });
 });
 
- $("body").delegate(".listCmdAction", 'click', function () {
+ $("body").off('click','.listCmdAction').on( 'click','.listCmdAction', function () {
     var type = $(this).attr('data-type');
     var el = $(this).closest('.' + type).find('.expressionAttr[data-l1key=cmd]');
     jeedom.cmd.getSelectModal({cmd: {type: 'action'}}, function (result) {
@@ -45,7 +49,7 @@
     });
 });
 
- $("body").delegate(".listAction", 'click', function () {
+ $("body").off('click','.listAction').on( 'click','.listAction',function () {
   var type = $(this).attr('data-type');
   var el = $(this).closest('.' + type).find('.expressionAttr[data-l1key=cmd]');
   jeedom.getSelectActionModal({}, function (result) {
@@ -57,20 +61,20 @@
 });
 });
 
- $("body").delegate('.bt_removeAction', 'click', function () {
+ $("body").off('click', '.bt_removeAction').on( 'click', '.bt_removeAction',function () {
     var type = $(this).attr('data-type');
     $(this).closest('.' + type).remove();
 });
 
- $("#div_modes").delegate('.bt_addInAction', 'click', function () {
+ $("#div_modes").off('click','.bt_addInAction').on('click','.bt_addInAction',  function () {
     addAction({}, 'inAction', '{{Action d\'entrée}}', $(this).closest('.mode'));
 });
 
- $("#div_modes").delegate('.bt_addOutAction', 'click', function () {
+ $("#div_modes").off('click','.bt_addOutAction').on( 'click','.bt_addOutAction',function () {
     addAction({}, 'outAction', '{{Action de sortie}}', $(this).closest('.mode'));
 });
 
- $('body').delegate('.cmdAction.expressionAttr[data-l1key=cmd]', 'focusout', function (event) {
+ $('body').off('focusout','.cmdAction.expressionAttr[data-l1key=cmd]').on( 'focusout', '.cmdAction.expressionAttr[data-l1key=cmd]',function (event) {
     var type = $(this).attr('data-type')
     var expression = $(this).closest('.' + type).getValues('.expressionAttr');
     var el = $(this);
@@ -80,22 +84,22 @@
     })
 });
 
- $("#div_modes").delegate('.bt_removeMode', 'click', function () {
+ $("#div_modes").off('click','.bt_removeMode').on('click', '.bt_removeMode',function () {
     $(this).closest('.mode').remove();
 });
 
- $('body').undelegate('.mode .modeAction[data-l1key=chooseIcon]', 'click').delegate('.mode .modeAction[data-l1key=chooseIcon]', 'click', function () {
+ $('body').off('click','.mode .modeAction[data-l1key=chooseIcon]').on('click','.mode .modeAction[data-l1key=chooseIcon]',  function () {
     var mode = $(this).closest('.mode');
     chooseIcon(function (_icon) {
         mode.find('.modeAttr[data-l1key=icon]').empty().append(_icon);
     });
 });
 
- $('body').undelegate('.mode .modeAttr[data-l1key=icon]', 'click').delegate('.mode .modeAttr[data-l1key=icon]', 'click', function () {
+ $('body').off('click','.mode .modeAttr[data-l1key=icon]').on( 'click','.mode .modeAttr[data-l1key=icon]', function () {
     $(this).empty();
 });
 
- $('#div_modes').delegate('.bt_duplicateMode', 'click', function () {
+ $('#div_modes').off('click','.bt_duplicateMode').on('click','.bt_duplicateMode',  function () {
     var mode = $(this).closest('.mode').clone();
     bootbox.prompt("{{Nom du mode ?}}", function (result) {
         if (result !== null) {
@@ -110,44 +114,45 @@
     });
 });
 
- $('.nav-tabs li a').on('click',function(){
+ $('.nav-tabs li a').off('click').on('click',function(){
      setTimeout(function(){ 
         taAutosize();
     }, 50);
  })
 
- $('#div_modes').on('click','.panel-heading',function(){
+ $('#div_modes').off('click','.panel-heading').on('click','.panel-heading',function(){
      setTimeout(function(){ 
         taAutosize();
     }, 50);
  })
-
-
 
  $("#div_modes").sortable({axis: "y", cursor: "move", items: ".mode", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
 
  function printEqLogic(_eqLogic) {
     $('#div_modes').empty();
-    if (isset(_eqLogic.configuration)) {
-        if (isset(_eqLogic.configuration.modes)) {
-         actionOptions = []
-         for (var i in _eqLogic.configuration.modes) {
-            addMode(_eqLogic.configuration.modes[i]);
-        }
-        jeedom.cmd.displayActionsOption({
-            params : actionOptions,
-            async : false,
-            error: function (error) {
-              $('#div_alert').showAlert({message: error.message, level: 'danger'});
-          },
-          success : function(data){
-            for(var i in data){
-                $('#'+data[i].id).append(data[i].html.html);
-            }
-            taAutosize();
-        }
-    });
+    MODE_LIST = [];
+    if (isset(_eqLogic.configuration) && isset(_eqLogic.configuration.modes)) {
+     actionOptions = []
+     for (var i in _eqLogic.configuration.modes) {
+        MODE_LIST.push(_eqLogic.configuration.modes[i].name)
     }
+    for (var i in _eqLogic.configuration.modes) {
+        addMode(_eqLogic.configuration.modes[i],false);
+    }
+    MODE_LIST = null
+    jeedom.cmd.displayActionsOption({
+        params : actionOptions,
+        async : false,
+        error: function (error) {
+          $('#div_alert').showAlert({message: error.message, level: 'danger'});
+      },
+      success : function(data){
+        for(var i in data){
+            $('#'+data[i].id).append(data[i].html.html);
+        }
+        taAutosize();
+    }
+});
 }
 }
 
@@ -165,7 +170,7 @@ function saveEqLogic(_eqLogic) {
     return _eqLogic;
 }
 
-function addMode(_mode) {
+function addMode(_mode,_updateMode) {
     if (init(_mode.name) == '') {
         return;
     }
@@ -263,10 +268,15 @@ function addAction(_action, _type, _name, _el) {
     div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="background" title="{{Cocher pour que la commande s\'éxecute en parrallele des autres actions}}" />';
     div += '<select class="expressionAttr form-control input-sm selectMode" data-l1key="onlyIfMode" style="width:calc(100% - 50px);display:inline-block" title="{{Entrée : Ne faire cette action que si l\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode}}">';
     div += '<option value="all">{{Tous les modes}}</option>';
-    $('#div_modes .mode').each(function () {
-        var mode = $(this).getValues('.modeAttr')[0];
-        div += '<option value="'+mode.name+'">'+mode.name+'</option>';
-    });
+    if(MODE_LIST != null){
+        for(var i in MODE_LIST){
+            div += '<option value="'+MODE_LIST[i]+'">'+MODE_LIST[i]+'</option>';
+        }
+    }else{
+        $('#div_modes .mode').each(function () {
+            div += '<option value="'+$(this).getValues('.modeAttr')[0].name+'">'+$(this).getValues('.modeAttr')[0].name+'</option>';
+        });
+    }
     div += '</select>';
     div += '</div>';
     div += '<div class="col-sm-4 ' + input + '">';
@@ -298,16 +308,24 @@ function addAction(_action, _type, _name, _el) {
         id : actionOption_id
     });
 }
-function updateSelectMode(){
+function updateSelectMode(_convert){
     $('select.selectMode').each(function () {
         var value = $(this).val();
         $(this).empty();
         var options = '<option value="all">{{Tous les modes}}</option>';
-        $('#div_modes .mode').each(function () {
-            var mode = $(this).getValues('.modeAttr')[0];
-            options += '<option value="'+mode.name+'">'+mode.name+'</option>';
-        });
+        if(MODE_LIST != null){
+            for(var i in MODE_LIST){
+                options += '<option value="'+MODE_LIST[i]+'">'+MODE_LIST[i]+'</option>';
+            }
+        }else{
+            $('#div_modes .mode').each(function () {
+                options += '<option value="'+$(this).getValues('.modeAttr')[0].name+'">'+$(this).getValues('.modeAttr')[0].name+'</option>';
+            });
+        }
         $(this).append(options);
+        if(isset(_convert) && isset(_convert[value])){
+           value = _convert[value];
+        }
         $(this).val(value);
     });
 }
