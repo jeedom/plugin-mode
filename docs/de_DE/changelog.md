@@ -1,8 +1,8 @@
 # 03/04/2018
 
-- Correction de bugs
+- Fehlerbehebungen
 
 # 12/02/2017
 
-- Correction d'un bug sur la selection d'action condition sur mode
-- Correction de bug lors du renommage des modes
+- Ein Fehler bei der Auswahl der Aktionsbedingungen im Modus wurde behoben
+- Fehler beim Umbenennen von Modi behoben

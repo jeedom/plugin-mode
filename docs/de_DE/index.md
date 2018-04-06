@@ -1,5 +1,5 @@
-Plugin permettant de gérer différents modes d’un
-appartement/maison/pièce, mais aussi des ambiances.
+Plugin für die Verwaltung von verschiedenen Modi der
+Wohnung/Haus/Zimmer, aber auch Stimmungen.
 
 Plugin-Konfiguration
 =======================
