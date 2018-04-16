@@ -1,3 +1,7 @@
+# 16/04/2018
+
+- Correction d'un bug si les modes contenaient un caractere spécial
+
 # 03/04/2018
 
 - Correction de bugs

@@ -81,7 +81,7 @@ class mode extends eqLogic {
 		}
 
 		foreach ($this->getCmd() as $cmd) {
-			if ($cmd->getType() == 'action' && !in_array($cmd->getName(), $existing_mode) && $cmd->getLogicalId() != 'returnPreviousMode') {
+			if ($cmd->getType() == 'action' && !in_array($cmd->getLogicalId(), $existing_mode) && $cmd->getLogicalId() != 'returnPreviousMode') {
 				$cmd->remove();
 			}
 		}
