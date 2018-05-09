@@ -1,3 +1,7 @@
+# 08/05/2018
+
+- Ajout de l'option pour dupliquer un mode
+
 # 16/04/2018
 
 - Correction d'un bug si les modes contenaient un caractere spécial
