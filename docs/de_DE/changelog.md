@@ -1,10 +1,10 @@
 # 08/05/2018
 
-- Ajout de l'option pour dupliquer un mode
+- Option hinzugefügt, um einen Modus zu duplizieren
 
 # 16/04/2018
 
-- Correction d'un bug si les modes contenaient un caractere spécial
+- Ein Fehler wurde behoben, wenn die Modi ein Sonderzeichen enthielten
 
 # 03/04/2018
 
