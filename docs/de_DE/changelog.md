@@ -1,3 +1,11 @@
+# 08/05/2018
+
+- Option hinzugefügt, um einen Modus zu duplizieren
+
+# 16/04/2018
+
+- Ein Fehler wurde behoben, wenn die Modi ein Sonderzeichen enthielten
+
 # 03/04/2018
 
 - Fehlerbehebungen
