@@ -12,7 +12,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 		<legend><i class="fa fa-th-large"></i> {{Gestion}}</legend>
 		<div class="eqLogicThumbnailContainer">
 			<div class="cursor eqLogicAction logoPrimary" data-action="add"  >
-				<i class="fa fa-plus-circle"></i>
+				<i class="fas fa-plus-circle"></i>
 				<br>
 				<span style="font-size : 1.1em;position:relative; top : 23px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;color:#94ca02">Ajouter</span>
 			</div>
@@ -92,7 +92,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				</form>
 			</div>
 			<div role="tabpanel" class="tab-pane" id="modetab">
-				<a class="btn btn-success pull-right" id="bt_addMode" style="margin-top: 5px;"><i class="fa fa-plus-circle"></i> {{Ajouter mode}}</a><br/><br/>
+				<a class="btn btn-success pull-right" id="bt_addMode" style="margin-top: 5px;"><i class="fas fa-plus-circle"></i> {{Ajouter mode}}</a><br/><br/>
 				<div id="div_modes"></div>
 			</div>
 		</div>

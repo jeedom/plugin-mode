@@ -200,8 +200,8 @@ function addMode(_mode,_updateMode) {
     div += '<div class="col-sm-6">';
     div += '<div class="btn-group pull-right" role="group">';
     div += '<a class="btn btn-sm bt_removeMode btn-primary"><i class="fa fa-minus-circle"></i> {{Supprimer}}</a>';
-    div += '<a class="btn btn-sm bt_addInAction btn-success"><i class="fa fa-plus-circle"></i> {{Action d\'entrée}}</a>';
-    div += '<a class="btn btn-danger btn-sm bt_addOutAction"><i class="fa fa-plus-circle"></i> {{Action de sortie}}</a>';
+    div += '<a class="btn btn-sm bt_addInAction btn-success"><i class="fas fa-plus-circle"></i> {{Action d\'entrée}}</a>';
+    div += '<a class="btn btn-danger btn-sm bt_addOutAction"><i class="fas fa-plus-circle"></i> {{Action de sortie}}</a>';
     div += '<a class="btn btn-sm bt_duplicateMode btn-default"><i class="fa fa-files-o"></i> {{Dupliquer}}</a>';
     div += '</div>';
     div += '</div>';
