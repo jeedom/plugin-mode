@@ -11,10 +11,10 @@ $eqLogics = eqLogic::byType($plugin->getId());
 	<div class="col-xs-12 eqLogicThumbnailDisplay">
 		<legend><i class="fa fa-th-large"></i> {{Gestion}}</legend>
 		<div class="eqLogicThumbnailContainer">
-			<div class="cursor eqLogicAction logoPrimary" data-action="add"  >
+			<div class="cursor eqLogicAction logoPrimary" data-action="add">
 				<i class="fas fa-plus-circle"></i>
-				<br>
-				<span >Ajouter</span>
+				<br/>
+				<span>{{Ajouter}}</span>
 			</div>
 		</div>
 		<legend><i class="fa fa-th-large"></i> {{Mes Modes}}</legend>
@@ -25,7 +25,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				$opacity = ($eqLogic->getIsEnable()) ? '' : 'disableCard';
 				echo '<div class="eqLogicDisplayCard cursor '.$opacity.'" data-eqLogic_id="' . $eqLogic->getId() . '">';
 				echo '<img src="' . $plugin->getPathImgIcon() . '"/>';
-				echo "<br>";
+				echo '<br/>';
 				echo '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
 				echo '</div>';
 			}
