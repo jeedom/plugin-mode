@@ -86,7 +86,7 @@ class mode extends eqLogic {
 			}
 		}
 	}
-
+	
 	public function doAction($_mode, $_type, $_previousMode = '') {
 		if (!is_array($this->getConfiguration('modes'))) {
 			return;
@@ -98,8 +98,16 @@ class mode extends eqLogic {
 			if ($value['name'] != $_mode) {
 				continue;
 			}
+			$txtmode='['.$this->getName().']['.$_type.']['.$_mode.']';
+			log::add('mode', 'info','Lancement de '.$txtmode);
+			
+			$i=0;
 			foreach ($value[$_type] as $action) {
+				$i+= 1;
+				$act=$action['cmd'];
+				$txtact=$txtmode.'[#'.$i.']=> '.$act;
 				if (isset($action['onlyIfMode']) && $action['onlyIfMode'] != 'all' && $action['onlyIfMode'] != $_previousMode) {
+					log::add('mode', 'debug','*SKIP* '.$txtact.' car condition ['.$_mode.' != '.$action['onlyIfMode'].']');
 					continue;
 				}
 				try {
@@ -108,10 +116,21 @@ class mode extends eqLogic {
 						$options = $action['options'];
 					}
 					scenarioExpression::createAndExec('action', $action['cmd'], $options);
+					log::add('mode', 'info','*RUN* '.$txtact);
+					if (is_array($options)) {
+						foreach ($options as $key => $value) {
+							if($key == 'enable'){
+								continue;
+							}else{
+								log::add('mode', 'debug',$txtact.' -> ['.$key.'='.$value.']');
+							}
+						}
+					}
 				} catch (Exception $e) {
 					log::add('mode', 'error', __('Erreur lors de l\'éxecution de ', __FILE__) . $action['cmd'] . __('. Détails : ', __FILE__) . $e->getMessage());
 				}
 			}
+			log::add('mode', 'info','Fin de ['.$this->getName().']['.$_type.']['.$_mode.']');
 			return;
 		}
 	}
