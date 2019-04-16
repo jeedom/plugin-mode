@@ -219,24 +219,24 @@ function addMode(_mode,_updateMode) {
   div += '</div>';
   
   $('#div_modes').append(div);
-  $('#div_modes .mode:last').setValues(_mode, '.modeAttr');
+  $('#div_modes .mode').last().setValues(_mode, '.modeAttr');
   if (is_array(_mode.inAction)) {
     for (var i in _mode.inAction) {
-      addAction(_mode.inAction[i], 'inAction', '{{Action d\'entrée}}', $('#div_modes .mode:last'));
+      addAction(_mode.inAction[i], 'inAction', '{{Action d\'entrée}}', $('#div_modes .mode').last());
     }
   } else {
     if ($.trim(_mode.inAction) != '') {
-      addAction(_mode.inAction[i], 'inAction', '{{Action d\'entrée}}', $('#div_modes .mode:last'));
+      addAction(_mode.inAction[i], 'inAction', '{{Action d\'entrée}}', $('#div_modes .mode').last());
     }
   }
   
   if (is_array(_mode.outAction)) {
     for (var i in _mode.outAction) {
-      addAction(_mode.outAction[i], 'outAction', '{{Action de sortie}}', $('#div_modes .mode:last'));
+      addAction(_mode.outAction[i], 'outAction', '{{Action de sortie}}', $('#div_modes .mode').last());
     }
   } else {
     if ($.trim(_mode.outAction) != '') {
-      addAction(_mode.outAction, 'outAction', '{{Action de sortie}}', $('#div_modes .mode:last'));
+      addAction(_mode.outAction, 'outAction', '{{Action de sortie}}', $('#div_modes .mode').last());
     }
   }
   $('.collapse').collapse();
@@ -299,10 +299,10 @@ function addAction(_action, _type, _name, _el) {
   div += '</div>';
   if (isset(_el)) {
     _el.find('.div_' + _type).append(div);
-    _el.find('.' + _type + ':last').setValues(_action, '.expressionAttr');
+    _el.find('.' + _type + '').last().setValues(_action, '.expressionAttr');
   } else {
     $('#div_' + _type).append(div);
-    $('#div_' + _type + ' .' + _type + ':last').setValues(_action, '.expressionAttr');
+    $('#div_' + _type + ' .' + _type + '').last().setValues(_action, '.expressionAttr');
   }
   actionOptions.push({
     expression : init(_action.cmd, ''),
