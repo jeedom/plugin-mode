@@ -1,5 +1,4 @@
-Plugin permettant de gérer différents modes d’un
-appartement/maison/pièce, mais aussi des ambiances.
+Plugin to manage different modes of apartment / house / room but also atmospheres.
 
 == Plugin configuration
 
