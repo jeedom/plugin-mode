@@ -183,21 +183,14 @@ function addMode(_mode,_updateMode) {
   div += '</a>';
   div += '</h4>';
   div += '</div>';
+  
   div += '<div id="collapse' + random + '" class="panel-collapse collapse in">';
   div += '<div class="panel-body">';
   div += '<div class="well">';
+  
   div += '<form class="form-horizontal" role="form">';
-  div += '<div class="form-group">';
-  div += '<label class="col-sm-1 control-label">{{Nom du mode}}</label>';
-  div += '<div class="col-sm-2">';
-  div += '<span class="modeAttr label label-info rename cursor" data-l1key="name" style="font-size : 1em;" ></span>';
-  div += '</div>';
-  div += '<label class="col-sm-1 control-label">{{Icône}}</label>';
-  div += '<div class="col-sm-2">';
-  div += '<a class="modeAction btn btn-default btn-sm" data-l1key="chooseIcon"><i class="fa fa-flag"></i> {{Icône}}</a>';
-  div += ' <span class="modeAttr label label-info cursor" data-l1key="icon" style="font-size : 1em;" ></span>';
-  div += '</div>';
-  div += '<div class="col-sm-6">';
+  
+  div += '<div class="col-lg-4 col-sm-12 pull-right">';
   div += '<div class="input-group pull-right" style="display:inline-flex">';
   div += '<span class="input-group-btn">';
   div += '<a class="btn btn-sm bt_removeMode btn-primary roundedLeft"><i class="fas fa-minus-circle"></i> {{Supprimer}}</a>';
@@ -207,6 +200,31 @@ function addMode(_mode,_updateMode) {
   div += '</span>';
   div += '</div>';
   div += '</div>';
+  
+  div += '<div class="form-group">';
+  div += '<div class="col-sm-2">';
+  div += '<label class="control-label" style="margin-right:7px">{{Nom}}</label>';
+  div += '<span class="modeAttr label label-info rename cursor" style="display:inline" data-l1key="name"></span>';
+  div += '</div>';
+  
+  div += '<div class="col-lg-2 col-sm-4">';
+  div += '<label class="control-label" style="margin-right:7px">{{Icône}}</label>';
+  div += '<a class="modeAction btn btn-default btn-sm" data-l1key="chooseIcon"><i class="fa fa-flag"></i> {{Icône}}</a>';
+  div += ' <span class="modeAttr label label-info cursor" data-l1key="icon" style="display:inline"></span>';
+  div += '</div>';
+  
+  div += '<div class="col-sm-3">';
+  div += '<label class="control-label" style="margin-right:7px">{{Couleur}}</label>';
+  div += '<select class="modeAttr input-sm" data-l1key="modecolor">';
+  div += '<option value="default">{{default}}</option>';
+  div += '<option value="icon_green">{{Vert}}</option>';
+  div += '<option value="icon_blue">{{Bleu}}</option>';
+  div += '<option value="icon_orange">{{Orange}}</option>';
+  div += '<option value="icon_red">{{Rouge}}</option>';
+  div += '<option value="icon_yellow">{{Jaune}}</option>';
+  div += '</select>';
+  div += '</div>';
+  
   div += '</div>';
   div += '<hr/>';
   div += '<div class="div_inAction"></div>';
