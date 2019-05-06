@@ -193,13 +193,14 @@ class modeCmd extends cmd {
 			if ($value['name'] != $_mode) {
 				continue;
 			}
-			
 			$return = $_mode;
 			if (isset($value['icon']) && $value['icon'] != '') {
 				$return = $value['icon'];
-			}
-			if (isset($value['modecolor']) && $value['modecolor'] != '') {
-				$return = str_replace('class="','class="'.$value['modecolor'].' ',$return);
+				if (isset($value['modecolor']) && $value['modecolor'] != '') {
+					$return = str_replace('class="','class="'.$value['modecolor'].' ',$return);
+				}
+			}else if (isset($value['modecolor']) && $value['modecolor'] != '') {
+				$return = '<span class="'.$value['modecolor'].'">'.$return.'<span>';
 			}
 			return $return;
 		}
