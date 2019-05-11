@@ -1,6 +1,6 @@
 {
     "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin untuk mengelola mode yang berbeda rumahnya / apartemennya",
+        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement",
         "Aucune": "Tak ada"
     },
     "plugins/mode/desktop/php/mode.php": {
@@ -36,17 +36,17 @@
         "Supprimer": "Menghapus",
         "Icône": "Icon",
         "Sélectionner un mot-clé": "Pilih kata kunci",
-        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "Periksa untuk urutan \\ 's dieksekusi secara paralel untuk tindakan lainnya",
-        "Décocher pour desactiver l\\'action": "Hapus tanda centang untuk menonaktifkan \\ 's Aksi",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Periksa perintah \\ 's berjalan secara paralel tindakan lain",
+        "Décocher pour désactiver l\\'action": "Hapus tanda centang untuk menonaktifkan \\ Aksi",
         "Tous les modes": "Tous les modes",
         "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
         "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "mode",
-        "Retour mode précedent": "mode sebelumnya Kembali"
+        "Retour mode précédent": "Retour mode précédent"
     },
     "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin untuk mengelola mode yang berbeda rumahnya / apartemennya"
+        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
     }
 }

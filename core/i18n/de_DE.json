@@ -1,6 +1,6 @@
 {
     "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin, um mit verschiedenen Methoden  sein Haus/seine Wohnung zu verwalten",
+        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement",
         "Aucune": "Ohne"
     },
     "plugins/mode/desktop/php/mode.php": {
@@ -36,17 +36,17 @@
         "Supprimer": "Löschen",
         "Icône": "Symbol",
         "Sélectionner un mot-clé": "Schlüsselwort auswählen",
-        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "Überprüfen Sie, ob der Befehl parallel zu den anderen Aktionen ausgeführt wird",
-        "Décocher pour desactiver l\\'action": "Deaktivieren Sie diese Option, um die Aktion zu deaktivieren",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Überprüfen Sie, ob der Befehl parallel zu den anderen Aktionen ausgeführt wird",
+        "Décocher pour désactiver l\\'action": "Auswählen, um die Aktion zu deaktivieren",
         "Tous les modes": "Alle Modi",
         "Ne faire cette action que si l\\'on vient du mode": "Führen Sie diese Aktion nur aus, wenn Sie aus dem Modus kommen",
         "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Eingabe : führen Sie diese Aktion nur aus, wenn eine aus dem Modus kommt. Ausgabe : Führen Sie die Aktionen nur aus, wenn Sie in den Modus wechseln"
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "Modus",
-        "Retour mode précedent": "Vorherigen Modus zurück"
+        "Retour mode précédent": "Retour mode précédent"
     },
     "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin, um mit verschiedenen Methoden  sein Haus/seine Wohnung zu verwalten"
+        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
     }
 }

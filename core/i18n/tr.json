@@ -1,6 +1,6 @@
 {
     "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Evinin/dairesinin değişik modlarını yönetmek için eklenti",
+        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement",
         "Aucune": "Hiçbir"
     },
     "plugins/mode/desktop/php/mode.php": {
@@ -36,17 +36,17 @@
         "Supprimer": "Sil",
         "Icône": "Icon",
         "Sélectionner un mot-clé": "Anahtar kelime seçin",
-        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "denetleyin diğer eylemlere ilişkin olarak yürütülen sipariş \\ 'ın",
-        "Décocher pour desactiver l\\'action": "\\ 'ın Eylem devre dışı bırakmak için işaretini kaldırın",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Komut \\ 'ın paralel diğer eylemler çalışan olup olmadığını kontrol edin",
+        "Décocher pour désactiver l\\'action": "\\ Eylem devre dışı bırakmak için işaretini kaldırın",
         "Tous les modes": "Tous les modes",
         "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
         "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "Mod",
-        "Retour mode précedent": "Önceki moda dönüş"
+        "Retour mode précédent": "Retour mode précédent"
     },
     "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Evinin/dairesinin değişik modlarını yönetmek için eklenti"
+        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
     }
 }

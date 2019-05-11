@@ -1,6 +1,6 @@
 {
     "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Плагин для управления различных мод своего дома / его квартира",
+        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement",
         "Aucune": "Нет"
     },
     "plugins/mode/desktop/php/mode.php": {
@@ -36,17 +36,17 @@
         "Supprimer": "Удалить",
         "Icône": "Иконка",
         "Sélectionner un mot-clé": "Выберите ключевое слово",
-        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "Проверьте порядок \\ «s выполняться параллельно с другими действиями",
-        "Décocher pour desactiver l\\'action": "Снимите флажок, чтобы отключить Action \\ «ы",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Проверьте, команда \\ «ы работает параллельно другие действия",
+        "Décocher pour désactiver l\\'action": "Снимите флажок, чтобы отключить \\ Action",
         "Tous les modes": "Tous les modes",
         "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
         "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "Режим",
-        "Retour mode précedent": "Предыдущий режим Назад"
+        "Retour mode précédent": "Retour mode précédent"
     },
     "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Плагин для управления различных мод своего дома / его квартира"
+        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
     }
 }
