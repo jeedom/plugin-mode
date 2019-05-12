@@ -16,6 +16,7 @@
 */
 
 MODE_LIST = null;
+var actionOptions = [];
 
 $('#bt_addMode').off('click').on('click', function () {
   bootbox.prompt("{{Nom du mode ?}}", function (result) {
