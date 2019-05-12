@@ -16,7 +16,6 @@
 */
 
 MODE_LIST = null;
-var actionOptions = [];
 
 $('#bt_addMode').off('click').on('click', function () {
   bootbox.prompt("{{Nom du mode ?}}", function (result) {
@@ -323,11 +322,13 @@ function addAction(_action, _type, _name, _el) {
     $('#div_' + _type).append(div);
     $('#div_' + _type + ' .' + _type + '').last().setValues(_action, '.expressionAttr');
   }
-  actionOptions.push({
-    expression : init(_action.cmd, ''),
-    options : _action.options,
-    id : actionOption_id
-  });
+  if(actionOptions){
+    actionOptions.push({
+      expression : init(_action.cmd, ''),
+      options : _action.options,
+      id : actionOption_id
+    });
+  }
 }
 function updateSelectMode(_convert){
   $('select.selectMode').each(function () {
