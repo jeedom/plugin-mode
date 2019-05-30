@@ -41,7 +41,23 @@ class mode extends eqLogic {
 		$currentMode->setSubType('string');
 		$currentMode->setDisplay('generic_type', 'MODE_STATE');
 		$currentMode->save();
-		
+
+		$previousMode = $this->getCmd(null, 'previousMode');
+                if (!is_object($previousMode)) {
+                        $previousMode = new modeCmd();
+                        $previousMode->setTemplate('dashboard', 'tile');
+                        $previousMode->setTemplate('mobile', 'tile');
+                }
+                $previousMode->setName(__('Mode prÃcedent', __FILE__));
+                $previousMode->setEqLogic_id($this->id);
+                $previousMode->setLogicalId('previousMode');
+                $previousMode->setType('info');
+                $previousMode->setOrder(1);
+                $previousMode->setSubType('string');
+                $previousMode->setDisplay('generic_type', 'MODE_STATE');
+		$previousMode->setIsVisible(0);
+                $previousMode->save();
+
 		$returnPreviousMode = $this->getCmd(null, 'returnPreviousMode');
 		if (!is_object($returnPreviousMode)) {
 			$returnPreviousMode = new modeCmd();
@@ -229,6 +245,10 @@ class modeCmd extends cmd {
 		if ($mode != $newMode) {
 			$eqLogic->setConfiguration('previousMode', $mode);
 			$eqLogic->save(true);
+			$previousMode = $eqLogic->getCmd(null, 'previousMode');
+			if (is_object($previousMode)) {
+				$previousMode->event($mode);
+			}
 			$eqLogic->doAction($mode, 'outAction', $newMode);
 		}
 		$currentMode->event($newMode);
