@@ -24,7 +24,7 @@ class mode extends eqLogic {
 	
 	/*     * ***********************Methode static*************************** */
 	
-	/*     * *********************Méthodes d'instance************************* */
+	/*     * *********************MÃ©thodes d'instance************************* */
 	
 	public function postSave() {
 		$currentMode = $this->getCmd(null, 'currentMode');
@@ -48,7 +48,7 @@ class mode extends eqLogic {
                         $previousMode->setTemplate('dashboard', 'tile');
                         $previousMode->setTemplate('mobile', 'tile');
                 }
-                $previousMode->setName(__('Mode pr�cedent', __FILE__));
+                $previousMode->setName(__('Mode précedent', __FILE__));
                 $previousMode->setEqLogic_id($this->id);
                 $previousMode->setLogicalId('previousMode');
                 $previousMode->setType('info');
@@ -62,7 +62,7 @@ class mode extends eqLogic {
 		if (!is_object($returnPreviousMode)) {
 			$returnPreviousMode = new modeCmd();
 		}
-		$returnPreviousMode->setName(__('Retour mode précedent', __FILE__));
+		$returnPreviousMode->setName(__('Retour mode prÃ©cedent', __FILE__));
 		$returnPreviousMode->setEqLogic_id($this->id);
 		$returnPreviousMode->setLogicalId('returnPreviousMode');
 		$returnPreviousMode->setType('action');
@@ -125,7 +125,7 @@ class mode extends eqLogic {
 					}
 					scenarioExpression::createAndExec('action', $action['cmd'], $options);
 				} catch (Exception $e) {
-					log::add('mode', 'error', __('Erreur lors de l\'éxecution de ', __FILE__) . $action['cmd'] . __('. Détails : ', __FILE__) . $e->getMessage());
+					log::add('mode', 'error', __('Erreur lors de l\'Ã©xecution de ', __FILE__) . $action['cmd'] . __('. DÃ©tails : ', __FILE__) . $e->getMessage());
 				}
 			}
 			return;
@@ -139,14 +139,14 @@ class mode extends eqLogic {
 				foreach ($value['inAction'] as $inAction) {
 					if ($inAction['cmd'] != '' && strpos($inAction['cmd'], '#') !== false) {
 						if (!cmd::byId(str_replace('#', '', $inAction['cmd']))) {
-							$return[] = array('detail' => 'Mode ' . $value['name'] . ' dans l\'équipement ' . $mode->getName(), 'help' => 'Action d\'entrée', 'who' => $inAction['cmd']);
+							$return[] = array('detail' => 'Mode ' . $value['name'] . ' dans l\'Ã©quipement ' . $mode->getName(), 'help' => 'Action d\'entrÃ©e', 'who' => $inAction['cmd']);
 						}
 					}
 				}
 				foreach ($value['outAction'] as $outAction) {
 					if ($outAction['cmd'] != '' && strpos($outAction['cmd'], '#') !== false) {
 						if (!cmd::byId(str_replace('#', '', $outAction['cmd']))) {
-							$return[] = array('detail' => 'Mode ' . $value['name'] . ' dans l\'équipement ' . $mode->getName(), 'help' => 'Action de sortie', 'who' => $outAction['cmd']);
+							$return[] = array('detail' => 'Mode ' . $value['name'] . ' dans l\'Ã©quipement ' . $mode->getName(), 'help' => 'Action de sortie', 'who' => $outAction['cmd']);
 						}
 					}
 				}
