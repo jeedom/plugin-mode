@@ -1,6 +1,6 @@
 {
     "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement",
+        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin para gestionar diferentes modos de su casa/apartamento.",
         "Aucune": "Ninguna"
     },
     "plugins/mode/desktop/php/mode.php": {
@@ -44,9 +44,9 @@
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "Modo",
-        "Retour mode précédent": "Retour mode précédent"
+        "Retour mode précédent": "Vuelta atrás modo anterior"
     },
     "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
+        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin para gestionar diferentes modos de su casa/apartamento"
     }
 }
