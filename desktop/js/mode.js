@@ -177,11 +177,11 @@ function addMode(_mode,_updateMode) {
   var random = Math.floor((Math.random() * 1000000) + 1);
   var div = '<div class="mode panel panel-default">';
   div += '<div class="panel-heading">';
-  div += '<h4 class="panel-title">';
-  div += '<a data-toggle="collapse" data-parent="#div_modes" href="#collapse' + random + '">';
+  div += '<h3 class="panel-title">';
+  div += '<a class="accordion-toggle" data-toggle="collapse" data-parent="#div_modes" href="#collapse' + random + '">';
   div += '<span class="name">' + _mode.name + '</span>';
   div += '</a>';
-  div += '</h4>';
+  div += '</h3>';
   div += '</div>';
   
   div += '<div id="collapse' + random + '" class="panel-collapse collapse in">';

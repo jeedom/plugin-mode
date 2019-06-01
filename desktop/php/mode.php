@@ -93,7 +93,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			</div>
 			<div role="tabpanel" class="tab-pane" id="modetab">
 				<a class="btn btn-success pull-right" id="bt_addMode" style="margin-top: 5px;"><i class="fas fa-plus-circle"></i> {{Ajouter mode}}</a><br/><br/>
-				<div id="div_modes"></div>
+				<div id="div_modes" class="panel-group"></div>
 			</div>
 		</div>
 	</div>
