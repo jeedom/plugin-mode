@@ -210,7 +210,7 @@ class modeCmd extends cmd {
 	public function execute($_options = array()) {
 		$eqLogic = $this->getEqLogic();
 		if ($this->getLogicalId() == 'returnPreviousMode') {
-			if ($eqLogic->getConfiguration('previousMode') == '') {
+			if ($eqLogic->getCache('previousMode') == '') {
 				return;
 			}
 			$cmd = $eqLogic->getCmd('action', $eqLogic->getConfiguration('previousMode'));
@@ -227,8 +227,7 @@ class modeCmd extends cmd {
 		$mode = $currentMode->execCmd();
 		$newMode = $this->getLogicalId();
 		if ($mode != $newMode) {
-			$eqLogic->setConfiguration('previousMode', $mode);
-			$eqLogic->save(true);
+			$eqLogic->setCache('previousMode', $mode);
 			$eqLogic->doAction($mode, 'outAction', $newMode);
 		}
 		$currentMode->event($newMode);
