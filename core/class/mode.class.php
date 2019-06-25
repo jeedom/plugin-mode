@@ -92,7 +92,7 @@ class mode extends eqLogic {
 			return;
 		}
 		if ($_previousMode == '') {
-			$_previousMode = $this->getConfiguration('previousMode');
+			$_previousMode = $this->getCache('previousMode');
 		}
 		foreach ($this->getConfiguration('modes') as $key => $value) {
 			if ($value['name'] != $_mode) {
@@ -213,7 +213,7 @@ class modeCmd extends cmd {
 			if ($eqLogic->getCache('previousMode') == '') {
 				return;
 			}
-			$cmd = $eqLogic->getCmd('action', $eqLogic->getConfiguration('previousMode'));
+			$cmd = $eqLogic->getCmd('action', $eqLogic->getCache('previousMode'));
 			if (!is_object($cmd)) {
 				return;
 			}
