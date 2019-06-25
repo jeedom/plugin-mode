@@ -226,11 +226,11 @@ class modeCmd extends cmd {
 		}
 		$mode = $currentMode->execCmd();
 		$newMode = $this->getLogicalId();
+		$currentMode->event($newMode);
 		if ($mode != $newMode) {
 			$eqLogic->setCache('previousMode', $mode);
 			$eqLogic->doAction($mode, 'outAction', $newMode);
 		}
-		$currentMode->event($newMode);
 		$eqLogic->doAction($newMode, 'inAction', $mode);
 		return;
 	}
