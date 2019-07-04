@@ -217,8 +217,8 @@ function addMode(_mode,_updateMode) {
   div += '<label class="control-label" style="margin-right:7px">{{Couleur}}</label>';
   div += '<select class="modeAttr input-sm" data-l1key="modecolor">';
   div += '<option value="default">{{Aucune}}</option>';
-  div += '<option value="icon_yellow">{{Jaune}}</option>';
   div += '<option value="icon_blue">{{Bleu}}</option>';
+  div += '<option value="icon_yellow">{{Jaune}}</option>';
   div += '<option value="icon_orange">{{Orange}}</option>';
   div += '<option value="icon_red">{{Rouge}}</option>';
   div += '<option value="icon_green">{{Vert}}</option>';
