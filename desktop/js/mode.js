@@ -99,21 +99,6 @@ $('body').off('click','.mode .modeAttr[data-l1key=icon]').on( 'click','.mode .mo
   $(this).empty();
 });
 
-$('#div_modes').off('click','.bt_duplicateMode').on('click','.bt_duplicateMode',  function () {
-  var mode = $(this).closest('.mode').clone();
-  bootbox.prompt("{{Nom du mode ?}}", function (result) {
-    if (result !== null) {
-      var random = Math.floor((Math.random() * 1000000) + 1);
-      mode.find('a[data-toggle=collapse]').attr('href', '#collapse' + random);
-      mode.find('.panel-collapse.collapse').attr('id', 'collapse' + random);
-      mode.find('.modeAttr[data-l1key=name]').html(result);
-      mode.find('.name').html(result);
-      $('#div_modes').append(mode);
-      $('.collapse').collapse();
-    }
-  });
-});
-
 $('.nav-tabs li a').off('click').on('click',function(){
   setTimeout(function(){
     taAutosize();
@@ -196,7 +181,6 @@ function addMode(_mode,_updateMode) {
   div += '<a class="btn btn-sm bt_removeMode btn-primary roundedLeft"><i class="fas fa-minus-circle"></i> {{Supprimer}}</a>';
   div += '<a class="btn btn-sm bt_addInAction btn-success"><i class="fas fa-plus-circle"></i> {{Action d\'entrée}}</a>';
   div += '<a class="btn btn-danger btn-sm bt_addOutAction"><i class="fas fa-plus-circle"></i> {{Action de sortie}}</a>';
-  div += '<a class="btn btn-sm bt_duplicateMode btn-default roundedRight"><i class="fa fa-files-o"></i> {{Dupliquer}}</a>';
   div += '</span>';
   div += '</div>';
   div += '</div>';
