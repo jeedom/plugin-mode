@@ -2,17 +2,17 @@
 
 # 08/05/2018
 
-- Ajout de l'option pour dupliquer un mode
+- Option hinzugefügt, um einen Modus zu duplizieren
 
 # 16/04/2018
 
-- Correction d'un bug si les modes contenaient un caractere spécial
+- Ein Fehler wurde behoben, wenn die Modi ein Sonderzeichen enthielten
 
 # 03/04/2018
 
-- Correction de bugs
+- Fehlerbehebungen
 
 # 12/02/2017
 
-- Correction d'un bug sur la selection d'action condition sur mode
-- Correction de bug lors du renommage des modes
+- Ein Fehler bei der Auswahl der Aktionsbedingungen im Modus wurde behoben
+- Fehler beim Umbenennen von Modi behoben
