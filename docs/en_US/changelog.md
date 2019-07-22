@@ -1,3 +1,5 @@
+- Suppression du bouton de duplication de mode (trop de bug)
+
 # 08/05/2018
 
 - Ajout de l'option pour dupliquer un mode
