@@ -137,7 +137,7 @@ class mode extends eqLogic {
 					foreach ($matches[1] as $cmd_id) {
 						if (is_numeric($cmd_id)) {
 							if (!cmd::byId(str_replace('#', '', $cmd_id))) {
-								$return[] = array('detail' => 'Mode ' . $value['name'] . ' dans l\'équipement ' . $mode->getName(), 'help' => 'Action d\'entrée', 'who' => $inAction['cmd']);
+								$return[] = array('detail' => 'Mode ' . $value['name'] . ' dans l\'équipement ' . $mode->getName(), 'help' => 'Action de sortie', 'who' => $inAction['cmd']);
 							}
 						}
 					}
