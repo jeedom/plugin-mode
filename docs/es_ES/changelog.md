@@ -1,4 +1,5 @@
 - Suppression du bouton de duplication de mode (trop de bug)
+- Correction d'un bug sur le calcul des commandes orphelines
 
 # 08/05/2018
 
