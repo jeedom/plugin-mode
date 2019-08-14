@@ -1,6 +1,6 @@
 {
     "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin para gerenciar diferentes fashion sua casa / apartamento dele",
+        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement",
         "Aucune": "Nenhum"
     },
     "plugins/mode/desktop/php/mode.php": {
@@ -36,17 +36,17 @@
         "Supprimer": "remover",
         "Icône": "ícone",
         "Sélectionner un mot-clé": "Selecione uma palavra-chave",
-        "Cocher pour que la commande s\\'éxecute en parrallele des autres actions": "Verifique a ordem \\ 's executadas em paralelo com outras acções",
-        "Décocher pour desactiver l\\'action": "Desmarque para desativar Ação 's \\",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Verifique para o comando \\ 's em execução em outras ações paralelas",
+        "Décocher pour désactiver l\\'action": "Desmarque para desativar \\ Ação",
         "Tous les modes": "Tous les modes",
         "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
         "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
     },
     "plugins/mode/core/class/mode.class.php": {
         "Mode": "modo",
-        "Retour mode précedent": "modo anterior Voltar"
+        "Retour mode précédent": "Retour mode précédent"
     },
     "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gerer different mode de sa maison/son appartement": "Plugin para gerenciar diferentes fashion sua casa / apartamento dele"
+        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
     }
 }

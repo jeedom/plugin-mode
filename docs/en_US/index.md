@@ -1,12 +1,12 @@
-Plugin permettant de gérer différents modes d’un
-appartement/maison/pièce, mais aussi des ambiances.
+Plugin to manage different modes of apartment / house / room but also atmospheres.
 
-== Plugin configuration
+Plugin configuration
+=======================
 
 After downloading the plugin, you just have to activate it,
 there is no configuration at this level.
 
-Equipment configuration
+Configuration des équipements
 =============================
 
 The configuration of the equipment mode is accessible from the menu
@@ -31,3 +31,7 @@ You can find here the full configuration of your device :
 Below you find the list of modes, by clicking on them
 you will be able to choose the actions to be done when entering this mode
 and at the exit.
+
+>**IMPORTANT**
+>
+>Attention lors du renommage d'un mode il faut absoluement revoir les scénarios/équipement qui utiliser l'ancien nom pour les passer sur le nouveau

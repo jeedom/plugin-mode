@@ -1,13 +1,13 @@
 Plugin permettant de gérer différents modes d’un
 appartement/maison/pièce, mais aussi des ambiances.
 
-configuración del plugin
+Configuración del plugin
 =======================
 
 Después de descargar el plugin, sólo hay que activarlo,
 no hay ninguna configuración a este nivel.
 
-Configuración del dispositivo
+Configuration des équipements
 =============================
 
 El equipo de modo de configuración está disponible en el menú
@@ -32,3 +32,7 @@ Aquí encontrará toda la configuración de su dispositivo:
 A continuación encontrará la lista de perfiles, haga clic en él se
 será capaz de elegir las acciones que hacer al entrar en este modo de
 y en la salida.
+
+>**IMPORTANT**
+>
+>Attention lors du renommage d'un mode il faut absoluement revoir les scénarios/équipement qui utiliser l'ancien nom pour les passer sur le nouveau

@@ -1,31 +1,31 @@
 <?php
 
 /* This file is part of Jeedom.
- *
- * Jeedom is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Jeedom is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
- */
+*
+* Jeedom is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* Jeedom is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
+*/
 
 /* * ***************************Includes********************************* */
 require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 
 class mode extends eqLogic {
 	/*     * *************************Attributs****************************** */
-
+	
 	/*     * ***********************Methode static*************************** */
-
+	
 	/*     * *********************Méthodes d'instance************************* */
-
+	
 	public function postSave() {
 		$currentMode = $this->getCmd(null, 'currentMode');
 		if (!is_object($currentMode)) {
@@ -41,7 +41,7 @@ class mode extends eqLogic {
 		$currentMode->setSubType('string');
 		$currentMode->setDisplay('generic_type', 'MODE_STATE');
 		$currentMode->save();
-
+		
 		$returnPreviousMode = $this->getCmd(null, 'returnPreviousMode');
 		if (!is_object($returnPreviousMode)) {
 			$returnPreviousMode = new modeCmd();
@@ -55,7 +55,7 @@ class mode extends eqLogic {
 		$returnPreviousMode->setDisplay('generic_type', 'MODE_SET_STATE');
 		$returnPreviousMode->setDisplay('icon', '<i class="fa fa-reply"></i>');
 		$returnPreviousMode->save();
-
+		
 		$existing_mode = array();
 		if (is_array($this->getConfiguration('modes'))) {
 			foreach ($this->getConfiguration('modes') as $key => $value) {
@@ -79,20 +79,20 @@ class mode extends eqLogic {
 				$cmd->save();
 			}
 		}
-
+		
 		foreach ($this->getCmd() as $cmd) {
 			if ($cmd->getType() == 'action' && !in_array($cmd->getLogicalId(), $existing_mode) && $cmd->getLogicalId() != 'returnPreviousMode') {
 				$cmd->remove();
 			}
 		}
 	}
-
+	
 	public function doAction($_mode, $_type, $_previousMode = '') {
 		if (!is_array($this->getConfiguration('modes'))) {
 			return;
 		}
 		if ($_previousMode == '') {
-			$_previousMode = $this->getConfiguration('previousMode');
+			$_previousMode = $this->getCache('previousMode');
 		}
 		foreach ($this->getConfiguration('modes') as $key => $value) {
 			if ($value['name'] != $_mode) {
@@ -115,22 +115,30 @@ class mode extends eqLogic {
 			return;
 		}
 	}
-
+	
 	public static function deadCmd() {
 		$return = array();
 		foreach (eqLogic::byType('mode') as $mode) {
 			foreach ($mode->getConfiguration('modes') as $key => $value) {
 				foreach ($value['inAction'] as $inAction) {
-					if ($inAction['cmd'] != '' && strpos($inAction['cmd'], '#') !== false) {
-						if (!cmd::byId(str_replace('#', '', $inAction['cmd']))) {
-							$return[] = array('detail' => 'Mode ' . $value['name'] . ' dans l\'équipement ' . $mode->getName(), 'help' => 'Action d\'entrée', 'who' => $inAction['cmd']);
+					$json = json_encode($inAction);
+					preg_match_all("/#([0-9]*)#/", $json, $matches);
+					foreach ($matches[1] as $cmd_id) {
+						if (is_numeric($cmd_id)) {
+							if (!cmd::byId(str_replace('#', '', $cmd_id))) {
+								$return[] = array('detail' => 'Mode ' . $value['name'] . ' dans l\'équipement ' . $mode->getName(), 'help' => 'Action d\'entrée', 'who' => $inAction['cmd']);
+							}
 						}
 					}
 				}
 				foreach ($value['outAction'] as $outAction) {
-					if ($outAction['cmd'] != '' && strpos($outAction['cmd'], '#') !== false) {
-						if (!cmd::byId(str_replace('#', '', $outAction['cmd']))) {
-							$return[] = array('detail' => 'Mode ' . $value['name'] . ' dans l\'équipement ' . $mode->getName(), 'help' => 'Action de sortie', 'who' => $outAction['cmd']);
+					$json = json_encode($outAction);
+					preg_match_all("/#([0-9]*)#/", $json, $matches);
+					foreach ($matches[1] as $cmd_id) {
+						if (is_numeric($cmd_id)) {
+							if (!cmd::byId(str_replace('#', '', $cmd_id))) {
+								$return[] = array('detail' => 'Mode ' . $value['name'] . ' dans l\'équipement ' . $mode->getName(), 'help' => 'Action de sortie', 'who' => $outAction['cmd']);
+							}
 						}
 					}
 				}
@@ -138,17 +146,17 @@ class mode extends eqLogic {
 		}
 		return $return;
 	}
-
+	
 	/*     * **********************Getteur Setteur*************************** */
 }
 
 class modeCmd extends cmd {
 	/*     * *************************Attributs****************************** */
-
+	
 	/*     * ***********************Methode static*************************** */
-
+	
 	/*     * *********************Methode d'instance************************* */
-
+	
 	public function imperihomeGenerate($ISSStructure) {
 		$eqLogic = $this->getEqLogic();
 		$object = $eqLogic->getObject();
@@ -171,41 +179,49 @@ class modeCmd extends cmd {
 		$info_device['params'][1]['value'] = trim($info_device['params'][1]['value'], ',');
 		return $info_device;
 	}
-
+	
 	public function imperihomeAction($_action, $_value) {
 		if ($_action == 'setChoice') {
 			$eqLogic = $this->getEqLogic();
 			$eqLogic->getCmd('action', $_value)->execCmd();
 		}
 	}
-
+	
 	public function imperihomeCmd() {
 		return ($this->getLogicalId() == 'currentMode');
 	}
-
+	
 	public function dontRemoveCmd() {
 		return true;
 	}
-
+	
 	public function formatValueWidget($_mode) {
 		$eqLogic = $this->getEqLogic();
 		foreach ($eqLogic->getConfiguration('modes') as $key => $value) {
-			if ($value['name'] == $_mode) {
-				if (isset($value['icon']) && $value['icon'] != '') {
-					return $value['icon'];
-				}
+			if ($value['name'] != $_mode) {
+				continue;
 			}
+			$return = $_mode;
+			if (isset($value['icon']) && $value['icon'] != '') {
+				$return = $value['icon'];
+				if (isset($value['modecolor']) && $value['modecolor'] != '') {
+					$return = str_replace('class="','class="'.$value['modecolor'].' ',$return);
+				}
+			}else if (isset($value['modecolor']) && $value['modecolor'] != '') {
+				$return = '<span class="'.$value['modecolor'].'">'.$return.'<span>';
+			}
+			return $return;
 		}
 		return $_mode;
 	}
-
+	
 	public function execute($_options = array()) {
 		$eqLogic = $this->getEqLogic();
 		if ($this->getLogicalId() == 'returnPreviousMode') {
-			if ($eqLogic->getConfiguration('previousMode') == '') {
+			if ($eqLogic->getCache('previousMode') == '') {
 				return;
 			}
-			$cmd = $eqLogic->getCmd('action', $eqLogic->getConfiguration('previousMode'));
+			$cmd = $eqLogic->getCmd('action', $eqLogic->getCache('previousMode'));
 			if (!is_object($cmd)) {
 				return;
 			}
@@ -218,16 +234,15 @@ class modeCmd extends cmd {
 		}
 		$mode = $currentMode->execCmd();
 		$newMode = $this->getLogicalId();
+		$currentMode->event($newMode);
 		if ($mode != $newMode) {
-			$eqLogic->setConfiguration('previousMode', $mode);
-			$eqLogic->save(true);
+			$eqLogic->setCache('previousMode', $mode);
 			$eqLogic->doAction($mode, 'outAction', $newMode);
 		}
-		$currentMode->event($newMode);
 		$eqLogic->doAction($newMode, 'inAction', $mode);
 		return;
 	}
-
+	
 	/*     * **********************Getteur Setteur*************************** */
 }
 
