@@ -198,7 +198,6 @@ function addMode(_mode,_updateMode) {
   div += '</div>';
   
   div += '<div class="col-sm-3">';
-  div += '<label class="control-label" style="margin-right:7px">{{Couleur}}</label>';
   div += '<select class="modeAttr input-sm" data-l1key="modecolor">';
   div += '<option value="default">{{Aucune}}</option>';
   div += '<option value="icon_blue">{{Bleu}}</option>';
