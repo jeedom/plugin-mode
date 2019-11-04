@@ -207,7 +207,7 @@ class modeCmd extends cmd {
 				if (isset($value['modecolor']) && $value['modecolor'] != '') {
 					$return = str_replace('class="','class="'.$value['modecolor'].' ',$return);
 				}
-			}else if (isset($value['modecolor']) && $value['modecolor'] != '') {
+			}else if (isset($value['modecolor']) && $value['modecolor'] != '' && $value['modecolor'] != 'default') {
 				$return = '<span class="'.$value['modecolor'].'">'.$return.'<span>';
 			}
 			return $return;
