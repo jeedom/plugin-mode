@@ -26,6 +26,18 @@ class mode extends eqLogic {
 	
 	/*     * *********************Méthodes d'instance************************* */
 	
+	public static function templateWidget(){
+		$return = array('info' => array('string' => array()));
+		$return['info']['string']['state'] = array(
+			'template' => 'tmplmultistate',
+			'replace' => array('#_time_widget_#' => 1),
+			'test' => array(
+				array('operation' => 'true','state_light' => '#value#')
+			)
+		);
+		return $return;
+	}
+	
 	public function postSave() {
 		$currentMode = $this->getCmd(null, 'currentMode');
 		if (!is_object($currentMode)) {
