@@ -1,6 +1,6 @@
 {
     "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin para gestionar diferentes modos de su casa/apartamento.",
+        "Plugin pour gérer différents modes de sa maison/son appartement": "Plugin pour gérer différents modes de sa maison/son appartement",
         "Aucune": "Ninguna"
     },
     "plugins/mode/desktop/php/mode.php": {
