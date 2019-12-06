@@ -26,6 +26,18 @@ class mode extends eqLogic {
 	
 	/*     * *********************Méthodes d'instance************************* */
 	
+	public static function templateWidget(){
+		$return = array('info' => array('string' => array()));
+		$return['info']['string']['state'] = array(
+			'template' => 'tmplmultistate',
+			'replace' => array('#_time_widget_#' => 1),
+			'test' => array(
+				array('operation' => 'true','state_light' => '#value#')
+			)
+		);
+		return $return;
+	}
+	
 	public function postSave() {
 		$currentMode = $this->getCmd(null, 'currentMode');
 		if (!is_object($currentMode)) {
@@ -41,6 +53,22 @@ class mode extends eqLogic {
 		$currentMode->setSubType('string');
 		$currentMode->setDisplay('generic_type', 'MODE_STATE');
 		$currentMode->save();
+
+		$previousMode = $this->getCmd(null, 'previousMode');
+		if (!is_object($previousMode)) {
+			$previousMode = new modeCmd();
+			$previousMode->setTemplate('dashboard', 'tile');
+			$previousMode->setTemplate('mobile', 'tile');
+		}
+		$previousMode->setName(__('Mode precedent', __FILE__));
+		$previousMode->setEqLogic_id($this->id);
+		$previousMode->setLogicalId('previousMode');
+		$previousMode->setType('info');
+		$previousMode->setOrder(1);
+		$previousMode->setSubType('string');
+		$previousMode->setDisplay('generic_type', 'MODE_STATE');
+		$previousMode->setIsVisible(0);
+		$previousMode->save();
 		
 		$returnPreviousMode = $this->getCmd(null, 'returnPreviousMode');
 		if (!is_object($returnPreviousMode)) {
@@ -207,7 +235,7 @@ class modeCmd extends cmd {
 				if (isset($value['modecolor']) && $value['modecolor'] != '') {
 					$return = str_replace('class="','class="'.$value['modecolor'].' ',$return);
 				}
-			}else if (isset($value['modecolor']) && $value['modecolor'] != '') {
+			}else if (isset($value['modecolor']) && $value['modecolor'] != '' && $value['modecolor'] != 'default') {
 				$return = '<span class="'.$value['modecolor'].'">'.$return.'<span>';
 			}
 			return $return;
@@ -237,6 +265,10 @@ class modeCmd extends cmd {
 		$currentMode->event($newMode);
 		if ($mode != $newMode) {
 			$eqLogic->setCache('previousMode', $mode);
+			$previousMode = $eqLogic->getCmd(null, 'previousMode');
+                        if (is_object($previousMode)) {
+                                $previousMode->event($mode);
+                        }
 			$eqLogic->doAction($mode, 'outAction', $newMode);
 		}
 		$eqLogic->doAction($newMode, 'inAction', $mode);
