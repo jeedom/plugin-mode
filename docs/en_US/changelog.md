@@ -1,6 +1,9 @@
+# 06/12/2019
+
 - Suppression du bouton de duplication de mode (trop de bug)
 - Correction d'un bug sur le calcul des commandes orphelines
 - Ajout d'une commande indiquant le mode précedent
+- Correction d'un bug sur les templates de widgets multistate V4
 
 # 08/05/2018
 
