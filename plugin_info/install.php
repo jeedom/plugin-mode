@@ -21,6 +21,13 @@ require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 function mode_update() {
 	foreach (mode::byType('mode') as $mode) {
 		$mode->save();
+		
+		$previousMode = $mode->getCmd(null, 'previousMode');
+		if(is_object($previousMode)){
+			$previousMode->setDisplay('generic_type', 'DONT');
+			$previousMode->setGeneric_type('DONT');
+			$previousMode->save();
+		}
 	}
 }
 ?>
