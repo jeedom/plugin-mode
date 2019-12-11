@@ -66,7 +66,6 @@ class mode extends eqLogic {
 		$previousMode->setType('info');
 		$previousMode->setOrder(1);
 		$previousMode->setSubType('string');
-		$previousMode->setDisplay('generic_type', 'MODE_STATE');
 		$previousMode->setIsVisible(0);
 		$previousMode->save();
 		
