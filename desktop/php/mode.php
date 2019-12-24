@@ -17,7 +17,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<span>{{Ajouter}}</span>
 			</div>
 		</div>
-		<legend><i class="fa fa-th-large"></i> {{Mes Modes}}</legend>
+		<legend><i class="fas fa-th-large"></i> {{Mes Modes}}</legend>
 		<input class="form-control" placeholder="{{Rechercher}}" id="in_searchEqlogic" />
 		<div class="eqLogicThumbnailContainer">
 			<?php
@@ -98,6 +98,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 		</div>
 	</div>
 </div>
-
-<?php include_file('desktop', 'mode', 'js', 'mode');?>
-<?php include_file('core', 'plugin.template', 'js');?>
+<?php 
+    include_file('desktop', 'mode', 'js', 'mode');
+    include_file('core', 'plugin.template', 'js');
+?>
