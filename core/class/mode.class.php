@@ -80,7 +80,7 @@ class mode extends eqLogic {
 		$returnPreviousMode->setOrder(3);
 		$returnPreviousMode->setSubType('other');
 		$returnPreviousMode->setDisplay('generic_type', 'MODE_SET_STATE');
-		$returnPreviousMode->setDisplay('icon', '<i class="fa fa-reply"></i>');
+		$returnPreviousMode->setDisplay('icon', '<i class="fas fa-reply"></i>');
 		$returnPreviousMode->save();
 		
 		$existing_mode = array();
