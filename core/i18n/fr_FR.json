@@ -1,52 +1,50 @@
 {
-    "plugins\/mode\/plugin_info\/info.xml": {
-        "Plugin pour gérer différents modes de sa maison\/son appartement": "Plugin pour gérer différents modes de sa maison\/son appartement",
-        "Aucune": "Aucune"
+    "desktop\/js\/mode.js": {
+        "Nom du mode ?": "Nom du mode ?",
+        "Nouveau nom ?": "Nouveau nom ?",
+        "Action d\\'entrée": "Action d\\'entrée",
+        "Action de sortie": "Action de sortie",
+        "Supprimer": "Supprimer",
+        "Nom": "Nom",
+        "Icône": "Icône",
+        "Aucune": "Aucune",
+        "Bleu": "Bleu",
+        "Jaune": "Jaune",
+        "Orange": "Orange",
+        "Rouge": "Rouge",
+        "Vert": "Vert",
+        "Décocher pour désactiver l\\'action": "Décocher pour désactiver l\\'action",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Cocher pour que la commande s\\'exécute en parallèle des autres actions",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode",
+        "Tous les modes": "Tous les modes",
+        "Sélectionner un mot-clé": "Sélectionner un mot-clé"
     },
-    "plugins\/mode\/desktop\/php\/mode.php": {
-        "Ajouter un mode": "Ajouter un mode",
+    "desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Mes Modes": "Mes Modes",
         "Rechercher": "Rechercher",
-        "Mes mode": "Mes mode",
-        "Général": "Général",
+        "Configuration avancée": "Configuration avancée",
+        "Dupliquer": "Dupliquer",
+        "Sauvegarder": "Sauvegarder",
+        "Supprimer": "Supprimer",
+        "Equipement": "Equipement",
+        "Modes": "Modes",
         "Nom de l'équipement mode": "Nom de l'équipement mode",
         "Objet parent": "Objet parent",
         "Aucun": "Aucun",
         "Activer": "Activer",
         "Visible": "Visible",
-        "Modes": "Modes",
-        "Ajouter mode": "Ajouter mode",
-        "Supprimer": "Supprimer",
-        "Sauvegarder": "Sauvegarder",
         "Catégorie": "Catégorie",
-        "Mes Modes": "Mes Modes",
-        "Configuration avancée": "Configuration avancée",
-        "Equipement": "Equipement",
-        "Gestion": "Gestion"
+        "Ajouter mode": "Ajouter mode"
     },
-    "plugins\/mode\/desktop\/js\/mode.js": {
-        "Afficher": "Afficher",
-        "Tester": "Tester",
-        "Nom du mode ?": "Nom du mode ?",
-        "Nom du mode": "Nom du mode",
-        "Action d\\'entrée": "Action d\\'entrée",
-        "Action de sortie": "Action de sortie",
-        "Déclencheur": "Déclencheur",
-        "Dupliquer": "Dupliquer",
-        "Nouveau nom ?": "Nouveau nom ?",
-        "Supprimer": "Supprimer",
-        "Icône": "Icône",
-        "Sélectionner un mot-clé": "Sélectionner un mot-clé",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Cocher pour que la commande s\\'exécute en parallèle des autres actions",
-        "Décocher pour désactiver l\\'action": "Décocher pour désactiver l\\'action",
-        "Tous les modes": "Tous les modes",
-        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
-    },
-    "plugins\/mode\/core\/class\/mode.class.php": {
+    "core\/class\/mode.class.php": {
         "Mode": "Mode",
-        "Retour mode précédent": "Retour mode précédent"
-    },
-    "plugins\/mode\/plugin_info\/info.json": {
-        "Plugin pour gérer différent mode de sa maison\/son appartement": "Plugin pour gérer différent mode de sa maison\/son appartement"
+        "Mode precedent": "Mode precedent",
+        "Retour mode précedent": "Retour mode précedent",
+        "Erreur lors de l\\'éxecution de ": "Erreur lors de l\\'éxecution de ",
+        ". Détails : ": ". Détails : ",
+        "La commande de mode courant est introuvable": "La commande de mode courant est introuvable"
     }
 }

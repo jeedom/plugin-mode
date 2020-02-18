@@ -1,52 +1,45 @@
 {
-    "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gérer différents modes de sa maison/son appartement": "Plugin pour gérer différents modes de sa maison/son appartement",
-        "Aucune": "Hiçbir"
+    "desktop\/js\/mode.js": {
+        "Nom du mode ?": "Mod ismi ?",
+        "Nouveau nom ?": "Yeni isim ?",
+        "Action d\\'entrée": "Giriş eylemi",
+        "Action de sortie": "Çıkış eylemi",
+        "Supprimer": "Sil",
+        "Nom": "Nom",
+        "Icône": "Icon",
+        "Aucune": "Hiçbir",
+        "Bleu": "Bleu",
+        "Jaune": "Jaune",
+        "Orange": "Orange",
+        "Rouge": "Rouge",
+        "Vert": "Vert",
+        "Décocher pour désactiver l\\'action": "\\ Eylem devre dışı bırakmak için işaretini kaldırın",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Komut \\ 'ın paralel diğer eylemler çalışan olup olmadığını kontrol edin",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode",
+        "Tous les modes": "Tous les modes",
+        "Sélectionner un mot-clé": "Anahtar kelime seçin"
     },
-    "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "Mod ekle",
+    "desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Yönetim",
+        "Ajouter": "Ajouter",
+        "Mes Modes": "Modlarım",
         "Rechercher": "Arayın",
-        "Mes mode": "Modlarım",
-        "Général": "Genel",
+        "Configuration avancée": "Gelişmiş ayarlar",
+        "Dupliquer": "Kopyala",
+        "Sauvegarder": "Kaydet",
+        "Supprimer": "Sil",
+        "Equipement": "Cihaz",
+        "Modes": "Modlar",
         "Nom de l'équipement mode": "Mode cihazımın ismi",
         "Objet parent": "Üst nesne",
         "Aucun": "Hiçbir",
         "Activer": "Etkinleştirmek",
         "Visible": "Görülebilir",
-        "Modes": "Modlar",
-        "Ajouter mode": "Mod ekle",
-        "Supprimer": "Sil",
-        "Sauvegarder": "Kaydet",
         "Catégorie": "Kategori",
-        "Mes Modes": "Modlarım",
-        "Configuration avancée": "Gelişmiş ayarlar",
-        "Equipement": "Cihaz",
-        "Gestion": "Yönetim"
+        "Ajouter mode": "Mod ekle"
     },
-    "plugins/mode/desktop/js/mode.js": {
-        "Afficher": "Göster",
-        "Tester": "Dene",
-        "Nom du mode ?": "Mod ismi ?",
-        "Nom du mode": "Mod ismi",
-        "Action d\\'entrée": "Giriş eylemi",
-        "Action de sortie": "Çıkış eylemi",
-        "Déclencheur": "Tetikleyici",
-        "Dupliquer": "Kopyala",
-        "Nouveau nom ?": "Yeni isim ?",
-        "Supprimer": "Sil",
-        "Icône": "Icon",
-        "Sélectionner un mot-clé": "Anahtar kelime seçin",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Komut \\ 'ın paralel diğer eylemler çalışan olup olmadığını kontrol edin",
-        "Décocher pour désactiver l\\'action": "\\ Eylem devre dışı bırakmak için işaretini kaldırın",
-        "Tous les modes": "Tous les modes",
-        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
-    },
-    "plugins/mode/core/class/mode.class.php": {
-        "Mode": "Mod",
-        "Retour mode précédent": "Retour mode précédent"
-    },
-    "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
+    "core\/class\/mode.class.php": {
+        "Plugin pour gérer différent mode de sa maison\/son appartement": "Plugin pour gérer différent mode de sa maison\/son appartement"
     }
 }

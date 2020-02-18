@@ -1,52 +1,45 @@
 {
-    "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gérer différents modes de sa maison/son appartement": "Plugin pour gérer différents modes de sa maison/son appartement",
-        "Aucune": "Nessuno"
+    "desktop\/js\/mode.js": {
+        "Nom du mode ?": "Nome modalità ?",
+        "Nouveau nom ?": "Nuovo nome ?",
+        "Action d\\'entrée": "Azione d\\'ingresso",
+        "Action de sortie": "Azione d'\\uscita",
+        "Supprimer": "Elimina",
+        "Nom": "Nom",
+        "Icône": "Icona",
+        "Aucune": "Nessuno",
+        "Bleu": "Bleu",
+        "Jaune": "Jaune",
+        "Orange": "Orange",
+        "Rouge": "Rouge",
+        "Vert": "Vert",
+        "Décocher pour désactiver l\\'action": "Deselezionare per disabilitare \\ azione",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Controllare l'esecuzione del comando \\ 's in parallelo altre azioni",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode",
+        "Tous les modes": "Tous les modes",
+        "Sélectionner un mot-clé": "Seleziona una parola chiave"
     },
-    "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "Aggiungi modalità",
+    "desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestione",
+        "Ajouter": "Ajouter",
+        "Mes Modes": "i miei metodi",
         "Rechercher": "Cerca",
-        "Mes mode": "Le mie modalit",
-        "Général": "Generale",
+        "Configuration avancée": "Configurazione avanzata",
+        "Dupliquer": "Duplica",
+        "Sauvegarder": "Salva",
+        "Supprimer": "Elimina",
+        "Equipement": "Dispositivo",
+        "Modes": "Modalità",
         "Nom de l'équipement mode": "apparecchiature di moda Nome",
         "Objet parent": "Oggetto padre",
         "Aucun": "Nessuno",
         "Activer": "Attiva",
         "Visible": "Visibile",
-        "Modes": "Modalità",
-        "Ajouter mode": "Aggiungi modalità",
-        "Supprimer": "Elimina",
-        "Sauvegarder": "Salva",
         "Catégorie": "Categoria",
-        "Mes Modes": "i miei metodi",
-        "Configuration avancée": "Configurazione avanzata",
-        "Equipement": "Dispositivo",
-        "Gestion": "Gestione"
+        "Ajouter mode": "Aggiungi modalità"
     },
-    "plugins/mode/desktop/js/mode.js": {
-        "Afficher": "Mostra",
-        "Tester": "Prova",
-        "Nom du mode ?": "Nome modalità ?",
-        "Nom du mode": "Nome modalità",
-        "Action d\\'entrée": "Azione d\\'ingresso",
-        "Action de sortie": "Azione d'\\uscita",
-        "Déclencheur": "Innesco",
-        "Dupliquer": "Duplica",
-        "Nouveau nom ?": "Nuovo nome ?",
-        "Supprimer": "Elimina",
-        "Icône": "Icona",
-        "Sélectionner un mot-clé": "Seleziona una parola chiave",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Controllare l'esecuzione del comando \\ 's in parallelo altre azioni",
-        "Décocher pour désactiver l\\'action": "Deselezionare per disabilitare \\ azione",
-        "Tous les modes": "Tous les modes",
-        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
-    },
-    "plugins/mode/core/class/mode.class.php": {
-        "Mode": "Modalità",
-        "Retour mode précédent": "Retour mode précédent"
-    },
-    "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
+    "core\/class\/mode.class.php": {
+        "Plugin pour gérer différent mode de sa maison\/son appartement": "Plugin pour gérer différent mode de sa maison\/son appartement"
     }
 }

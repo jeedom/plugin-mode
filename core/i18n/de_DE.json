@@ -1,52 +1,45 @@
 {
-    "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gérer différents modes de sa maison/son appartement": "Plugin pour gérer différents modes de sa maison/son appartement",
-        "Aucune": "Ohne"
+    "desktop\/js\/mode.js": {
+        "Nom du mode ?": "Modus Name",
+        "Nouveau nom ?": "Neuer Name",
+        "Action d\\'entrée": "Eingangs Aktion",
+        "Action de sortie": "Ausgangs Aktion",
+        "Supprimer": "Löschen",
+        "Nom": "Name",
+        "Icône": "Symbol",
+        "Aucune": "Ohne",
+        "Bleu": "blau",
+        "Jaune": "gelb",
+        "Orange": "orange",
+        "Rouge": "rot",
+        "Vert": "grün",
+        "Décocher pour désactiver l\\'action": "Auswählen, um die Aktion zu deaktivieren",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Überprüfen Sie, ob der Befehl parallel zu den anderen Aktionen ausgeführt wird",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Eingabe : führen Sie diese Aktion nur aus, wenn eine aus dem Modus kommt. Ausgabe : Führen Sie die Aktionen nur aus, wenn Sie in den Modus wechseln",
+        "Tous les modes": "Alle Modi",
+        "Sélectionner un mot-clé": "Schlüsselwort auswählen"
     },
-    "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "Modus hinzufügen",
+    "desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Gestion": "Verwaltung",
+        "Ajouter": "hinzufügen",
+        "Mes Modes": "Meine Modi",
         "Rechercher": "Suchen nach",
-        "Mes mode": "Mein Modus",
-        "Général": "Allgemein",
+        "Configuration avancée": "Erweiterte Konfiguration",
+        "Dupliquer": "Kopieren",
+        "Sauvegarder": "Speichern",
+        "Supprimer": "Löschen",
+        "Equipement": "Gerät",
+        "Modes": "Modus",
         "Nom de l'équipement mode": "Modus Gerätename",
         "Objet parent": "Eltern-Objekt",
         "Aucun": "Ohne",
         "Activer": "aktivieren",
         "Visible": "Sichtbar",
-        "Modes": "Modus",
-        "Ajouter mode": "Modus hinzufügen",
-        "Supprimer": "Löschen",
-        "Sauvegarder": "Speichern",
         "Catégorie": "Kategorie",
-        "Mes Modes": "Meine Modi",
-        "Configuration avancée": "Erweiterte Konfiguration",
-        "Equipement": "Gerät",
-        "Gestion": "Verwaltung"
+        "Ajouter mode": "Modus hinzufügen"
     },
-    "plugins/mode/desktop/js/mode.js": {
-        "Afficher": "anzeigen",
-        "Tester": "Test",
-        "Nom du mode ?": "Modus Name",
-        "Nom du mode": "Modus Name",
-        "Action d\\'entrée": "Eingangs Aktion",
-        "Action de sortie": "Ausgangs Aktion",
-        "Déclencheur": "Auslöser",
-        "Dupliquer": "Kopieren",
-        "Nouveau nom ?": "Neuer Name",
-        "Supprimer": "Löschen",
-        "Icône": "Symbol",
-        "Sélectionner un mot-clé": "Schlüsselwort auswählen",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Überprüfen Sie, ob der Befehl parallel zu den anderen Aktionen ausgeführt wird",
-        "Décocher pour désactiver l\\'action": "Auswählen, um die Aktion zu deaktivieren",
-        "Tous les modes": "Alle Modi",
-        "Ne faire cette action que si l\\'on vient du mode": "Führen Sie diese Aktion nur aus, wenn Sie aus dem Modus kommen",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Eingabe : führen Sie diese Aktion nur aus, wenn eine aus dem Modus kommt. Ausgabe : Führen Sie die Aktionen nur aus, wenn Sie in den Modus wechseln"
-    },
-    "plugins/mode/core/class/mode.class.php": {
-        "Mode": "Modus",
-        "Retour mode précédent": "Retour mode précédent"
-    },
-    "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
+    "core\/class\/mode.class.php": {
+        "Plugin pour gérer différent mode de sa maison\/son appartement": "Plugin zur Verwaltung verschiedener Modi Ihres Hauses \/ Ihrer Wohnung"
     }
 }
