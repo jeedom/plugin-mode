@@ -1,38 +1,38 @@
-Plugin permettant de gérer différents modes d’un
-appartement/maison/pièce, mais aussi des ambiances.
+
+.
 
 Configuración del plugin
 =======================
 
-Después de descargar el plugin, sólo hay que activarlo,
-no hay ninguna configuración a este nivel.
+Después de descargar el complemento, solo necesita activarlo,
+no hay configuración a este nivel.
 
-Configuration des équipements
+Configuración del equipo
 =============================
 
-El equipo de modo de configuración está disponible en el menú
-plugin y organización:
 
-Aquí encontrará toda la configuración de su dispositivo:
+ :
 
--   ** ** Nombre del dispositivo Modo: Modo nombre de su equipo,
+Aquí encontrarás toda la configuración de tu equipo :
 
--   **Objeto padre** : especifica el objeto padre al que pertenece
-    equipos,
+-   **** : ,
 
--   ** ** Activar: para que su equipo activo,
+-   **Objeto padre** : indica el objeto padre al que pertenece
+    equipo,
 
--   ** ** visible hace que su equipo visible en el salpicadero,
+-   **Activar** : activa su equipo,
 
--   ** ** Categoría: categorías de equipos (que pueden pertenecer a
-    la mayoría de categorías).
+-   **Visible** : hace que su equipo sea visible en el tablero,
 
--   ** ** Añadir la moda: el botón para añadir una nueva forma
+-   **Categoría** : categorías de equipos (puede pertenecer a
+    categorías múltiples).
 
-A continuación encontrará la lista de perfiles, haga clic en él se
-será capaz de elegir las acciones que hacer al entrar en este modo de
-y en la salida.
+-   **** : 
 
->**IMPORTANT**
+
+
+.
+
+>**Importante**
 >
->Attention lors du renommage d'un mode il faut absoluement revoir les scénarios/équipement qui utiliser l'ancien nom pour les passer sur le nouveau
+>Atención durante el cambio de nombre de un modo es absolutamente necesario revisar los escenarios / equipos que usan el nombre antiguo para pasarlos al nuevo

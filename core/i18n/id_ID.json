@@ -1,45 +1,50 @@
 {
-    "desktop\/js\/mode.js": {
-        "Nom du mode ?": "nama profil?",
-        "Nouveau nom ?": "nama baru?",
-        "Action d\\'entrée": "Aksi \\ 's entri",
-        "Action de sortie": "Output Aksi",
-        "Supprimer": "Menghapus",
-        "Nom": "Nom",
-        "Icône": "Icon",
-        "Aucune": "Tak ada",
-        "Bleu": "Bleu",
-        "Jaune": "Jaune",
-        "Orange": "Orange",
-        "Rouge": "Rouge",
-        "Vert": "Vert",
-        "Décocher pour désactiver l\\'action": "Hapus tanda centang untuk menonaktifkan \\ Aksi",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Periksa perintah \\ 's berjalan secara paralel tindakan lain",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode",
-        "Tous les modes": "Tous les modes",
-        "Sélectionner un mot-clé": "Pilih kata kunci"
-    },
-    "desktop\/php\/mode.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
+    "plugins\/mode\/desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401 - Akses tidak sah",
         "Gestion": "Manajemen",
-        "Ajouter": "Ajouter",
-        "Mes Modes": "metode saya",
-        "Rechercher": "Mencari",
-        "Configuration avancée": "konfigurasi lanjutan",
+        "Ajouter": "Tambahan",
+        "Mes Modes": "",
+        "Rechercher": "Pencarian",
+        "Configuration avancée": "Konfigurasi lanjutan",
         "Dupliquer": "Duplikat",
         "Sauvegarder": "Menyimpan",
         "Supprimer": "Menghapus",
         "Equipement": "Peralatan",
-        "Modes": "mode",
-        "Nom de l'équipement mode": "Nama peralatan busana",
+        "Modes": "Mode",
+        "Nom de l'équipement mode": "",
         "Objet parent": "Objek induk",
         "Aucun": "Tak ada",
         "Activer": "Mengaktifkan",
         "Visible": "Terlihat",
         "Catégorie": "Kategori",
-        "Ajouter mode": "menambahkan mode"
+        "Ajouter mode": ""
     },
-    "core\/class\/mode.class.php": {
-        "Plugin pour gérer différent mode de sa maison\/son appartement": "Plugin pour gérer différent mode de sa maison\/son appartement"
+    "plugins\/mode\/desktop\/js\/mode.js": {
+        "Nom du mode ?": "Nama profil?",
+        "Nouveau nom ?": "Nama baru?",
+        "Action d\\'entrée": "",
+        "Action de sortie": "",
+        "Supprimer": "Menghapus",
+        "Nom": "Nama",
+        "Icône": "Icon",
+        "Aucune": "Tidak",
+        "Bleu": "Biru",
+        "Jaune": "Kuninh",
+        "Orange": "Jeruk",
+        "Rouge": "Merah",
+        "Vert": "Hijau",
+        "Décocher pour désactiver l\\'action": "Hapus tanda centang untuk menonaktifkan \\ Aksi",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Periksa perintah \\ 's berjalan secara paralel tindakan lain",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "",
+        "Tous les modes": "",
+        "Sélectionner un mot-clé": "Pilih kata kunci"
+    },
+    "plugins\/mode\/core\/class\/mode.class.php": {
+        "Mode": "",
+        "Mode precedent": "",
+        "Retour mode précedent": "",
+        "Erreur lors de l\\'éxecution de ": "",
+        ". Détails : ": "",
+        "La commande de mode courant est introuvable": ""
     }
 }

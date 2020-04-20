@@ -1,45 +1,50 @@
 {
-    "desktop\/js\/mode.js": {
-        "Nom du mode ?": "Modus Name",
-        "Nouveau nom ?": "Neuer Name",
-        "Action d\\'entrée": "Eingangs Aktion",
-        "Action de sortie": "Ausgangs Aktion",
-        "Supprimer": "Löschen",
-        "Nom": "Name",
-        "Icône": "Symbol",
-        "Aucune": "Ohne",
-        "Bleu": "blau",
-        "Jaune": "gelb",
-        "Orange": "orange",
-        "Rouge": "rot",
-        "Vert": "grün",
-        "Décocher pour désactiver l\\'action": "Auswählen, um die Aktion zu deaktivieren",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Überprüfen Sie, ob der Befehl parallel zu den anderen Aktionen ausgeführt wird",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Eingabe : führen Sie diese Aktion nur aus, wenn eine aus dem Modus kommt. Ausgabe : Führen Sie die Aktionen nur aus, wenn Sie in den Modus wechseln",
-        "Tous les modes": "Alle Modi",
-        "Sélectionner un mot-clé": "Schlüsselwort auswählen"
-    },
-    "desktop\/php\/mode.php": {
+    "plugins\/mode\/desktop\/php\/mode.php": {
         "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
         "Gestion": "Verwaltung",
-        "Ajouter": "hinzufügen",
-        "Mes Modes": "Meine Modi",
+        "Ajouter": "Hinzufügen",
+        "Mes Modes": "",
         "Rechercher": "Suchen nach",
         "Configuration avancée": "Erweiterte Konfiguration",
-        "Dupliquer": "Kopieren",
+        "Dupliquer": "Duplikat",
         "Sauvegarder": "Speichern",
         "Supprimer": "Löschen",
         "Equipement": "Gerät",
         "Modes": "Modus",
-        "Nom de l'équipement mode": "Modus Gerätename",
-        "Objet parent": "Eltern-Objekt",
+        "Nom de l'équipement mode": "",
+        "Objet parent": "Übergeordnetes Objekt",
         "Aucun": "Ohne",
-        "Activer": "aktivieren",
+        "Activer": "Aktivieren",
         "Visible": "Sichtbar",
         "Catégorie": "Kategorie",
-        "Ajouter mode": "Modus hinzufügen"
+        "Ajouter mode": ""
     },
-    "core\/class\/mode.class.php": {
-        "Plugin pour gérer différent mode de sa maison\/son appartement": "Plugin zur Verwaltung verschiedener Modi Ihres Hauses \/ Ihrer Wohnung"
+    "plugins\/mode\/desktop\/js\/mode.js": {
+        "Nom du mode ?": "Modus Name",
+        "Nouveau nom ?": "Neuer Name",
+        "Action d\\'entrée": "Eingabeaktion",
+        "Action de sortie": "Aktion beenden",
+        "Supprimer": "Löschen",
+        "Nom": "Name",
+        "Icône": "Symbol",
+        "Aucune": "Keine",
+        "Bleu": "Blau",
+        "Jaune": "Gelb",
+        "Orange": "Orange",
+        "Rouge": "Rot",
+        "Vert": "Grün",
+        "Décocher pour désactiver l\\'action": "Auswählen, um die Aktion zu deaktivieren",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Überprüfen Sie, ob der Befehl parallel zu den anderen Aktionen ausgeführt wird",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "",
+        "Tous les modes": "",
+        "Sélectionner un mot-clé": "Schlüsselwort auswählen"
+    },
+    "plugins\/mode\/core\/class\/mode.class.php": {
+        "Mode": "Modus",
+        "Mode precedent": "",
+        "Retour mode précedent": "",
+        "Erreur lors de l\\'éxecution de ": "Fehler beim Ausführen",
+        ". Détails : ": ". Details:",
+        "La commande de mode courant est introuvable": ""
     }
 }

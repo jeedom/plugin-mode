@@ -1,38 +1,38 @@
-Plugin für die Verwaltung von verschiedenen Modi der
-Wohnung/Haus/Zimmer, aber auch Stimmungen.
 
-Configuration du plugin
+.
+
+Plugin Konfiguration
 =======================
 
-Nachdem das Plugin herunterzuladen, müssen Sie nur um es zu aktivieren,
-gibt es auf dieser Ebene keine Konfiguration.
+Nach dem Herunterladen des Plugins müssen Sie es nur noch aktivieren,
+Auf dieser Ebene gibt es keine Konfiguration.
 
-Configuration des équipements
+Gerätekonfiguration
 =============================
 
-Der Konfigurationsmodus Gerät ist aus dem Menü verfügbar
-Plugin und Organisation:
 
-Sie werden hier alle die Konfiguration Ihrer Geräte finden:
+ :
 
--   **Gerätename** Modus: Modus Namen Ihrer Ausrüstung,
+Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
 
--   **Übergeordnete Objekt** zeigt das übergeordnete Objekt gehört
+-   **** : ,
+
+-   **Übergeordnetes Objekt** : gibt das übergeordnete Objekt an, zu dem es gehört
     Ausrüstung,
 
--   **Aktivieren**: auf Ihre aktive Ausrüstung zu machen,
+-   **Aktivieren** : macht Ihre Ausrüstung aktiv,
 
--   Visible ** ** macht Ihr Gerät sichtbar auf dem Armaturenbrett,
+-   **Sichtbar** : macht Ihre Ausrüstung auf dem Armaturenbrett sichtbar,
 
--   ** ** Kategorie: Gerätekategorien (es kann gehören
+-   **Kategorie** : Gerätekategorien (es kann gehören
     mehrere Kategorien).
 
--   **hinzufügen** Art und Weise: die Schaltfläche, um eine neue Form hinzufügen
+-   **** : 
 
-Weiter unten finden Sie die Liste der Profile finden, indem Sie darauf klicken Sie
-in der Lage, die Aktionen zu wählen, zu tun, wenn Sie diesen Modus eintritt
-und am Ausgang.
 
->**IMPORTANT**
+
+.
+
+>**Wichtig**
 >
->Attention lors du renommage d'un mode il faut absoluement revoir les scénarios/équipement qui utiliser l'ancien nom pour les passer sur le nouveau
+>Achtung beim Umbenennen eines Modus ist es unbedingt erforderlich, die Szenarien / Geräte zu überprüfen, die den alten Namen verwenden, um sie an den neuen weiterzugeben

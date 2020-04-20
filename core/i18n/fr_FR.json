@@ -1,25 +1,5 @@
 {
-    "desktop\/js\/mode.js": {
-        "Nom du mode ?": "Nom du mode ?",
-        "Nouveau nom ?": "Nouveau nom ?",
-        "Action d\\'entrée": "Action d\\'entrée",
-        "Action de sortie": "Action de sortie",
-        "Supprimer": "Supprimer",
-        "Nom": "Nom",
-        "Icône": "Icône",
-        "Aucune": "Aucune",
-        "Bleu": "Bleu",
-        "Jaune": "Jaune",
-        "Orange": "Orange",
-        "Rouge": "Rouge",
-        "Vert": "Vert",
-        "Décocher pour désactiver l\\'action": "Décocher pour désactiver l\\'action",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Cocher pour que la commande s\\'exécute en parallèle des autres actions",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode",
-        "Tous les modes": "Tous les modes",
-        "Sélectionner un mot-clé": "Sélectionner un mot-clé"
-    },
-    "desktop\/php\/mode.php": {
+    "plugins\/mode\/desktop\/php\/mode.php": {
         "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Gestion": "Gestion",
         "Ajouter": "Ajouter",
@@ -39,7 +19,27 @@
         "Catégorie": "Catégorie",
         "Ajouter mode": "Ajouter mode"
     },
-    "core\/class\/mode.class.php": {
+    "plugins\/mode\/desktop\/js\/mode.js": {
+        "Nom du mode ?": "Nom du mode ?",
+        "Nouveau nom ?": "Nouveau nom ?",
+        "Action d\\'entrée": "Action d\\'entrée",
+        "Action de sortie": "Action de sortie",
+        "Supprimer": "Supprimer",
+        "Nom": "Nom",
+        "Icône": "Icône",
+        "Aucune": "Aucune",
+        "Bleu": "Bleu",
+        "Jaune": "Jaune",
+        "Orange": "Orange",
+        "Rouge": "Rouge",
+        "Vert": "Vert",
+        "Décocher pour désactiver l\\'action": "Décocher pour désactiver l\\'action",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Cocher pour que la commande s\\'exécute en parallèle des autres actions",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode",
+        "Tous les modes": "Tous les modes",
+        "Sélectionner un mot-clé": "Sélectionner un mot-clé"
+    },
+    "plugins\/mode\/core\/class\/mode.class.php": {
         "Mode": "Mode",
         "Mode precedent": "Mode precedent",
         "Retour mode précedent": "Retour mode précedent",

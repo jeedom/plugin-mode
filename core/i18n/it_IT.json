@@ -1,45 +1,50 @@
 {
-    "desktop\/js\/mode.js": {
-        "Nom du mode ?": "Nome modalità ?",
-        "Nouveau nom ?": "Nuovo nome ?",
-        "Action d\\'entrée": "Azione d\\'ingresso",
-        "Action de sortie": "Azione d'\\uscita",
-        "Supprimer": "Elimina",
-        "Nom": "Nom",
-        "Icône": "Icona",
-        "Aucune": "Nessuno",
-        "Bleu": "Bleu",
-        "Jaune": "Jaune",
-        "Orange": "Orange",
-        "Rouge": "Rouge",
-        "Vert": "Vert",
-        "Décocher pour désactiver l\\'action": "Deselezionare per disabilitare \\ azione",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Controllare l'esecuzione del comando \\ 's in parallelo altre azioni",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode",
-        "Tous les modes": "Tous les modes",
-        "Sélectionner un mot-clé": "Seleziona una parola chiave"
-    },
-    "desktop\/php\/mode.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
+    "plugins\/mode\/desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401 - Accesso non autorizzato",
         "Gestion": "Gestione",
-        "Ajouter": "Ajouter",
-        "Mes Modes": "i miei metodi",
-        "Rechercher": "Cerca",
+        "Ajouter": "Aggiungi",
+        "Mes Modes": "",
+        "Rechercher": "Ricercare",
         "Configuration avancée": "Configurazione avanzata",
-        "Dupliquer": "Duplica",
+        "Dupliquer": "Duplicato",
         "Sauvegarder": "Salva",
-        "Supprimer": "Elimina",
+        "Supprimer": "Rimuovere",
         "Equipement": "Dispositivo",
         "Modes": "Modalità",
-        "Nom de l'équipement mode": "apparecchiature di moda Nome",
+        "Nom de l'équipement mode": "",
         "Objet parent": "Oggetto padre",
         "Aucun": "Nessuno",
-        "Activer": "Attiva",
+        "Activer": "Attivare",
         "Visible": "Visibile",
         "Catégorie": "Categoria",
-        "Ajouter mode": "Aggiungi modalità"
+        "Ajouter mode": ""
     },
-    "core\/class\/mode.class.php": {
-        "Plugin pour gérer différent mode de sa maison\/son appartement": "Plugin pour gérer différent mode de sa maison\/son appartement"
+    "plugins\/mode\/desktop\/js\/mode.js": {
+        "Nom du mode ?": "Nome modalità ?",
+        "Nouveau nom ?": "Nuovo nome ?",
+        "Action d\\'entrée": "",
+        "Action de sortie": "",
+        "Supprimer": "Rimuovere",
+        "Nom": "Nome",
+        "Icône": "Icona",
+        "Aucune": "No",
+        "Bleu": "Blu",
+        "Jaune": "Giallo",
+        "Orange": "Arancione",
+        "Rouge": "Rosso",
+        "Vert": "Verde",
+        "Décocher pour désactiver l\\'action": "Deselezionare per disabilitare \\ azione",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Controllare l'esecuzione del comando \\ 's in parallelo altre azioni",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "",
+        "Tous les modes": "",
+        "Sélectionner un mot-clé": "Seleziona una parola chiave"
+    },
+    "plugins\/mode\/core\/class\/mode.class.php": {
+        "Mode": "",
+        "Mode precedent": "",
+        "Retour mode précedent": "",
+        "Erreur lors de l\\'éxecution de ": "Errore durante l'esecuzione",
+        ". Détails : ": ". Dettagli:",
+        "La commande de mode courant est introuvable": ""
     }
 }

@@ -1,37 +1,38 @@
-Plugin to manage different modes of apartment / house / room but also atmospheres.
+
+.
 
 Plugin configuration
 =======================
 
-After downloading the plugin, you just have to activate it,
+After downloading the plugin, you just need to activate it,
 there is no configuration at this level.
 
-Configuration des équipements
+Equipment configuration
 =============================
 
-The configuration of the equipment mode is accessible from the menu
-plugin then organization:
 
-You can find here the full configuration of your device :
+ :
 
--   **Name of the equipment Mode**: name of your equipment Mode,
+Here you find all the configuration of your equipment :
 
--   **Parent Object** : means the parent object the equipment depend
+-   **** : ,
+
+-   **Parent object** : indicates the parent object to which belongs
     equipment,
 
--   **Enable**: to make your equipment active,
+-   **Activate** : makes your equipment active,
 
--   **Visible**: makes your equipment visible on the dashboard,
+-   **Visible** : makes your equipment visible on the dashboard,
 
--   **Category**: categories of equipment (it may belong to
-    several categories).
+-   **Category** : equipment categories (it may belong to
+    multiple categories).
 
--   **Add mode**: button to add a new mode
+-   **** : 
 
-Below you find the list of modes, by clicking on them
-you will be able to choose the actions to be done when entering this mode
-and at the exit.
 
->**IMPORTANT**
+
+.
+
+>**Important**
 >
->Attention lors du renommage d'un mode il faut absoluement revoir les scénarios/équipement qui utiliser l'ancien nom pour les passer sur le nouveau
+>Attention during the renaming of a mode it is absolutely necessary to review the scenarios / equipment which use the old name to pass them on the new

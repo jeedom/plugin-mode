@@ -1,45 +1,50 @@
 {
-    "desktop\/js\/mode.js": {
-        "Nom du mode ?": "Название режима?",
-        "Nouveau nom ?": "Новое имя?",
-        "Action d\\'entrée": "запись действий \\ «s",
-        "Action de sortie": "выходное воздействие",
-        "Supprimer": "Удалить",
-        "Nom": "Nom",
-        "Icône": "Иконка",
-        "Aucune": "Нет",
-        "Bleu": "Bleu",
-        "Jaune": "Jaune",
-        "Orange": "Orange",
-        "Rouge": "Rouge",
-        "Vert": "Vert",
-        "Décocher pour désactiver l\\'action": "Снимите флажок, чтобы отключить \\ Action",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Проверьте, команда \\ «ы работает параллельно другие действия",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode",
-        "Tous les modes": "Tous les modes",
-        "Sélectionner un mot-clé": "Выберите ключевое слово"
-    },
-    "desktop\/php\/mode.php": {
-        "401 - Accès non autorisé": "401 - Accès non autorisé",
+    "plugins\/mode\/desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401 - Несанкционированный доступ",
         "Gestion": "Управление",
-        "Ajouter": "Ajouter",
-        "Mes Modes": "мои методы",
-        "Rechercher": "Искать",
+        "Ajouter": "Добавить",
+        "Mes Modes": "",
+        "Rechercher": "поиск",
         "Configuration avancée": "Расширенные настройки",
-        "Dupliquer": "Дублировать",
+        "Dupliquer": "дубликат",
         "Sauvegarder": "Сохранить",
-        "Supprimer": "Удалить",
+        "Supprimer": "удаление",
         "Equipement": "Оборудование",
         "Modes": "Режимы",
-        "Nom de l'équipement mode": "Наименование способа оборудование",
+        "Nom de l'équipement mode": "",
         "Objet parent": "Родительский объект",
         "Aucun": "Нет",
-        "Activer": "Активировать",
+        "Activer": "активировать",
         "Visible": "Видимый",
-        "Catégorie": "Категория",
-        "Ajouter mode": "Добавить режим"
+        "Catégorie": "категория",
+        "Ajouter mode": ""
     },
-    "core\/class\/mode.class.php": {
-        "Plugin pour gérer différent mode de sa maison\/son appartement": "Plugin pour gérer différent mode de sa maison\/son appartement"
+    "plugins\/mode\/desktop\/js\/mode.js": {
+        "Nom du mode ?": "Название режима?",
+        "Nouveau nom ?": "Новое имя?",
+        "Action d\\'entrée": "",
+        "Action de sortie": "",
+        "Supprimer": "удаление",
+        "Nom": "Имя",
+        "Icône": "Иконка",
+        "Aucune": "нет",
+        "Bleu": "синий",
+        "Jaune": "желтый",
+        "Orange": "оранжевый",
+        "Rouge": "красный",
+        "Vert": "зеленый",
+        "Décocher pour désactiver l\\'action": "Снимите флажок, чтобы отключить \\ Action",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Проверьте, команда \\ «ы работает параллельно другие действия",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "",
+        "Tous les modes": "",
+        "Sélectionner un mot-clé": "Выберите ключевое слово"
+    },
+    "plugins\/mode\/core\/class\/mode.class.php": {
+        "Mode": "",
+        "Mode precedent": "",
+        "Retour mode précedent": "",
+        "Erreur lors de l\\'éxecution de ": "",
+        ". Détails : ": "",
+        "La commande de mode courant est introuvable": ""
     }
 }

@@ -1,11 +1,31 @@
 {
-    "desktop\/js\/mode.js": {
-        "Nom du mode ?": "Mode name ?",
+    "plugins\/mode\/desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "Gestion": "Management",
+        "Ajouter": "Add",
+        "Mes Modes": "",
+        "Rechercher": "Search",
+        "Configuration avancée": "Advanced configuration",
+        "Dupliquer": "Duplicate",
+        "Sauvegarder": "Save",
+        "Supprimer": "Delete",
+        "Equipement": "Equipment",
+        "Modes": "Modes",
+        "Nom de l'équipement mode": "",
+        "Objet parent": "Parent object",
+        "Aucun": "None",
+        "Activer": "Activate",
+        "Visible": "Visible",
+        "Catégorie": "Category",
+        "Ajouter mode": ""
+    },
+    "plugins\/mode\/desktop\/js\/mode.js": {
+        "Nom du mode ?": "Mode name?",
         "Nouveau nom ?": "New name?",
         "Action d\\'entrée": "Input action",
-        "Action de sortie": "Output action",
+        "Action de sortie": "Exit action",
         "Supprimer": "Delete",
-        "Nom": "Last name",
+        "Nom": "Name",
         "Icône": "Icon",
         "Aucune": "None",
         "Bleu": "Blue",
@@ -15,36 +35,16 @@
         "Vert": "Green",
         "Décocher pour désactiver l\\'action": "Uncheck to disable the action",
         "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Check for the command to run in parallel with the other actions",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entry: Do this action only if we come from the mode. Exit: do the actions only if we go to the mode",
-        "Tous les modes": "All modes",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "",
+        "Tous les modes": "",
         "Sélectionner un mot-clé": "Select a keyword"
     },
-    "desktop\/php\/mode.php": {
-        "401 - Accès non autorisé": "401 - Unauthorized access",
-        "Gestion": "Management",
-        "Ajouter": "Add",
-        "Mes Modes": "My Modes",
-        "Rechercher": "Search",
-        "Configuration avancée": "Advanced configuration",
-        "Dupliquer": "Duplicate",
-        "Sauvegarder": "Save",
-        "Supprimer": "Delete",
-        "Equipement": "Device",
-        "Modes": "modes",
-        "Nom de l'équipement mode": "Mode equipment name",
-        "Objet parent": "Parent object",
-        "Aucun": "None",
-        "Activer": "Enabled",
-        "Visible": "Visible",
-        "Catégorie": "Category",
-        "Ajouter mode": "Add mode"
-    },
-    "core\/class\/mode.class.php": {
+    "plugins\/mode\/core\/class\/mode.class.php": {
         "Mode": "Fashion",
-        "Mode precedent": "Previous mode",
-        "Retour mode précedent": "Return to previous mode",
+        "Mode precedent": "",
+        "Retour mode précedent": "",
         "Erreur lors de l\\'éxecution de ": "Error while executing",
         ". Détails : ": ". Details:",
-        "La commande de mode courant est introuvable": "Current mode command not found"
+        "La commande de mode courant est introuvable": ""
     }
 }
