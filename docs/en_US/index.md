@@ -15,7 +15,7 @@ Equipment configuration
 
 Here you find all the configuration of your equipment :
 
--   **** : ,
+-   **Mode equipment name** : ,
 
 -   **Parent object** : indicates the parent object to which belongs
     equipment,
@@ -27,7 +27,7 @@ Here you find all the configuration of your equipment :
 -   **Category** : equipment categories (it may belong to
     multiple categories).
 
--   **** : 
+-   **Add mode** : 
 
 
 
