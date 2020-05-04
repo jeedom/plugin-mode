@@ -3,7 +3,7 @@
         "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
         "Gestion": "Verwaltung",
         "Ajouter": "Hinzufügen",
-        "Mes Modes": "",
+        "Mes Modes": "Meine Modi",
         "Rechercher": "Suchen nach",
         "Configuration avancée": "Erweiterte Konfiguration",
         "Dupliquer": "Duplikat",
@@ -11,13 +11,13 @@
         "Supprimer": "Löschen",
         "Equipement": "Gerät",
         "Modes": "Modus",
-        "Nom de l'équipement mode": "",
+        "Nom de l'équipement mode": "Gerätename Modus",
         "Objet parent": "Übergeordnetes Objekt",
         "Aucun": "Ohne",
         "Activer": "Aktivieren",
         "Visible": "Sichtbar",
         "Catégorie": "Kategorie",
-        "Ajouter mode": ""
+        "Ajouter mode": "Modus hinzufügen"
     },
     "plugins\/mode\/desktop\/js\/mode.js": {
         "Nom du mode ?": "Modus Name",
@@ -35,16 +35,16 @@
         "Vert": "Grün",
         "Décocher pour désactiver l\\'action": "Auswählen, um die Aktion zu deaktivieren",
         "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Überprüfen Sie, ob der Befehl parallel zu den anderen Aktionen ausgeführt wird",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "",
-        "Tous les modes": "",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Enter: Führen Sie diese Aktion nur aus, wenn Sie aus dem Modus kommen. Beenden: Führen Sie die Aktionen nur aus, wenn Sie in den Modus wechseln",
+        "Tous les modes": "Alle Modi",
         "Sélectionner un mot-clé": "Schlüsselwort auswählen"
     },
     "plugins\/mode\/core\/class\/mode.class.php": {
         "Mode": "Modus",
-        "Mode precedent": "",
-        "Retour mode précedent": "",
+        "Mode precedent": "Vorheriger Modus",
+        "Retour mode précedent": "Kehren Sie zum vorherigen Modus zurück",
         "Erreur lors de l\\'éxecution de ": "Fehler beim Ausführen",
         ". Détails : ": ". Details:",
-        "La commande de mode courant est introuvable": ""
+        "La commande de mode courant est introuvable": "Aktueller Modusbefehl nicht gefunden"
     }
 }

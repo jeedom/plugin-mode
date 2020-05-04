@@ -3,7 +3,7 @@
         "401 - Accès non autorisé": "401 - Acceso no autorizado",
         "Gestion": "Gestión",
         "Ajouter": "Añadir",
-        "Mes Modes": "",
+        "Mes Modes": "Mis modos",
         "Rechercher": "Buscar",
         "Configuration avancée": "Configuración avanzada",
         "Dupliquer": "Duplicar",
@@ -11,13 +11,13 @@
         "Supprimer": "Borrar",
         "Equipement": "Dispositivos",
         "Modes": "Modos",
-        "Nom de l'équipement mode": "",
+        "Nom de l'équipement mode": "Nombre del equipo Modo",
         "Objet parent": "Objeto padre",
         "Aucun": "Ninguna",
         "Activer": "Activar",
         "Visible": "Visible",
         "Catégorie": "Categoría",
-        "Ajouter mode": ""
+        "Ajouter mode": "Añadir modo"
     },
     "plugins\/mode\/desktop\/js\/mode.js": {
         "Nom du mode ?": "¿Nombre del modo?",
@@ -35,16 +35,16 @@
         "Vert": "Verde",
         "Décocher pour désactiver l\\'action": "Desactive la casilla para desactivar Acción",
         "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Compruebe si la ejecución del comando \\'s en otras acciones paralelas",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "",
-        "Tous les modes": "",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Intro: realice esta acción solo si viene del modo. Salir: realiza las acciones solo si vas al modo",
+        "Tous les modes": "Todos los modos",
         "Sélectionner un mot-clé": "Seleccionar una palabra clave"
     },
     "plugins\/mode\/core\/class\/mode.class.php": {
         "Mode": "Modo",
-        "Mode precedent": "",
-        "Retour mode précedent": "",
+        "Mode precedent": "Modo anterior",
+        "Retour mode précedent": "Regresar al modo anterior",
         "Erreur lors de l\\'éxecution de ": "Error al ejecutar",
         ". Détails : ": ". Detalles:",
-        "La commande de mode courant est introuvable": ""
+        "La commande de mode courant est introuvable": "Comando de modo actual no encontrado"
     }
 }

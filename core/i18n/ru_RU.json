@@ -40,7 +40,7 @@
         "Sélectionner un mot-clé": "Выберите ключевое слово"
     },
     "plugins\/mode\/core\/class\/mode.class.php": {
-        "Mode": "",
+        "Mode": "Режим",
         "Mode precedent": "",
         "Retour mode précedent": "",
         "Erreur lors de l\\'éxecution de ": "",

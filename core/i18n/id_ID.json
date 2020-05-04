@@ -40,7 +40,7 @@
         "Sélectionner un mot-clé": "Pilih kata kunci"
     },
     "plugins\/mode\/core\/class\/mode.class.php": {
-        "Mode": "",
+        "Mode": "Mode",
         "Mode precedent": "",
         "Retour mode précedent": "",
         "Erreur lors de l\\'éxecution de ": "",

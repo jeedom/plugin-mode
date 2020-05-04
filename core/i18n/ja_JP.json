@@ -40,7 +40,7 @@
         "Sélectionner un mot-clé": "キーワードを選択"
     },
     "plugins\/mode\/core\/class\/mode.class.php": {
-        "Mode": "",
+        "Mode": "モード",
         "Mode precedent": "",
         "Retour mode précedent": "",
         "Erreur lors de l\\'éxecution de ": "",

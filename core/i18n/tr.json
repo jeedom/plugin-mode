@@ -40,7 +40,7 @@
         "Sélectionner un mot-clé": "Anahtar kelime seçin"
     },
     "plugins\/mode\/core\/class\/mode.class.php": {
-        "Mode": "",
+        "Mode": "Mod",
         "Mode precedent": "",
         "Retour mode précedent": "",
         "Erreur lors de l\\'éxecution de ": "Yürütülürken hata oluştu",

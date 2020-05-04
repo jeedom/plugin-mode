@@ -3,7 +3,7 @@
         "401 - Accès non autorisé": "401 - Acesso não autorizado",
         "Gestion": "Gestão",
         "Ajouter": "Adicionar",
-        "Mes Modes": "",
+        "Mes Modes": "Meus modos",
         "Rechercher": "Pesquisa",
         "Configuration avancée": "Configuração avançada",
         "Dupliquer": "Duplicar",
@@ -11,19 +11,19 @@
         "Supprimer": "Remover",
         "Equipement": "Equipamento",
         "Modes": "Modos",
-        "Nom de l'équipement mode": "",
+        "Nom de l'équipement mode": "Nome do equipamento Modo",
         "Objet parent": "Objeto pai",
         "Aucun": "Nemhum",
         "Activer": "Ativar",
         "Visible": "Visivél",
         "Catégorie": "Categoria",
-        "Ajouter mode": ""
+        "Ajouter mode": "Adicionar modo"
     },
     "plugins\/mode\/desktop\/js\/mode.js": {
         "Nom du mode ?": "Nome do perfil?",
         "Nouveau nom ?": "Novo nome?",
-        "Action d\\'entrée": "",
-        "Action de sortie": "",
+        "Action d\\'entrée": "Ação de entrada",
+        "Action de sortie": "Ação de saída",
         "Supprimer": "Remover",
         "Nom": "Nome",
         "Icône": "ícone",
@@ -35,16 +35,16 @@
         "Vert": "Verde",
         "Décocher pour désactiver l\\'action": "Desmarque para desativar \\ Ação",
         "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Verifique para o comando \\ 's em execução em outras ações paralelas",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "",
-        "Tous les modes": "",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Enter: execute esta ação apenas se você vier do modo. Sair: execute as ações apenas se você for para o modo",
+        "Tous les modes": "Todos os modos",
         "Sélectionner un mot-clé": "Selecione uma palavra-chave"
     },
     "plugins\/mode\/core\/class\/mode.class.php": {
-        "Mode": "",
-        "Mode precedent": "",
-        "Retour mode précedent": "",
-        "Erreur lors de l\\'éxecution de ": "",
-        ". Détails : ": "",
-        "La commande de mode courant est introuvable": ""
+        "Mode": "Modo",
+        "Mode precedent": "Modo anterior",
+        "Retour mode précedent": "Retornar ao modo anterior",
+        "Erreur lors de l\\'éxecution de ": "Erro ao executar",
+        ". Détails : ": ". Detalhes:",
+        "La commande de mode courant est introuvable": "Comando do modo atual não encontrado"
     }
 }
