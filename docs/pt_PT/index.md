@@ -1,37 +1,25 @@
-Plugin para gerenciar diferentes modos de um
-apartamento / casa / quarto, mas também atmosferas.
+# Plugin de moda
 
-Configuração do plugin
-=======================
+Plugin para gerenciar diferentes modos de um apartamento / casa / quarto, mas também atmosferas.
 
-Depois de baixar o plugin, você só precisa ativá-lo,
-não há configuração neste nível.
+# Configuração do plugin
 
-Configuração do equipamento
-=============================
+Depois de baixar o plugin, você só precisa ativá-lo, não há configuração neste nível.
 
-A configuração do equipamento de modo pode ser acessada no menu
-plugin e organização :
+# Configuração do equipamento
+
+A configuração do equipamento de modo é acessível no menu do plug-in e depois na organização :
 
 Aqui você encontra toda a configuração do seu equipamento :
 
 -   **Nome do equipamento Modo** : nome do seu equipamento Mode,
-
--   **Objeto pai** : indica o objeto pai ao qual pertence
-    o equipamento,
-
+-   **Objeto pai** : indica o objeto pai ao qual o equipamento pertence,
 -   **Activer** : torna seu equipamento ativo,
-
 -   **Visible** : torna seu equipamento visível no painel,
-
--   **Categoria** : categorias de equipamentos (pode pertencer a
-    várias categorias).
-
+-   **Categoria** : categorias de equipamentos (pode pertencer a várias categorias).
 -   **Adicionar modo** : para adicionar um novo modo
 
-Abaixo, você encontra a lista de modos, clicando nela.
-poderá escolher as ações a serem executadas ao entrar neste modo
-e quando sair.
+Abaixo, você encontra a lista de modos. Ao clicar nele, você poderá escolher as ações a serem executadas ao entrar neste modo e ao sair.
 
 >**IMPORTANT**
 >

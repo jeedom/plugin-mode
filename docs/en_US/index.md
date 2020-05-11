@@ -1,37 +1,25 @@
-Plugin to manage different modes of a
-apartment / house / room, but also atmospheres.
+# Fashion Plugin
 
-Plugin configuration
-=======================
+Plugin to manage different modes of an apartment / house / room, but also atmospheres.
 
-After downloading the plugin, you just need to activate it,
-there is no configuration at this level.
+# Plugin configuration
 
-Equipment configuration
-=============================
+After downloading the plugin, you just need to activate it, there is no configuration at this level.
 
-The mode equipment configuration is accessible from the menu
-plugin then organization :
+# Equipment configuration
+
+The configuration of the mode equipment is accessible from the plugin menu then organization :
 
 Here you find all the configuration of your equipment :
 
 -   **Mode equipment name** : name of your equipment Mode,
-
--   **Parent object** : indicates the parent object to which belongs
-    equipment,
-
+-   **Parent object** : indicates the parent object to which the equipment belongs,
 -   **Activer** : makes your equipment active,
-
 -   **Visible** : makes your equipment visible on the dashboard,
-
--   **Category** : equipment categories (it may belong to
-    multiple categories).
-
+-   **Category** : equipment categories (it can belong to several categories).
 -   **Add mode** : button to add a new mode
 
-Below you find the list of modes, by clicking on it you
-will be able to choose the actions to do when entering this mode
-and when going out.
+Below you find the list of modes, by clicking on it you will be able to choose the actions to do when entering this mode and when exiting.
 
 >**IMPORTANT**
 >

@@ -1,37 +1,25 @@
-Plugin zum Verwalten verschiedener Modi von a
-Wohnung / Haus / Zimmer, aber auch Atmosphäre.
+# Mode Plugin
 
-Plugin Konfiguration
-=======================
+Plugin zum Verwalten verschiedener Modi einer Wohnung / eines Hauses / eines Zimmers, aber auch der Atmosphäre.
 
-Nach dem Herunterladen des Plugins müssen Sie es nur noch aktivieren,
-Auf dieser Ebene gibt es keine Konfiguration.
+# Plugin Konfiguration
 
-Gerätekonfiguration
-=============================
+Nachdem Sie das Plugin heruntergeladen haben, müssen Sie es nur noch aktivieren. Auf dieser Ebene gibt es keine Konfiguration.
 
-Die Konfiguration der Modusausrüstung ist über das Menü zugänglich
-Plugin dann Organisation :
+# Gerätekonfiguration
+
+Auf die Konfiguration der Modusausrüstung kann über das Plugin-Menü und dann über die Organisation zugegriffen werden :
 
 Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
 
 -   **Gerätename Modus** : Name Ihres Gerätemodus,
-
--   **Übergeordnetes Objekt** : gibt das übergeordnete Objekt an, zu dem es gehört
-    Ausrüstung,
-
+-   **Übergeordnetes Objekt** : Gibt das übergeordnete Objekt an, zu dem das Gerät gehört,
 -   **Activer** : macht Ihre Ausrüstung aktiv,
-
 -   **Visible** : macht Ihre Ausrüstung auf dem Armaturenbrett sichtbar,
-
--   **Kategorie** : Gerätekategorien (es kann gehören
-    mehrere Kategorien).
-
+-   **Kategorie** : Gerätekategorien (es kann zu mehreren Kategorien gehören).
 -   **Modus hinzufügen** : Schaltfläche, um einen neuen Modus hinzuzufügen
 
-Unten finden Sie die Liste der Modi, indem Sie darauf klicken
-können die Aktionen auswählen, die beim Aufrufen dieses Modus ausgeführt werden sollen
-und beim ausgehen.
+Unten finden Sie die Liste der Modi. Wenn Sie darauf klicken, können Sie die Aktionen auswählen, die beim Aufrufen dieses Modus und beim Beenden ausgeführt werden sollen.
 
 >**IMPORTANT**
 >
