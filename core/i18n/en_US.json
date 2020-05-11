@@ -35,7 +35,7 @@
         "Vert": "Green",
         "Décocher pour désactiver l\\'action": "Uncheck to disable the action",
         "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Check for the command to run in parallel with the other actions",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "\nEnter: Do this action only if you come from the mode. Exit: do the actions only if you go to the mode",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Enter: Do this action only if you come from the mode. Exit: do the actions only if you go to the mode",
         "Tous les modes": "All modes",
         "Sélectionner un mot-clé": "Select a keyword"
     },
@@ -44,7 +44,7 @@
         "Mode precedent": "Previous mode",
         "Retour mode précedent": "Return to previous mode",
         "Erreur lors de l\\'éxecution de ": "Error while executing",
-        ". Détails : ": ". Details:",
-        "La commande de mode courant est introuvable": "Current mode command not found\n"
+        ". Détails : ": "Details:",
+        "La commande de mode courant est introuvable": "Current mode command not found"
     }
 }

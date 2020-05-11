@@ -4,7 +4,7 @@
         "Correction d'un bug sur l'app Mobile et le plugin Homebridge": "Corrección de un error en la aplicación móvil y el complemento Homebridge",
         "06\/12\/2019": "06\/12\/2019",
         "Suppression du bouton de duplication de mode (trop de bug)": "Botón de eliminación de modo duplicado (demasiados errores)",
-        "Correction d'un bug sur le calcul des commandes orphelines": "Corrección de un error en el cálculo de órdenes huérfanas.",
+        "Correction d'un bug sur le calcul des commandes orphelines": "Corrección de un error en el cálculo de órdenes huérfanas",
         "Ajout d'une commande indiquant le mode précedent": "Adición de un comando que indica el modo anterior",
         "Correction d'un bug sur les templates de widgets multistate V4": "Se corrigió el error en las plantillas de widgets V4 multiestado",
         "08\/05\/2018": "08\/05\/2018",
@@ -42,15 +42,21 @@
         "Activer ": "Activar ",
         "[Activer": "[Activar",
         "Activer]": "Activar]",
+        "*Activer": "*Activar",
+        "Activer*": "Activar*",
         " Visible.": " Visible.",
         " Visible?": " Visible?",
         "Visible ": "Visible ",
         "[Visible": "[Visible",
         "Visible]": "Visible]",
+        "*Visible": "*Visible",
+        "Visible*": "Visible*",
         " IMPORTANT.": " Importante.",
         " IMPORTANT?": " Importante?",
         "IMPORTANT ": "Importante ",
         "[IMPORTANT": "[Importante",
-        "IMPORTANT]": "Importante]"
+        "IMPORTANT]": "Importante]",
+        "*IMPORTANT": "*Importante",
+        "IMPORTANT*": "Importante*"
     }
 }

@@ -42,15 +42,21 @@
         "Activer ": "Ativar ",
         "[Activer": "[Ativar",
         "Activer]": "Ativar]",
+        "*Activer": "*Ativar",
+        "Activer*": "Ativar*",
         " Visible.": " Visivél.",
         " Visible?": " Visivél?",
         "Visible ": "Visivél ",
         "[Visible": "[Visivél",
         "Visible]": "Visivél]",
+        "*Visible": "*Visivél",
+        "Visible*": "Visivél*",
         " IMPORTANT.": " IMPORTANTE.",
         " IMPORTANT?": " IMPORTANTE?",
         "IMPORTANT ": "IMPORTANTE ",
         "[IMPORTANT": "[IMPORTANTE",
-        "IMPORTANT]": "IMPORTANTE]"
+        "IMPORTANT]": "IMPORTANTE]",
+        "*IMPORTANT": "*IMPORTANTE",
+        "IMPORTANT*": "IMPORTANTE*"
     }
 }

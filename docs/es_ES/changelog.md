@@ -5,7 +5,7 @@
 # 06/12/2019
 
 - Botón de eliminación de modo duplicado (demasiados errores)
-- Corrección de un error en el cálculo de órdenes huérfanas.
+- Corrección de un error en el cálculo de órdenes huérfanas
 - Adición de un comando que indica el modo anterior
 - Se corrigió el error en las plantillas de widgets V4 multiestado
 
