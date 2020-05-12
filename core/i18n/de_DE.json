@@ -1,52 +1,50 @@
 {
-    "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gérer différents modes de sa maison/son appartement": "Plugin pour gérer différents modes de sa maison/son appartement",
-        "Aucune": "Ohne"
-    },
-    "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "Modus hinzufügen",
-        "Rechercher": "Suchen nach",
-        "Mes mode": "Mein Modus",
-        "Général": "Allgemein",
-        "Nom de l'équipement mode": "Modus Gerätename",
-        "Objet parent": "Eltern-Objekt",
-        "Aucun": "Ohne",
-        "Activer": "aktivieren",
-        "Visible": "Sichtbar",
-        "Modes": "Modus",
-        "Ajouter mode": "Modus hinzufügen",
-        "Supprimer": "Löschen",
-        "Sauvegarder": "Speichern",
-        "Catégorie": "Kategorie",
+    "plugins\/mode\/desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Gestion": "Verwaltung",
+        "Ajouter": "Hinzufügen",
         "Mes Modes": "Meine Modi",
+        "Rechercher": "Suchen nach",
         "Configuration avancée": "Erweiterte Konfiguration",
-        "Equipement": "Gerät",
-        "Gestion": "Verwaltung"
-    },
-    "plugins/mode/desktop/js/mode.js": {
-        "Afficher": "anzeigen",
-        "Tester": "Test",
-        "Nom du mode ?": "Modus Name",
-        "Nom du mode": "Modus Name",
-        "Action d\\'entrée": "Eingangs Aktion",
-        "Action de sortie": "Ausgangs Aktion",
-        "Déclencheur": "Auslöser",
-        "Dupliquer": "Kopieren",
-        "Nouveau nom ?": "Neuer Name",
+        "Dupliquer": "Duplikat",
+        "Sauvegarder": "Speichern",
         "Supprimer": "Löschen",
+        "Equipement": "Gerät",
+        "Modes": "Modus",
+        "Nom de l'équipement mode": "Gerätename Modus",
+        "Objet parent": "Übergeordnetes Objekt",
+        "Aucun": "Ohne",
+        "Activer": "Aktivieren",
+        "Visible": "Sichtbar",
+        "Catégorie": "Kategorie",
+        "Ajouter mode": "Modus hinzufügen"
+    },
+    "plugins\/mode\/desktop\/js\/mode.js": {
+        "Nom du mode ?": "Modus Name",
+        "Nouveau nom ?": "Neuer Name",
+        "Action d\\'entrée": "Eingabeaktion",
+        "Action de sortie": "Aktion beenden",
+        "Supprimer": "Löschen",
+        "Nom": "Name",
         "Icône": "Symbol",
-        "Sélectionner un mot-clé": "Schlüsselwort auswählen",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Überprüfen Sie, ob der Befehl parallel zu den anderen Aktionen ausgeführt wird",
+        "Aucune": "Keine",
+        "Bleu": "Blau",
+        "Jaune": "Gelb",
+        "Orange": "Orange",
+        "Rouge": "Rot",
+        "Vert": "Grün",
         "Décocher pour désactiver l\\'action": "Auswählen, um die Aktion zu deaktivieren",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Überprüfen Sie, ob der Befehl parallel zu den anderen Aktionen ausgeführt wird",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Enter: Führen Sie diese Aktion nur aus, wenn Sie aus dem Modus kommen. Beenden: Führen Sie die Aktionen nur aus, wenn Sie in den Modus wechseln",
         "Tous les modes": "Alle Modi",
-        "Ne faire cette action que si l\\'on vient du mode": "Führen Sie diese Aktion nur aus, wenn Sie aus dem Modus kommen",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Eingabe : führen Sie diese Aktion nur aus, wenn eine aus dem Modus kommt. Ausgabe : Führen Sie die Aktionen nur aus, wenn Sie in den Modus wechseln"
+        "Sélectionner un mot-clé": "Schlüsselwort auswählen"
     },
-    "plugins/mode/core/class/mode.class.php": {
+    "plugins\/mode\/core\/class\/mode.class.php": {
         "Mode": "Modus",
-        "Retour mode précédent": "Retour mode précédent"
-    },
-    "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
+        "Mode precedent": "Vorheriger Modus",
+        "Retour mode précedent": "Kehren Sie zum vorherigen Modus zurück",
+        "Erreur lors de l\\'éxecution de ": "Fehler beim Ausführen",
+        ". Détails : ": "Details:",
+        "La commande de mode courant est introuvable": "Aktueller Modusbefehl nicht gefunden"
     }
 }

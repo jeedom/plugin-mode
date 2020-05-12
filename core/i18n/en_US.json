@@ -1,52 +1,50 @@
 {
-    "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gérer différents modes de sa maison/son appartement": "Plugin pour gérer différents modes de sa maison/son appartement",
-        "Aucune": "None"
-    },
-    "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "Add a Mode",
+    "plugins\/mode\/desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "Gestion": "Management",
+        "Ajouter": "Add",
+        "Mes Modes": "My mode",
         "Rechercher": "Search",
-        "Mes mode": "My Modes",
-        "Général": "Main",
+        "Configuration avancée": "Advanced configuration",
+        "Dupliquer": "Duplicate",
+        "Sauvegarder": "Save",
+        "Supprimer": "Delete",
+        "Equipement": "Equipment",
+        "Modes": "Modes",
         "Nom de l'équipement mode": "Mode equipment name",
         "Objet parent": "Parent object",
         "Aucun": "None",
-        "Activer": "Enabled",
+        "Activer": "Activate",
         "Visible": "Visible",
-        "Modes": "Modes",
-        "Ajouter mode": "Add mode",
-        "Supprimer": "Delete",
-        "Sauvegarder": "Save",
         "Catégorie": "Category",
-        "Mes Modes": "My Modes",
-        "Configuration avancée": "Advanced configuration",
-        "Equipement": "Device",
-        "Gestion": "Management"
+        "Ajouter mode": "Add mode"
     },
-    "plugins/mode/desktop/js/mode.js": {
-        "Afficher": "Show",
-        "Tester": "Test",
-        "Nom du mode ?": "Mode name ?",
-        "Nom du mode": "Mode name",
-        "Action d\\'entrée": "Input action",
-        "Action de sortie": "Output action",
-        "Déclencheur": "Trigger",
-        "Dupliquer": "Duplicate",
+    "plugins\/mode\/desktop\/js\/mode.js": {
+        "Nom du mode ?": "Mode name?",
         "Nouveau nom ?": "New name?",
+        "Action d\\'entrée": "Input action",
+        "Action de sortie": "Exit action",
         "Supprimer": "Delete",
+        "Nom": "Name",
         "Icône": "Icon",
-        "Sélectionner un mot-clé": "Select a keyword",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Check for the command to run in parallel with the other actions",
+        "Aucune": "None",
+        "Bleu": "Blue",
+        "Jaune": "Yellow",
+        "Orange": "Orange",
+        "Rouge": "Red",
+        "Vert": "Green",
         "Décocher pour désactiver l\\'action": "Uncheck to disable the action",
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Check for the command to run in parallel with the other actions",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Enter: Do this action only if you come from the mode. Exit: do the actions only if you go to the mode",
         "Tous les modes": "All modes",
-        "Ne faire cette action que si l\\'on vient du mode": "Do this action only if we come from the mode",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entry: Do this action only if we come from the mode. Exit: do the actions only if we go to the mode"
+        "Sélectionner un mot-clé": "Select a keyword"
     },
-    "plugins/mode/core/class/mode.class.php": {
+    "plugins\/mode\/core\/class\/mode.class.php": {
         "Mode": "Mode",
-        "Retour mode précédent": "Back to previous mode"
-    },
-    "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin to manage different modes of your house/apartment"
+        "Mode precedent": "Previous mode",
+        "Retour mode précedent": "Return to previous mode",
+        "Erreur lors de l\\'éxecution de ": "Error while executing",
+        ". Détails : ": "Details:",
+        "La commande de mode courant est introuvable": "Current mode command not found"
     }
 }

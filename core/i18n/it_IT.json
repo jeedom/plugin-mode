@@ -1,52 +1,50 @@
 {
-    "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gérer différents modes de sa maison/son appartement": "Plugin pour gérer différents modes de sa maison/son appartement",
-        "Aucune": "Nessuno"
-    },
-    "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "Aggiungi modalità",
-        "Rechercher": "Cerca",
-        "Mes mode": "Le mie modalit",
-        "Général": "Generale",
-        "Nom de l'équipement mode": "apparecchiature di moda Nome",
+    "plugins\/mode\/desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401 - Accesso non autorizzato",
+        "Gestion": "Gestione",
+        "Ajouter": "Aggiungi",
+        "Mes Modes": "",
+        "Rechercher": "Ricercare",
+        "Configuration avancée": "Configurazione avanzata",
+        "Dupliquer": "Duplicato",
+        "Sauvegarder": "Salva",
+        "Supprimer": "Rimuovere",
+        "Equipement": "Dispositivo",
+        "Modes": "Modalità",
+        "Nom de l'équipement mode": "",
         "Objet parent": "Oggetto padre",
         "Aucun": "Nessuno",
-        "Activer": "Attiva",
+        "Activer": "Attivare",
         "Visible": "Visibile",
-        "Modes": "Modalità",
-        "Ajouter mode": "Aggiungi modalità",
-        "Supprimer": "Elimina",
-        "Sauvegarder": "Salva",
         "Catégorie": "Categoria",
-        "Mes Modes": "i miei metodi",
-        "Configuration avancée": "Configurazione avanzata",
-        "Equipement": "Dispositivo",
-        "Gestion": "Gestione"
+        "Ajouter mode": ""
     },
-    "plugins/mode/desktop/js/mode.js": {
-        "Afficher": "Mostra",
-        "Tester": "Prova",
+    "plugins\/mode\/desktop\/js\/mode.js": {
         "Nom du mode ?": "Nome modalità ?",
-        "Nom du mode": "Nome modalità",
-        "Action d\\'entrée": "Azione d\\'ingresso",
-        "Action de sortie": "Azione d'\\uscita",
-        "Déclencheur": "Innesco",
-        "Dupliquer": "Duplica",
         "Nouveau nom ?": "Nuovo nome ?",
-        "Supprimer": "Elimina",
+        "Action d\\'entrée": "",
+        "Action de sortie": "",
+        "Supprimer": "Rimuovere",
+        "Nom": "Nome",
         "Icône": "Icona",
-        "Sélectionner un mot-clé": "Seleziona una parola chiave",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Controllare l'esecuzione del comando \\ 's in parallelo altre azioni",
+        "Aucune": "No",
+        "Bleu": "Blu",
+        "Jaune": "Giallo",
+        "Orange": "Arancione",
+        "Rouge": "Rosso",
+        "Vert": "Verde",
         "Décocher pour désactiver l\\'action": "Deselezionare per disabilitare \\ azione",
-        "Tous les modes": "Tous les modes",
-        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Controllare l'esecuzione del comando \\ 's in parallelo altre azioni",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "",
+        "Tous les modes": "",
+        "Sélectionner un mot-clé": "Seleziona una parola chiave"
     },
-    "plugins/mode/core/class/mode.class.php": {
+    "plugins\/mode\/core\/class\/mode.class.php": {
         "Mode": "Modalità",
-        "Retour mode précédent": "Retour mode précédent"
-    },
-    "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
+        "Mode precedent": "",
+        "Retour mode précedent": "",
+        "Erreur lors de l\\'éxecution de ": "Errore durante l'esecuzione",
+        ". Détails : ": "Dettagli:",
+        "La commande de mode courant est introuvable": ""
     }
 }

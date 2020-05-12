@@ -1,52 +1,50 @@
 {
-    "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gérer différents modes de sa maison/son appartement": "Plugin pour gérer différents modes de sa maison/son appartement",
-        "Aucune": "Tak ada"
-    },
-    "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "Tambahkan bentuk",
-        "Rechercher": "Mencari",
-        "Mes mode": "mode saya",
-        "Général": "Umum",
-        "Nom de l'équipement mode": "Nama peralatan busana",
+    "plugins\/mode\/desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401 - Akses tidak sah",
+        "Gestion": "Manajemen",
+        "Ajouter": "Tambahan",
+        "Mes Modes": "",
+        "Rechercher": "Pencarian",
+        "Configuration avancée": "Konfigurasi lanjutan",
+        "Dupliquer": "Duplikat",
+        "Sauvegarder": "Menyimpan",
+        "Supprimer": "Menghapus",
+        "Equipement": "Peralatan",
+        "Modes": "Mode",
+        "Nom de l'équipement mode": "",
         "Objet parent": "Objek induk",
         "Aucun": "Tak ada",
         "Activer": "Mengaktifkan",
         "Visible": "Terlihat",
-        "Modes": "mode",
-        "Ajouter mode": "menambahkan mode",
-        "Supprimer": "Menghapus",
-        "Sauvegarder": "Menyimpan",
         "Catégorie": "Kategori",
-        "Mes Modes": "metode saya",
-        "Configuration avancée": "konfigurasi lanjutan",
-        "Equipement": "Peralatan",
-        "Gestion": "Manajemen"
+        "Ajouter mode": ""
     },
-    "plugins/mode/desktop/js/mode.js": {
-        "Afficher": "Memenitikan",
-        "Tester": "Coba",
-        "Nom du mode ?": "nama profil?",
-        "Nom du mode": "Nama Mode",
-        "Action d\\'entrée": "Aksi \\ 's entri",
-        "Action de sortie": "Output Aksi",
-        "Déclencheur": "pelatuk",
-        "Dupliquer": "Duplikat",
-        "Nouveau nom ?": "nama baru?",
+    "plugins\/mode\/desktop\/js\/mode.js": {
+        "Nom du mode ?": "Nama profil?",
+        "Nouveau nom ?": "Nama baru?",
+        "Action d\\'entrée": "",
+        "Action de sortie": "",
         "Supprimer": "Menghapus",
+        "Nom": "Nama",
         "Icône": "Icon",
-        "Sélectionner un mot-clé": "Pilih kata kunci",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Periksa perintah \\ 's berjalan secara paralel tindakan lain",
+        "Aucune": "Tidak",
+        "Bleu": "Biru",
+        "Jaune": "Kuninh",
+        "Orange": "Jeruk",
+        "Rouge": "Merah",
+        "Vert": "Hijau",
         "Décocher pour désactiver l\\'action": "Hapus tanda centang untuk menonaktifkan \\ Aksi",
-        "Tous les modes": "Tous les modes",
-        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Periksa perintah \\ 's berjalan secara paralel tindakan lain",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "",
+        "Tous les modes": "",
+        "Sélectionner un mot-clé": "Pilih kata kunci"
     },
-    "plugins/mode/core/class/mode.class.php": {
-        "Mode": "mode",
-        "Retour mode précédent": "Retour mode précédent"
-    },
-    "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
+    "plugins\/mode\/core\/class\/mode.class.php": {
+        "Mode": "Mode",
+        "Mode precedent": "",
+        "Retour mode précedent": "",
+        "Erreur lors de l\\'éxecution de ": "",
+        ". Détails : ": "",
+        "La commande de mode courant est introuvable": ""
     }
 }

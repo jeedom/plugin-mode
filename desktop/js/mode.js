@@ -193,7 +193,7 @@ function addMode(_mode,_updateMode) {
   
   div += '<div class="col-lg-2 col-sm-4">';
   div += '<label class="control-label" style="margin-right:7px">{{Icône}}</label>';
-  div += '<a class="modeAction btn btn-default btn-sm" data-l1key="chooseIcon"><i class="fa fa-flag"></i> {{Icône}}</a>';
+  div += '<a class="modeAction btn btn-default btn-sm" data-l1key="chooseIcon"><i class="fas fa-flag"></i> {{Icône}}</a>';
   div += ' <span class="modeAttr label label-info cursor" data-l1key="icon" style="display:inline"></span>';
   div += '</div>';
   
@@ -289,7 +289,7 @@ function addAction(_action, _type, _name, _el) {
   div += '</span>';
   div += '<input class="expressionAttr form-control input-sm cmdAction" data-l1key="cmd" data-type="' + _type + '" />';
   div += '<span class="input-group-btn">';
-  div += '<a class="btn ' + button + ' btn-sm listAction" data-type="' + _type + '" title="{{Sélectionner un mot-clé}}"><i class="fa fa-tasks"></i></a>';
+  div += '<a class="btn ' + button + ' btn-sm listAction" data-type="' + _type + '" title="{{Sélectionner un mot-clé}}"><i class="fas fa-tasks"></i></a>';
   div += '<a class="btn ' + button + ' btn-sm listCmdAction" data-type="' + _type + '"><i class="fas fa-list-alt"></i></a>';
   div += '</span>';
   div += '</div>';

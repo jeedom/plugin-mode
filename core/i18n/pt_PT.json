@@ -1,52 +1,50 @@
 {
-    "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gérer différents modes de sa maison/son appartement": "Plugin pour gérer différents modes de sa maison/son appartement",
-        "Aucune": "Nenhum"
-    },
-    "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "Adicionar formulário",
-        "Rechercher": "Pesquisar",
-        "Mes mode": "minha moda",
-        "Général": "Geral",
-        "Nom de l'équipement mode": "equipamentos moda nome",
-        "Objet parent": "objeto pai",
+    "plugins\/mode\/desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401 - Acesso não autorizado",
+        "Gestion": "Gestão",
+        "Ajouter": "Adicionar",
+        "Mes Modes": "Meus modos",
+        "Rechercher": "Pesquisa",
+        "Configuration avancée": "Configuração avançada",
+        "Dupliquer": "Duplicar",
+        "Sauvegarder": "Salvar",
+        "Supprimer": "Remover",
+        "Equipement": "Equipamento",
+        "Modes": "Modos",
+        "Nom de l'équipement mode": "Nome do equipamento Modo",
+        "Objet parent": "Objeto pai",
         "Aucun": "Nemhum",
         "Activer": "Ativar",
         "Visible": "Visivél",
-        "Modes": "modos",
-        "Ajouter mode": "adicionar moda",
-        "Supprimer": "remover",
-        "Sauvegarder": "Salvar",
-        "Catégorie": "categoria",
-        "Mes Modes": "meus métodos",
-        "Configuration avancée": "configuração avançada",
-        "Equipement": "Equipamento",
-        "Gestion": "gestão"
+        "Catégorie": "Categoria",
+        "Ajouter mode": "Adicionar modo"
     },
-    "plugins/mode/desktop/js/mode.js": {
-        "Afficher": "display",
-        "Tester": "teste",
+    "plugins\/mode\/desktop\/js\/mode.js": {
         "Nom du mode ?": "Nome do perfil?",
-        "Nom du mode": "Nome modo",
-        "Action d\\'entrée": "entrada Ação \\ 's",
-        "Action de sortie": "Ação de saída",
-        "Déclencheur": "gatilho",
-        "Dupliquer": "duplicar",
         "Nouveau nom ?": "Novo nome?",
-        "Supprimer": "remover",
+        "Action d\\'entrée": "Ação de entrada",
+        "Action de sortie": "Ação de saída",
+        "Supprimer": "Remover",
+        "Nom": "Nome",
         "Icône": "ícone",
-        "Sélectionner un mot-clé": "Selecione uma palavra-chave",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Verifique para o comando \\ 's em execução em outras ações paralelas",
+        "Aucune": "Não",
+        "Bleu": "Azul",
+        "Jaune": "Amarelo",
+        "Orange": "Laranja",
+        "Rouge": "Vermelho",
+        "Vert": "Verde",
         "Décocher pour désactiver l\\'action": "Desmarque para desativar \\ Ação",
-        "Tous les modes": "Tous les modes",
-        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Verifique para o comando \\ 's em execução em outras ações paralelas",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Enter: execute esta ação apenas se você vier do modo. Sair: execute as ações apenas se você for para o modo",
+        "Tous les modes": "Todos os modos",
+        "Sélectionner un mot-clé": "Selecione uma palavra-chave"
     },
-    "plugins/mode/core/class/mode.class.php": {
-        "Mode": "modo",
-        "Retour mode précédent": "Retour mode précédent"
-    },
-    "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
+    "plugins\/mode\/core\/class\/mode.class.php": {
+        "Mode": "Modo",
+        "Mode precedent": "Modo anterior",
+        "Retour mode précedent": "Retornar ao modo anterior",
+        "Erreur lors de l\\'éxecution de ": "Erro ao executar",
+        ". Détails : ": "Detalhes:",
+        "La commande de mode courant est introuvable": "Comando do modo atual não encontrado"
     }
 }

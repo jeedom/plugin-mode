@@ -1,52 +1,50 @@
 {
-    "plugins/mode/plugin_info/info.xml": {
-        "Plugin pour gérer différents modes de sa maison/son appartement": "Plugin pour gérer différents modes de sa maison/son appartement",
-        "Aucune": "何でもありません"
-    },
-    "plugins/mode/desktop/php/mode.php": {
-        "Ajouter un mode": "フォームを追加",
-        "Rechercher": "検索する",
-        "Mes mode": "私のファッション",
-        "Général": "コモン",
-        "Nom de l'équipement mode": "名前ファッション機器",
+    "plugins\/mode\/desktop\/php\/mode.php": {
+        "401 - Accès non autorisé": "401-不正アクセス",
+        "Gestion": "管理",
+        "Ajouter": "加えます",
+        "Mes Modes": "",
+        "Rechercher": "検索",
+        "Configuration avancée": "高度な構成",
+        "Dupliquer": "重複",
+        "Sauvegarder": "セーブ",
+        "Supprimer": "取り除きます",
+        "Equipement": "設備",
+        "Modes": "モード",
+        "Nom de l'équipement mode": "",
         "Objet parent": "親オブジェクト",
         "Aucun": "何でもありません",
-        "Activer": "アクティブにし",
+        "Activer": "アクティブ",
         "Visible": "目に見えます",
-        "Modes": "モード",
-        "Ajouter mode": "ファッションを追加",
-        "Supprimer": "取り除きます",
-        "Sauvegarder": "セーブ",
         "Catégorie": "カテゴリ",
-        "Mes Modes": "私の方法",
-        "Configuration avancée": "高度な設定",
-        "Equipement": "設備",
-        "Gestion": "管理"
+        "Ajouter mode": ""
     },
-    "plugins/mode/desktop/js/mode.js": {
-        "Afficher": "ディスプレイ",
-        "Tester": "テスト",
+    "plugins\/mode\/desktop\/js\/mode.js": {
         "Nom du mode ?": "プロフィールの名前は？",
-        "Nom du mode": "モード名",
-        "Action d\\'entrée": "アクション\\「sのエントリー",
-        "Action de sortie": "出力アクション",
-        "Déclencheur": "トリガー",
-        "Dupliquer": "複写",
         "Nouveau nom ?": "新しい名前は？",
+        "Action d\\'entrée": "",
+        "Action de sortie": "",
         "Supprimer": "取り除きます",
+        "Nom": "表題",
         "Icône": "アイコン",
-        "Sélectionner un mot-clé": "キーワードを選択",
-        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "コマンド\\「sが並列他のアクションで実行しているかどうかを確認",
+        "Aucune": "いいえ",
+        "Bleu": "ブルー",
+        "Jaune": "黄色",
+        "Orange": "オレンジ",
+        "Rouge": "赤",
+        "Vert": "グリーン",
         "Décocher pour désactiver l\\'action": "\\アクションを無効にするにはチェックを外し",
-        "Tous les modes": "Tous les modes",
-        "Ne faire cette action que si l\\'on vient du mode": "Ne faire cette action que si l\\'on vient du mode",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode"
+        "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "コマンド\\「sが並列他のアクションで実行しているかどうかを確認",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "",
+        "Tous les modes": "",
+        "Sélectionner un mot-clé": "キーワードを選択"
     },
-    "plugins/mode/core/class/mode.class.php": {
+    "plugins\/mode\/core\/class\/mode.class.php": {
         "Mode": "モード",
-        "Retour mode précédent": "Retour mode précédent"
-    },
-    "plugins/mode/plugin_info/info.json": {
-        "Plugin pour gérer différent mode de sa maison/son appartement": "Plugin pour gérer différent mode de sa maison/son appartement"
+        "Mode precedent": "",
+        "Retour mode précedent": "",
+        "Erreur lors de l\\'éxecution de ": "",
+        ". Détails : ": "",
+        "La commande de mode courant est introuvable": ""
     }
 }

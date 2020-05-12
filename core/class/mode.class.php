@@ -64,7 +64,7 @@ class mode extends eqLogic {
 		$previousMode->setEqLogic_id($this->id);
 		$previousMode->setLogicalId('previousMode');
 		$previousMode->setType('info');
-		$previousMode->setOrder(1);
+		$previousMode->setOrder(2);
 		$previousMode->setSubType('string');
 		$previousMode->setIsVisible(0);
 		$previousMode->save();
@@ -80,11 +80,12 @@ class mode extends eqLogic {
 		$returnPreviousMode->setOrder(3);
 		$returnPreviousMode->setSubType('other');
 		$returnPreviousMode->setDisplay('generic_type', 'MODE_SET_STATE');
-		$returnPreviousMode->setDisplay('icon', '<i class="fa fa-reply"></i>');
+		$returnPreviousMode->setDisplay('icon', '<i class="fas fa-reply"></i>');
 		$returnPreviousMode->save();
 		
 		$existing_mode = array();
 		if (is_array($this->getConfiguration('modes'))) {
+			$i=3;
 			foreach ($this->getConfiguration('modes') as $key => $value) {
 				$existing_mode[] = $value['name'];
 				$cmd = $this->getCmd(null, $value['name']);
@@ -95,7 +96,8 @@ class mode extends eqLogic {
 				$cmd->setEqLogic_id($this->id);
 				$cmd->setType('action');
 				$cmd->setSubType('other');
-				$cmd->setOrder(3);
+				$i++;
+				$cmd->setOrder($i);
 				$cmd->setLogicalId($value['name']);
 				$cmd->setDisplay('generic_type', 'MODE_SET_STATE');
 				if (isset($value['icon'])) {
