@@ -1,3 +1,5 @@
+# Modo de Registro de Alterações
+
 # 11/12/2019
 
 - Correção de um bug no aplicativo Mobile e no plug-in Homebridge.

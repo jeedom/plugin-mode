@@ -1,3 +1,5 @@
+# Änderungsprotokollmodus
+
 # 12/11/2019
 
 - Behebung eines Fehlers in der Mobile App und im Homebridge-Plugin.

@@ -1,3 +1,5 @@
+# Modo de registro de cambios
+
 # 12/11/2019
 
 - Corrección de un error en la aplicación móvil y el complemento Homebridge.
