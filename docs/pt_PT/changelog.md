@@ -6,7 +6,7 @@
 
 # 06/06/2019
 
-- Botão de duplicação do modo Remover (muitos erros)
+- Removido o botão de duplicação de modo (muitos erros)
 - Correção de um erro no cálculo de ordens órfãs
 - Adição de um comando indicando o modo anterior
 - Corrigido o erro nos modelos de widget V4 com vários estados

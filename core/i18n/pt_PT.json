@@ -46,5 +46,8 @@
         "Erreur lors de l\\'éxecution de ": "Erro ao executar",
         ". Détails : ": "Detalhes:",
         "La commande de mode courant est introuvable": "Comando do modo atual não encontrado"
+    },
+    "info.json": {
+        "Plugin pour gerer different mode de sa maison\/son appartement": "Plugin para gerenciar diferentes modos de sua casa \/ apartamento"
     }
 }

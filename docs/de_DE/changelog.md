@@ -6,7 +6,7 @@
 
 # 12/06/2019
 
-- Schaltfläche zum Duplizieren des Modus entfernen (zu viele Fehler)
+- Die Schaltfläche zum Duplizieren des Modus wurde entfernt (zu viele Fehler))
 - Korrektur eines Fehlers bei der Berechnung von Orphan Orders
 - Hinzufügen eines Befehls, der den vorherigen Modus angibt
 - Fehler in V4-Widget-Vorlagen mit mehreren Zuständen behoben

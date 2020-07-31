@@ -46,5 +46,8 @@
         "Erreur lors de l\\'éxecution de ": "Fehler beim Ausführen",
         ". Détails : ": "Details:",
         "La commande de mode courant est introuvable": "Aktueller Modusbefehl nicht gefunden"
+    },
+    "info.json": {
+        "Plugin pour gerer different mode de sa maison\/son appartement": "Plugin zur Verwaltung verschiedener Modi Ihres Hauses \/ Ihrer Wohnung"
     }
 }

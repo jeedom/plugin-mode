@@ -46,5 +46,8 @@
         "Erreur lors de l\\'éxecution de ": "Erreur lors de l\\'éxecution de ",
         ". Détails : ": ". Détails : ",
         "La commande de mode courant est introuvable": "La commande de mode courant est introuvable"
+    },
+    "info.json": {
+        "Plugin pour gerer different mode de sa maison\/son appartement": "Plugin pour gerer different mode de sa maison\/son appartement"
     }
 }

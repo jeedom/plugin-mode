@@ -6,7 +6,7 @@
 
 # 12/06/2019
 
-- Remove mode duplication button (too many bugs)
+- Removed the mode duplication button (too many bugs)
 - Correction of a bug on the calculation of orphan orders
 - Addition of a command indicating the previous mode
 - Fixed bug on multistate V4 widget templates

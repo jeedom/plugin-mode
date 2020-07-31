@@ -1,13 +1,33 @@
 {
     "id": "mode",
     "name": "Mode",
-    "description": "Plugin pour gerer different mode de sa maison\/son appartement",
+    "description": {
+        "fr_FR": "Plugin pour gerer different mode de sa maison\/son appartement",
+        "en_US": "Plugin to manage different mode of your house \/ apartment",
+        "es_ES": "Complemento para administrar diferentes modos de su casa \/ apartamento",
+        "de_DE": "Plugin zur Verwaltung verschiedener Modi Ihres Hauses \/ Ihrer Wohnung",
+        "pt_PT": "Plugin para gerenciar diferentes modos de sua casa \/ apartamento"
+    },
     "licence": "AGPL",
     "author": "Loïc",
     "require": "3.0",
     "category": "organization",
     "changelog": "https:\/\/doc.jeedom.com\/#language#\/plugins\/organization\/mode\/changelog",
     "documentation": "https:\/\/doc.jeedom.com\/#language#\/plugins\/organization\/mode\/",
-    "language" : ["fr_FR","en_US","de_DE","sp_SP"],
-    "compatibility" : ["miniplus","smart","rpi","docker","diy","mobile","v4"]
+    "language": [
+        "fr_FR",
+        "en_US",
+        "es_ES",
+        "de_DE",
+        "pt_PT"
+    ],
+    "compatibility": [
+        "miniplus",
+        "smart",
+        "rpi",
+        "docker",
+        "diy",
+        "mobile",
+        "v4"
+    ]
 }

@@ -46,5 +46,8 @@
         "Erreur lors de l\\'éxecution de ": "Error while executing",
         ". Détails : ": "Details:",
         "La commande de mode courant est introuvable": "Current mode command not found"
+    },
+    "info.json": {
+        "Plugin pour gerer different mode de sa maison\/son appartement": "Plugin to manage different mode of your house \/ apartment"
     }
 }
