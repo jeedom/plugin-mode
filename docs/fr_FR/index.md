@@ -37,7 +37,7 @@ En-dessous vous retrouvez la liste des modes, en cliquant dessus vous allez pouv
 
 ### Mode Volet
 
-Exemple d'un équipement sans action d'entrée ou de sortie sur les modes. Un mode de ce type peut être utile comme déclencheur d'un scénario ou pour conditionner des actions dans un scénario.
+Exemple d'un équipement sans action d'entrée ou de sortie sur les modes. Un équipement de ce type peut être utile comme déclencheur d'un scénario ou pour conditionner des actions dans un scénario.
 
 ![Mode volet](../images/mode_volet.png)
 
