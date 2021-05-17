@@ -45,7 +45,7 @@ Exemple d'un équipement sans action d'entrée ou de sortie sur les modes. Un mo
 
 Exemple d'un équipement avec des actions définis lorsque l'on change de mode.
 
-Dans cet équipement, on va créer 3 modes à partir de l'onglet *Modes* de l'quipement:
+Dans cet équipement, on va créer 3 modes à partir de l'onglet *Modes* de l'équipement:
 
 - Présent
 - Absent
