@@ -17,6 +17,7 @@
         "Activer": "Activar",
         "Visible": "Visible",
         "Catégorie": "Categoría",
+        "Afficher commande de verrouillage": "Mostrar comando de bloqueo",
         "Ajouter mode": "Añadir modo"
     },
     "plugins\/mode\/desktop\/js\/mode.js": {
@@ -43,6 +44,7 @@
         "Mode": "Modo",
         "Mode precedent": "Modo anterior",
         "Retour mode précedent": "Regresar al modo anterior",
+        "Verrouillage": "Cierre",
         "Erreur lors de l\\'éxecution de ": "Error al ejecutar",
         ". Détails : ": "Detalles:",
         "La commande de mode courant est introuvable": "Comando de modo actual no encontrado"

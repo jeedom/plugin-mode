@@ -3,7 +3,7 @@
         "401 - Accès non autorisé": "401 - Несанкционированный доступ",
         "Gestion": "Управление",
         "Ajouter": "Добавить",
-        "Mes Modes": "",
+        "Mes Modes": "Mes Modes",
         "Rechercher": "поиск",
         "Configuration avancée": "Расширенные настройки",
         "Dupliquer": "дубликат",
@@ -11,19 +11,20 @@
         "Supprimer": "удаление",
         "Equipement": "Оборудование",
         "Modes": "Режимы",
-        "Nom de l'équipement mode": "",
+        "Nom de l'équipement mode": "Nom de l'équipement mode",
         "Objet parent": "Родительский объект",
         "Aucun": "Нет",
         "Activer": "активировать",
         "Visible": "Видимый",
         "Catégorie": "категория",
-        "Ajouter mode": ""
+        "Afficher commande de verrouillage": "Afficher commande de verrouillage",
+        "Ajouter mode": "Ajouter mode"
     },
     "plugins\/mode\/desktop\/js\/mode.js": {
         "Nom du mode ?": "Название режима?",
         "Nouveau nom ?": "Новое имя?",
-        "Action d\\'entrée": "",
-        "Action de sortie": "",
+        "Action d\\'entrée": "Action d\\'entrée",
+        "Action de sortie": "Action de sortie",
         "Supprimer": "удаление",
         "Nom": "Имя",
         "Icône": "Иконка",
@@ -35,19 +36,20 @@
         "Vert": "зеленый",
         "Décocher pour désactiver l\\'action": "Снимите флажок, чтобы отключить \\ Action",
         "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Проверьте, команда \\ «ы работает параллельно другие действия",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "",
-        "Tous les modes": "",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode",
+        "Tous les modes": "Tous les modes",
         "Sélectionner un mot-clé": "Выберите ключевое слово"
     },
     "plugins\/mode\/core\/class\/mode.class.php": {
         "Mode": "Режим",
-        "Mode precedent": "",
-        "Retour mode précedent": "",
-        "Erreur lors de l\\'éxecution de ": "",
-        ". Détails : ": "",
-        "La commande de mode courant est introuvable": ""
+        "Mode precedent": "Mode precedent",
+        "Retour mode précedent": "Retour mode précedent",
+        "Verrouillage": "Verrouillage",
+        "Erreur lors de l\\'éxecution de ": "Erreur lors de l\\'éxecution de",
+        ". Détails : ": "Détails :",
+        "La commande de mode courant est introuvable": "La commande de mode courant est introuvable"
     },
     "info.json": {
-        "Plugin pour gerer different mode de sa maison\/son appartement": ""
+        "Plugin pour gerer different mode de sa maison\/son appartement": "Plugin pour gerer different mode de sa maison\/son appartement"
     }
 }

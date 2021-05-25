@@ -14,9 +14,10 @@
         "Nom de l'équipement mode": "Mode equipment name",
         "Objet parent": "Parent object",
         "Aucun": "None",
-        "Activer": "Activate",
+        "Activer": "Active",
         "Visible": "Visible",
         "Catégorie": "Category",
+        "Afficher commande de verrouillage": "Show lock command",
         "Ajouter mode": "Add mode"
     },
     "plugins\/mode\/desktop\/js\/mode.js": {
@@ -43,6 +44,7 @@
         "Mode": "Mode",
         "Mode precedent": "Previous mode",
         "Retour mode précedent": "Return to previous mode",
+        "Verrouillage": "Locking",
         "Erreur lors de l\\'éxecution de ": "Error while executing",
         ". Détails : ": "Details:",
         "La commande de mode courant est introuvable": "Current mode command not found"

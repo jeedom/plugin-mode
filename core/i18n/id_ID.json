@@ -3,7 +3,7 @@
         "401 - Accès non autorisé": "401 - Akses tidak sah",
         "Gestion": "Manajemen",
         "Ajouter": "Tambahan",
-        "Mes Modes": "",
+        "Mes Modes": "Mes Modes",
         "Rechercher": "Pencarian",
         "Configuration avancée": "Konfigurasi lanjutan",
         "Dupliquer": "Duplikat",
@@ -11,19 +11,20 @@
         "Supprimer": "Menghapus",
         "Equipement": "Peralatan",
         "Modes": "Mode",
-        "Nom de l'équipement mode": "",
+        "Nom de l'équipement mode": "Nom de l'équipement mode",
         "Objet parent": "Objek induk",
         "Aucun": "Tak ada",
         "Activer": "Mengaktifkan",
         "Visible": "Terlihat",
         "Catégorie": "Kategori",
-        "Ajouter mode": ""
+        "Afficher commande de verrouillage": "Afficher commande de verrouillage",
+        "Ajouter mode": "Ajouter mode"
     },
     "plugins\/mode\/desktop\/js\/mode.js": {
         "Nom du mode ?": "Nama profil?",
         "Nouveau nom ?": "Nama baru?",
-        "Action d\\'entrée": "",
-        "Action de sortie": "",
+        "Action d\\'entrée": "Action d\\'entrée",
+        "Action de sortie": "Action de sortie",
         "Supprimer": "Menghapus",
         "Nom": "Nama",
         "Icône": "Icon",
@@ -35,19 +36,20 @@
         "Vert": "Hijau",
         "Décocher pour désactiver l\\'action": "Hapus tanda centang untuk menonaktifkan \\ Aksi",
         "Cocher pour que la commande s\\'exécute en parallèle des autres actions": "Periksa perintah \\ 's berjalan secara paralel tindakan lain",
-        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "",
-        "Tous les modes": "",
+        "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode": "Entrée : Ne faire cette action que si l\\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode",
+        "Tous les modes": "Tous les modes",
         "Sélectionner un mot-clé": "Pilih kata kunci"
     },
     "plugins\/mode\/core\/class\/mode.class.php": {
         "Mode": "Mode",
-        "Mode precedent": "",
-        "Retour mode précedent": "",
-        "Erreur lors de l\\'éxecution de ": "",
-        ". Détails : ": "",
-        "La commande de mode courant est introuvable": ""
+        "Mode precedent": "Mode precedent",
+        "Retour mode précedent": "Retour mode précedent",
+        "Verrouillage": "Verrouillage",
+        "Erreur lors de l\\'éxecution de ": "Erreur lors de l\\'éxecution de",
+        ". Détails : ": "Détails :",
+        "La commande de mode courant est introuvable": "La commande de mode courant est introuvable"
     },
     "info.json": {
-        "Plugin pour gerer different mode de sa maison\/son appartement": ""
+        "Plugin pour gerer different mode de sa maison\/son appartement": "Plugin pour gerer different mode de sa maison\/son appartement"
     }
 }

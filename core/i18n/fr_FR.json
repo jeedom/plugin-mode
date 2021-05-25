@@ -17,6 +17,7 @@
         "Activer": "Activer",
         "Visible": "Visible",
         "Catégorie": "Catégorie",
+        "Afficher commande de verrouillage": "Afficher commande de verrouillage",
         "Ajouter mode": "Ajouter mode"
     },
     "plugins\/mode\/desktop\/js\/mode.js": {
@@ -43,6 +44,7 @@
         "Mode": "Mode",
         "Mode precedent": "Mode precedent",
         "Retour mode précedent": "Retour mode précedent",
+        "Verrouillage": "Verrouillage",
         "Erreur lors de l\\'éxecution de ": "Erreur lors de l\\'éxecution de ",
         ". Détails : ": ". Détails : ",
         "La commande de mode courant est introuvable": "La commande de mode courant est introuvable"

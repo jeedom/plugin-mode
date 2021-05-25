@@ -17,6 +17,7 @@
         "Activer": "Aktivieren",
         "Visible": "Sichtbar",
         "Catégorie": "Kategorie",
+        "Afficher commande de verrouillage": "Befehl sperren anzeigen",
         "Ajouter mode": "Modus hinzufügen"
     },
     "plugins\/mode\/desktop\/js\/mode.js": {
@@ -43,6 +44,7 @@
         "Mode": "Modus",
         "Mode precedent": "Vorheriger Modus",
         "Retour mode précedent": "Kehren Sie zum vorherigen Modus zurück",
+        "Verrouillage": "Verriegeln",
         "Erreur lors de l\\'éxecution de ": "Fehler beim Ausführen",
         ". Détails : ": "Details:",
         "La commande de mode courant est introuvable": "Aktueller Modusbefehl nicht gefunden"

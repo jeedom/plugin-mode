@@ -6,7 +6,12 @@
         "en_US": "Plugin to manage different mode of your house \/ apartment",
         "es_ES": "Complemento para administrar diferentes modos de su casa \/ apartamento",
         "de_DE": "Plugin zur Verwaltung verschiedener Modi Ihres Hauses \/ Ihrer Wohnung",
-        "pt_PT": "Plugin para gerenciar diferentes modos de sua casa \/ apartamento"
+        "pt_PT": "Plugin para gerenciar diferentes modos de sua casa \/ apartamento",
+        "ru_RU": "Plugin pour gerer different mode de sa maison\/son appartement",
+        "id_ID": "Plugin pour gerer different mode de sa maison\/son appartement",
+        "it_IT": "Plugin pour gerer different mode de sa maison\/son appartement",
+        "ja_JP": "Plugin pour gerer different mode de sa maison\/son appartement",
+        "tr": "Plugin pour gerer different mode de sa maison\/son appartement"
     },
     "licence": "AGPL",
     "author": "Loïc",
@@ -19,7 +24,12 @@
         "en_US",
         "es_ES",
         "de_DE",
-        "pt_PT"
+        "ru_RU",
+        "id_ID",
+        "it_IT",
+        "ja_JP",
+        "pt_PT",
+        "tr"
     ],
     "compatibility": [
         "miniplus",
