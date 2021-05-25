@@ -83,6 +83,58 @@ class mode extends eqLogic {
 		$returnPreviousMode->setDisplay('icon', '<i class="fas fa-reply"></i>');
 		$returnPreviousMode->save();
 		
+		$lockState = $this->getCmd(null, 'lock_state');
+		if (!is_object($lockState)) {
+			$lockState = new modeCmd();
+			$lockState->setTemplate('dashboard', 'lock');
+			$lockState->setTemplate('mobile', 'lock');
+			$lockState->setName(__('Verrouillage', __FILE__));
+			$lockState->setIsVisible(0);
+		}
+		$lockState->setEqLogic_id($this->getId());
+		$lockState->setType('info');
+		$lockState->setSubType('binary');
+		$lockState->setLogicalId('lock_state');
+		$lockState->save();
+		
+		$lock = $this->getCmd(null, 'lock');
+		if (!is_object($lock)) {
+			$lock = new modeCmd();
+			$lock->setTemplate('dashboard', 'lock');
+			$lock->setTemplate('mobile', 'lock');
+			$lock->setName('lock');
+		}
+		$lock->setEqLogic_id($this->getId());
+		$lock->setType('action');
+		$lock->setSubType('other');
+		$lock->setLogicalId('lock');
+		if ($this->getConfiguration('showLockCmd') == 1) {
+			$lock->setIsVisible(1);
+		}else {
+			$lock->setIsVisible(0);
+		}
+		$lock->setValue($lockState->getId());
+		$lock->save();
+		
+		$unlock = $this->getCmd(null, 'unlock');
+		if (!is_object($unlock)) {
+			$unlock = new modeCmd();
+			$unlock->setTemplate('dashboard', 'lock');
+			$unlock->setTemplate('mobile', 'lock');
+			$unlock->setName('unlock');
+		}
+		$unlock->setEqLogic_id($this->getId());
+		$unlock->setType('action');
+		$unlock->setSubType('other');
+		$unlock->setLogicalId('unlock');
+		if ($this->getConfiguration('showLockCmd') == 1) {
+			$unlock->setIsVisible(1);
+		} else {
+			$unlock->setIsVisible(0);
+		}
+		$unlock->setValue($lockState->getId());
+		$unlock->save();
+		
 		$existing_mode = array();
 		if (is_array($this->getConfiguration('modes'))) {
 			$i=3;
@@ -110,7 +162,7 @@ class mode extends eqLogic {
 		}
 		
 		foreach ($this->getCmd() as $cmd) {
-			if ($cmd->getType() == 'action' && !in_array($cmd->getLogicalId(), $existing_mode) && $cmd->getLogicalId() != 'returnPreviousMode') {
+			if ($cmd->getType() == 'action' && !in_array($cmd->getLogicalId(), $existing_mode) && !in_array($cmd->getLogicalId(), ['returnPreviousMode','lock','unlock'])) {
 				$cmd->remove();
 			}
 		}
@@ -246,6 +298,25 @@ class modeCmd extends cmd {
 	
 	public function execute($_options = array()) {
 		$eqLogic = $this->getEqLogic();
+
+		$lockState = $eqLogic->getCmd(null, 'lock_state');
+		if (is_object($lockState)) {
+			if ($this->getLogicalId() == 'lock') {
+				log::add('mode','info',$this->getHumanName(). ' is now locked');
+				$lockState->event(1);
+				return;
+	                } else if ($this->getLogicalId() == 'unlock') {
+				log::add('mode','info',$this->getHumanName(). ' is now unlocked');
+				$lockState->event(0);
+				return;
+			} else if ($lockState->execCmd() == 1) {
+				log::add('mode','info',$this->getHumanName(). ' is locked : change mode denied');
+				return;
+			} else {
+				log::add('mode','info',$this->getHumanName(). ' is unlocked : change mode allowed');
+			}
+		}
+
 		if ($this->getLogicalId() == 'returnPreviousMode') {
 			if ($eqLogic->getCache('previousMode') == '') {
 				return;

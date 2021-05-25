@@ -90,6 +90,12 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								?>
 							</div>
 						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">{{Afficher commande de verrouillage}}</label>
+							<div class="col-sm-3">
+								<input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="showLockCmd" />
+							</div>
+						</div>
 					</fieldset>
 				</form>
 			</div>
