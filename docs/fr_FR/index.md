@@ -19,11 +19,11 @@ Vous retrouvez ici toute la configuration de votre équipement :
 - **Catégorie** : les catégories de l’équipement (il peut appartenir à plusieurs catégories).
 - **Ajouter mode** : bouton permettant d’ajouter un nouveau mode
 
-En-dessous vous retrouvez la liste des modes, en cliquant dessus vous allez pouvoir choisir les actions à faire lors de l’entrée dans ce mode et lors de la sortie.
+En dessous vous retrouvez la liste des modes, en cliquant dessus vous allez pouvoir choisir les actions à effectuer lors de l’entrée et/ou la sortie de ce mode.
 
 >**IMPORTANT**
 >
->Attention lors du renommage d'un mode il faut absoluement revoir les scénarios/équipement qui utiliser l'ancien nom pour les passer sur le nouveau
+>Attention lors du renommage d'un mode il faut absolument revoir les scénarios/équipements qui utilisaient l'ancien nom pour les passer sur le nouveau.
 
 ## Création d'un équipement
 
