@@ -164,41 +164,34 @@ function addMode(_mode,_updateMode) {
   div += '<div class="panel-heading">';
   div += '<h3 class="panel-title">';
   div += '<a class="accordion-toggle" data-toggle="collapse" data-parent="#div_modes" href="#collapse' + random + '">';
-  div += '<span class="name">' + _mode.name + '</span>';
+  div += '<span class="name">{{Mode }}' + _mode.name + '</span>';
   div += '</a>';
   div += '</h3>';
   div += '</div>';
-  
+
   div += '<div id="collapse' + random + '" class="panel-collapse collapse in">';
   div += '<div class="panel-body">';
-  div += '<div class="well">';
-  
-  div += '<form class="form-horizontal" role="form">';
-  
-  div += '<div class="col-lg-4 col-sm-12 pull-right">';
+  div += '<form class="form-horizontal col-xs-12" role="form">';
+
+  div += '<div class="pull-right">';
   div += '<div class="input-group pull-right" style="display:inline-flex">';
   div += '<span class="input-group-btn">';
-  div += '<a class="btn btn-sm bt_removeMode btn-primary roundedLeft"><i class="fas fa-minus-circle"></i> {{Supprimer}}</a>';
-  div += '<a class="btn btn-sm bt_addInAction btn-success"><i class="fas fa-plus-circle"></i> {{Action d\'entrée}}</a>';
-  div += '<a class="btn btn-danger btn-sm bt_addOutAction"><i class="fas fa-plus-circle"></i> {{Action de sortie}}</a>';
+  div += '<a class="btn btn-sm btn-primary bt_addInAction roundedLeft"><i class="fas fa-plus-circle"></i> {{Action d\'entrée}}</a>';
+  div += '<a class="btn btn-sm btn-warning bt_addOutAction"><i class="fas fa-plus-circle"></i> {{Action de sortie}}</a>';
+  div += '<a class="btn btn-sm btn-danger bt_removeMode roundedRight"><i class="fas fa-minus-circle"></i> {{Supprimer}}</a>';
   div += '</span>';
   div += '</div>';
   div += '</div>';
-  
+
   div += '<div class="form-group">';
   div += '<div class="col-sm-2">';
-  div += '<label class="control-label" style="margin-right:7px">{{Nom}}</label>';
-  div += '<span class="modeAttr label label-info rename cursor" style="display:inline" data-l1key="name"></span>';
+  div += '<label class="control-label" style="margin-right:7px">{{Nom du mode}}<sup><i class="fas fa-question-circle tooltips" title="{{Cliquer sur le nom du mode pour le modifier}}"></i></sup></label>';
+  div += '<span class="modeAttr label label-info rename cursor" data-l1key="name"></span>';
   div += '</div>';
-  
-  div += '<div class="col-lg-2 col-sm-4">';
-  div += '<label class="control-label" style="margin-right:7px">{{Icône}}</label>';
-  div += '<a class="modeAction btn btn-default btn-sm" data-l1key="chooseIcon"><i class="fas fa-flag"></i> {{Icône}}</a>';
-  div += ' <span class="modeAttr label label-info cursor" data-l1key="icon" style="display:inline"></span>';
-  div += '</div>';
-  
+
   div += '<div class="col-sm-3">';
-  div += '<select class="modeAttr input-sm" data-l1key="modecolor">';
+  div += '<label class="control-label" style="margin-right:7px">{{Couleur du mode}}<sup><i class="fas fa-question-circle tooltips" title="{{Choisissez la couleur représentative de ce mode}}"></i></sup></label>';
+  div += '<select class="modeAttr input-sm" data-l1key="modecolor" style="max-width:150px;display:inline-block">';
   div += '<option value="default">{{Aucune}}</option>';
   div += '<option value="icon_blue">{{Bleu}}</option>';
   div += '<option value="icon_yellow">{{Jaune}}</option>';
@@ -207,18 +200,21 @@ function addMode(_mode,_updateMode) {
   div += '<option value="icon_green">{{Vert}}</option>';
   div += '</select>';
   div += '</div>';
-  
+
+  div += '<div class="col-sm-2">';
+  div += '<a class="modeAction btn btn-default btn-sm" data-l1key="chooseIcon"><i class="fas fa-flag"></i> {{Icône}}</a>';
+  div += ' <span class="modeAttr label label-info cursor" data-l1key="icon" ></span>';
   div += '</div>';
-  div += '<hr/>';
-  div += '<div class="div_inAction"></div>';
-  div += '<hr/>';
-  div += '<div class="div_outAction"></div>';
+
+  div += '</div>';
+  div += '<br>';
+  div += '<div class="div_inAction col-lg-11" style="padding-bottom:10px;margin-bottom:10px;background-color:rgb(var(--bg-color));"><legend><i class="fas fa-sign-in-alt icon_blue"></i> {{Action(s) d\'entrée}}</legend></div>';
+  div += '<div class="div_outAction col-lg-11" style="padding-bottom:10px;margin-bottom:15px;background-color:rgb(var(--bg-color));"><legend><i class="fas fa-sign-out-alt icon_orange"></i> {{Action(s) de sortie}}</legend></div>';
   div += '</form>';
   div += '</div>';
   div += '</div>';
   div += '</div>';
-  div += '</div>';
-  
+
   $('#div_modes').append(div);
   $('#div_modes .mode').last().setValues(_mode, '.modeAttr');
   if (is_array(_mode.inAction)) {
@@ -230,7 +226,7 @@ function addMode(_mode,_updateMode) {
       addAction(_mode.inAction[i], 'inAction', '{{Action d\'entrée}}', $('#div_modes .mode').last());
     }
   }
-  
+
   if (is_array(_mode.outAction)) {
     for (var i in _mode.outAction) {
       addAction(_mode.outAction[i], 'outAction', '{{Action de sortie}}', $('#div_modes .mode').last());
@@ -257,19 +253,18 @@ function addAction(_action, _type, _name, _el) {
   var button = 'btn-default';
   if (_type == 'outAction') {
     input = 'has-error';
-    button = 'btn-danger';
+    button = 'btn-warning';
   }
   if (_type == 'inAction') {
     input = 'has-success';
-    button = 'btn-success';
+    button = 'btn-primary';
   }
   var div = '<div class="' + _type + '">';
   div += '<div class="form-group ">';
-  div += '<label class="col-sm-1 control-label">' + _name + '</label>';
-  div += '<div class="col-sm-2  ' + input + '">';
-  div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="enable" checked title="{{Décocher pour désactiver l\'action}}" />';
-  div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="background" title="{{Cocher pour que la commande s\'exécute en parallèle des autres actions}}" />';
-  div += '<select class="expressionAttr form-control input-sm selectMode" data-l1key="onlyIfMode" style="width:calc(100% - 50px);display:inline-block" title="{{Entrée : Ne faire cette action que si l\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode}}">';
+  div += '<div class="col-sm-2 ' + input +'" style="width:250px;">';
+  div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="enable" checked title="{{Décocher pour désactiver l\'action}}">';
+  div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="background" title="{{Cocher pour que la commande s\'exécute en parallèle des autres actions}}">';
+  div += '<select class="expressionAttr form-control input-sm selectMode" data-l1key="onlyIfMode" style="max-width:170px;display:inline-block" title="{{Entrée : Ne faire cette action que si l\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode}}">';
   div += '<option value="all">{{Tous les modes}}</option>';
   if(MODE_LIST != null){
     for(var i in MODE_LIST){
@@ -285,17 +280,17 @@ function addAction(_action, _type, _name, _el) {
   div += '<div class="col-sm-4 ' + input + '">';
   div += '<div class="input-group">';
   div += '<span class="input-group-btn">';
-  div += '<a class="btn btn-default bt_removeAction btn-sm" data-type="' + _type + '"><i class="fas fa-minus-circle"></i></a>';
+  div += '<a class="btn btn-default bt_removeAction btn-sm roundedLeft" data-type="' + _type + '"><i class="fas fa-minus-circle"></i></a>';
   div += '</span>';
   div += '<input class="expressionAttr form-control input-sm cmdAction" data-l1key="cmd" data-type="' + _type + '" />';
   div += '<span class="input-group-btn">';
   div += '<a class="btn ' + button + ' btn-sm listAction" data-type="' + _type + '" title="{{Sélectionner un mot-clé}}"><i class="fas fa-tasks"></i></a>';
-  div += '<a class="btn ' + button + ' btn-sm listCmdAction" data-type="' + _type + '"><i class="fas fa-list-alt"></i></a>';
+  div += '<a class="btn ' + button + ' btn-sm listCmdAction roundedRight" data-type="' + _type + '" title="{{Sélectionner une commande}}"><i class="fas fa-list-alt"></i></a>';
   div += '</span>';
   div += '</div>';
   div += '</div>';
   var actionOption_id = uniqId();
-  div += '<div class="col-sm-5 actionOptions" id="'+actionOption_id+'">';
+  div += '<div class="col-sm-6 actionOptions" id="'+actionOption_id+'">';
   div += '</div>';
   div += '</div>';
   if (isset(_el)) {
@@ -313,6 +308,7 @@ function addAction(_action, _type, _name, _el) {
     });
   }
 }
+
 function updateSelectMode(_convert){
   $('select.selectMode').each(function () {
     var value = $(this).val();
