@@ -190,7 +190,7 @@ function addMode(_mode,_updateMode) {
   div += '</div>';
 
   div += '<div class="col-sm-3">';
-  div += '<label class="control-label" style="margin-right:7px">{{Couleur du mode}}<sup><i class="fas fa-question-circle tooltips" title="{{Choisissez la couleur représentative de ce mode}}"></i></sup></label>';
+  div += '<label class="control-label" style="margin-right:7px">{{Couleur du mode}}<sup><i class="fas fa-question-circle tooltips" title="{{Choisir la couleur représentative de ce mode}}"></i></sup></label>';
   div += '<select class="modeAttr input-sm" data-l1key="modecolor" style="max-width:150px;display:inline-block">';
   div += '<option value="default">{{Aucune}}</option>';
   div += '<option value="icon_blue">{{Bleu}}</option>';
