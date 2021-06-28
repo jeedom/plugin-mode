@@ -2,7 +2,7 @@
     "id": "mode",
     "name": "Mode",
     "description": {
-        "fr_FR": "Plugin pour gerer different mode de sa maison\/son appartement",
+        "fr_FR": "Plugin permettant de créer et gérer différents modes (maison/appartmement, alarme, présences, etc...) et d'effectuer des actions automatiquement lors de l'entrée et/ou la sortie d'un mode.",
         "en_US": "Plugin to manage different mode of your house \/ apartment",
         "es_ES": "Complemento para administrar diferentes modos de su casa \/ apartamento",
         "de_DE": "Plugin zur Verwaltung verschiedener Modi Ihres Hauses \/ Ihrer Wohnung",
@@ -13,9 +13,10 @@
         "ja_JP": "Plugin pour gerer different mode de sa maison\/son appartement",
         "tr": "Plugin pour gerer different mode de sa maison\/son appartement"
     },
+    "utilization": "Créez un nouvel équipement dans Plugins → Organisation → Mode puis ajoutez les modes souhaités avant de définir les actions d'entrée et/ou de sortie de chaque mode.",
     "licence": "AGPL",
     "author": "Loïc",
-    "require": "3.0",
+    "require": "3.3.39",
     "category": "organization",
     "changelog": "https:\/\/doc.jeedom.com\/#language#\/plugins\/organization\/mode\/changelog",
     "documentation": "https:\/\/doc.jeedom.com\/#language#\/plugins\/organization\/mode\/",
