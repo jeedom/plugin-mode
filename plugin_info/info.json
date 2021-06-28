@@ -2,7 +2,7 @@
     "id": "mode",
     "name": "Mode",
     "description": {
-        "fr_FR": "Plugin permettant de créer et gérer différents modes (maison/appartmement, alarme, présences, etc...) et d'effectuer des actions automatiquement lors de l'entrée et/ou la sortie d'un mode.",
+        "fr_FR": "Plugin permettant de créer et gérer différents modes (maison/appartement, alarme, présences, etc...) et d'effectuer des actions automatiquement lors de l'entrée et/ou la sortie d'un mode.",
         "en_US": "Plugin to manage different mode of your house \/ apartment",
         "es_ES": "Complemento para administrar diferentes modos de su casa \/ apartamento",
         "de_DE": "Plugin zur Verwaltung verschiedener Modi Ihres Hauses \/ Ihrer Wohnung",
