@@ -19,11 +19,11 @@ Aquí encontrarás toda la configuración de tu equipo :
 - **Categoría** : categorías de equipos (puede pertenecer a varias categorías).
 - **Añadir modo** : botón para agregar un nuevo modo
 
-A continuación encontrará la lista de modos, al hacer clic en ella podrá elegir las acciones a realizar al ingresar a este modo y al salir.
+A continuación encontrarás la lista de modos, al hacer clic en ella podrás elegir las acciones a realizar al entrar y / o salir de este modo.
 
 >**Importante**
 >
->Atención durante el cambio de nombre de un modo es absolutamente necesario revisar los escenarios / equipos que usan el nombre antiguo para pasarlos al nuevo
+>Tenga cuidado al cambiar el nombre de un modo, es esencial revisar los escenarios / equipos que usaron el nombre anterior para cambiarlos al nuevo.
 
 ## Creación de equipos
 

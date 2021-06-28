@@ -1,14 +1,26 @@
 # Änderungsprotokollmodus
 
+# 28.06.2021
+
+- Neugestaltung der Schnittstelle
+
+# 25.05.2021
+
+- Hinzufügen verschiedener Beispiele für Modi in der Dokumentation
+
+# 04.11.2021
+
+- Ein Sperrbefehl wurde hinzugefügt, um jede Modusänderung zu verhindern, wenn aktiv
+
 # 12/11/2019
 
-- Behebung eines Fehlers in der Mobile App und im Homebridge-Plugin.
+- Fehler in der Mobile-Anwendung und dem Homebridge-Plugin behoben
 
 # 12/06/2019
 
-- Die Schaltfläche zum Duplizieren des Modus wurde entfernt (zu viele Fehler))
+- Die Option zum Duplizieren eines Modus wurde entfernt *(zu viele Fehler)*
 - Korrektur eines Fehlers bei der Berechnung von Orphan Orders
-- Hinzufügen eines Befehls, der den vorherigen Modus angibt
+- Hinzufügen eines Befehls, der über den vorherigen Modus informiert
 - Fehler in V4-Widget-Vorlagen mit mehreren Zuständen behoben
 
 # 05/08/2018
@@ -17,7 +29,7 @@
 
 # 16.04.2008
 
-- Ein Fehler wurde behoben, wenn die Modi ein Sonderzeichen enthielten
+- Ein Fehler wurde behoben, wenn die Modi ein Sonderzeichen enthalten
 
 # 2018.03.04
 

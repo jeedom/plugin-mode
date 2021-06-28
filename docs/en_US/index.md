@@ -19,11 +19,11 @@ Here you find all the configuration of your equipment :
 - **Category** : equipment categories (it can belong to several categories).
 - **Add mode** : button to add a new mode
 
-Below you find the list of modes, by clicking on it you will be able to choose the actions to do when entering this mode and when exiting.
+Below you will find the list of modes, by clicking on it you will be able to choose the actions to be performed when entering and / or exiting this mode.
 
 >**Important**
 >
->Attention during the renaming of a mode it is absolutely necessary to review the scenarios / equipment which use the old name to pass them on the new
+>Be careful when renaming a mode, it is essential to review the scenarios / equipment that used the old name to switch them to the new one.
 
 ## Equipment creation
 

@@ -19,11 +19,11 @@ Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
 - **Kategorie** : Gerätekategorien (es kann zu mehreren Kategorien gehören).
 - **Modus hinzufügen** : Schaltfläche, um einen neuen Modus hinzuzufügen
 
-Unten finden Sie die Liste der Modi. Wenn Sie darauf klicken, können Sie die Aktionen auswählen, die beim Aufrufen dieses Modus und beim Beenden ausgeführt werden sollen.
+Unten finden Sie die Liste der Modi. Wenn Sie darauf klicken, können Sie die Aktionen auswählen, die beim Betreten und / oder Verlassen dieses Modus ausgeführt werden sollen.
 
 >**Wichtig**
 >
->Achtung beim Umbenennen eines Modus ist es unbedingt erforderlich, die Szenarien / Geräte zu überprüfen, die den alten Namen verwenden, um sie an den neuen weiterzugeben
+>Seien Sie vorsichtig, wenn Sie einen Modus umbenennen. Es ist wichtig, die Szenarien / Geräte zu überprüfen, die den alten Namen verwendet haben, um sie auf den neuen umzustellen.
 
 ## Geräteerstellung
 
