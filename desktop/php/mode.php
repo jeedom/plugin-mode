@@ -63,7 +63,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 						<div class="col-lg-6">
 							<legend><i class="fas fa-wrench"></i> {{Paramètres généraux}}</legend>
 							<div class="form-group">
-								<label class="col-sm-3 control-label">{{Nom du mode}}</label>
+								<label class="col-sm-3 control-label">{{Nom de l'équipement Mode}}</label>
 								<div class="col-sm-7">
 									<input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display : none;" />
 									<input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement mode}}"/>
@@ -118,7 +118,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 						<div class="col-lg-6">
 							<legend><i class="fas fa-info"></i> {{Informations}}</legend>
 							<div class="form-group">
-								<label class="col-sm-3 control-label">{{Description du mode}}</label>
+								<label class="col-sm-3 control-label">{{Description des modes}}</label>
 								<div class="col-sm-8">
 									<textarea data-l1key="comment" class="form-control eqLogicAttr autogrow" ></textarea>
 								</div>

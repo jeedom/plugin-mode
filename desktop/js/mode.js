@@ -208,8 +208,8 @@ function addMode(_mode,_updateMode) {
 
   div += '</div>';
   div += '<br>';
-  div += '<div class="div_inAction col-lg-11" style="padding-bottom:10px;margin-bottom:10px;background-color:rgb(var(--bg-color));"><legend><i class="fas fa-sign-in-alt icon_blue"></i> {{Action(s) d\'entrée}}</legend></div>';
-  div += '<div class="div_outAction col-lg-11" style="padding-bottom:10px;margin-bottom:15px;background-color:rgb(var(--bg-color));"><legend><i class="fas fa-sign-out-alt icon_orange"></i> {{Action(s) de sortie}}</legend></div>';
+  div += '<div class="div_inAction col-xs-12" style="padding-bottom:10px;margin-bottom:10px;background-color:rgb(var(--bg-color));"><legend><i class="fas fa-sign-in-alt icon_blue"></i> {{Action(s) d\'entrée}}</legend></div>';
+  div += '<div class="div_outAction col-xs-12" style="padding-bottom:10px;margin-bottom:15px;background-color:rgb(var(--bg-color));"><legend><i class="fas fa-sign-out-alt icon_orange"></i> {{Action(s) de sortie}}</legend></div>';
   div += '</form>';
   div += '</div>';
   div += '</div>';
@@ -261,7 +261,7 @@ function addAction(_action, _type, _name, _el) {
   }
   var div = '<div class="' + _type + '">';
   div += '<div class="form-group ">';
-  div += '<div class="col-sm-2 ' + input +'" style="width:250px;">';
+  div += '<div class="col-sm-2 ' + input +'" style="max-width:250px;">';
   div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="enable" checked title="{{Décocher pour désactiver l\'action}}">';
   div += '<input type="checkbox" class="expressionAttr" data-l1key="options" data-l2key="background" title="{{Cocher pour que la commande s\'exécute en parallèle des autres actions}}">';
   div += '<select class="expressionAttr form-control input-sm selectMode" data-l1key="onlyIfMode" style="max-width:170px;display:inline-block" title="{{Entrée : Ne faire cette action que si l\'on vient du mode. Sortie : ne faire les actions que si on va sur le mode}}">';
@@ -290,7 +290,7 @@ function addAction(_action, _type, _name, _el) {
   div += '</div>';
   div += '</div>';
   var actionOption_id = uniqId();
-  div += '<div class="col-sm-6 actionOptions" id="'+actionOption_id+'">';
+  div += '<div class="col-sm-6 col-lg-5 actionOptions" id="'+actionOption_id+'">';
   div += '</div>';
   div += '</div>';
   if (isset(_el)) {
