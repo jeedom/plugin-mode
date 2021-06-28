@@ -208,8 +208,9 @@ function addMode(_mode,_updateMode) {
 
   div += '</div>';
   div += '<br>';
-  div += '<div class="div_inAction col-xs-12" style="padding-bottom:10px;margin-bottom:10px;background-color:rgb(var(--bg-color));"><legend><i class="fas fa-sign-in-alt icon_blue"></i> {{Action(s) d\'entrée}}</legend></div>';
-  div += '<div class="div_outAction col-xs-12" style="padding-bottom:10px;margin-bottom:15px;background-color:rgb(var(--bg-color));"><legend><i class="fas fa-sign-out-alt icon_orange"></i> {{Action(s) de sortie}}</legend></div>';
+  div += '<div class="div_inAction col-xs-12" style="display:none;padding-bottom:10px;margin-bottom:15px;background-color:rgb(var(--bg-color));"><legend><i class="fas fa-sign-in-alt icon_blue"></i> {{Action(s) d\'entrée}}</legend></div>';
+  div += '<div class="div_outAction col-xs-12" style="display:none;padding-bottom:10px;margin-bottom:15px;background-color:rgb(var(--bg-color));"><legend><i class="fas fa-sign-out-alt icon_orange"></i> {{Action(s) de sortie}}</legend></div>';
+  div += '<br>';
   div += '</form>';
   div += '</div>';
   div += '</div>';
@@ -294,7 +295,7 @@ function addAction(_action, _type, _name, _el) {
   div += '</div>';
   div += '</div>';
   if (isset(_el)) {
-    _el.find('.div_' + _type).append(div);
+    _el.find('.div_' + _type).append(div).show();
     _el.find('.' + _type + '').last().setValues(_action, '.expressionAttr');
   } else {
     $('#div_' + _type).append(div);
