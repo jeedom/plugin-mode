@@ -171,22 +171,39 @@ class mode extends eqLogic {
 		if ($_previousMode == '') {
 			$_previousMode = $this->getCache('previousMode');
 		}
+		$logText = ($_type === 'inAction') ? [__('Entrée dans le mode', __FILE__), __('mode précédent', __FILE__)] : [__('Sortie du mode', __FILE__), __('mode suivant', __FILE__)];
+		log::add(__CLASS__, 'debug', $this->getHumanName().' '.$logText[0].' '.$_mode.' ('.$logText[1].' : '.$_previousMode.')');
+
 		foreach ($this->getConfiguration('modes') as $key => $value) {
 			if ($value['name'] != $_mode) {
 				continue;
 			}
+			if (empty($value[$_type])) {
+				log::add(__CLASS__, 'debug', $this->getHumanName().__(' Aucune action à effectuer', __FILE__));
+				continue;
+			}
 			foreach ($value[$_type] as $action) {
+				if (!isset($action['cmd']) || empty($action['cmd'])) {
+					log::add(__CLASS__, 'debug', $this->getHumanName().__(' Action ignorée car le champ est vide', __FILE__));
+					continue;
+				}
 				if (isset($action['onlyIfMode']) && $action['onlyIfMode'] != 'all' && $action['onlyIfMode'] != $_previousMode) {
+					log::add(__CLASS__, 'debug', $this->getHumanName().__(' Action ignorée car le ', __FILE__).$logText[1].__(' ne correspond pas : ', __FILE__).$_previousMode.' != '.$action['onlyIfMode']);
 					continue;
 				}
 				try {
 					$options = array();
 					if (isset($action['options'])) {
+						if ($action['options']['enable'] == 0) {
+							log::add(__CLASS__, 'debug', $this->getHumanName() . __(' Action ignorée car désactivée : ', __FILE__) . $action['cmd']);
+							continue;
+						}
 						$options = $action['options'];
 					}
+					log::add(__CLASS__, 'debug', $this->getHumanName() . __(' Exécution de l\'action ', __FILE__) . $action['cmd'] . __(' (options : ', __FILE__) . print_r($options, true) .')');
 					scenarioExpression::createAndExec('action', $action['cmd'], $options);
 				} catch (Exception $e) {
-					log::add('mode', 'error', __('Erreur lors de l\'exécution de ', __FILE__) . $action['cmd'] . __('. Détails : ', __FILE__) . $e->getMessage());
+					log::add(__CLASS__, 'error', __('Erreur lors de l\'exécution de ', __FILE__) . $action['cmd'] . __('. Détails : ', __FILE__) . $e->getMessage());
 				}
 			}
 			return;
@@ -295,18 +312,18 @@ class modeCmd extends cmd {
 		$lockState = $eqLogic->getCmd(null, 'lock_state');
 		if (is_object($lockState)) {
 			if ($this->getLogicalId() == 'lock') {
-				log::add('mode','info',$eqLogic->getHumanName(). __(' l\'équipement est verrouillé : aucun changement de mode n\'est autorisé', __FILE__));
+				log::add('mode', 'debug', $eqLogic->getHumanName(). __(' L\'équipement est verrouillé : aucun changement de mode n\'est autorisé', __FILE__));
 				$lockState->event(1);
 				return;
 			} else if ($this->getLogicalId() == 'unlock') {
-				log::add('mode','info',$eqLogic->getHumanName(). __(' l\'équipement est déverrouillé : les changements de mode sont autorisés', __FILE__));
+				log::add('mode', 'debug', $eqLogic->getHumanName(). __(' L\'équipement est déverrouillé : les changements de mode sont autorisés', __FILE__));
 				$lockState->event(0);
 				return;
 			} else if ($lockState->execCmd() == 1) {
-				log::add('mode','info',$eqLogic->getHumanName(). __(' l\'équipement est verrouillé : changement de mode interdit vers ', __FILE__) . $this->getName());
+				log::add('mode', 'info', $eqLogic->getHumanName(). __(' L\'équipement est verrouillé : changement de mode interdit vers ', __FILE__) . $this->getName());
 				return;
 			} else {
-				log::add('mode','info',$eqLogic->getHumanName(). __(' l\'équipement est déverrouillé : changement de mode autorisé vers ', __FILE__) . $this->getName());
+				log::add('mode', 'info', $eqLogic->getHumanName(). __(' L\'équipement est déverrouillé : changement de mode autorisé vers ', __FILE__) . $this->getName());
 			}
 		}
 
