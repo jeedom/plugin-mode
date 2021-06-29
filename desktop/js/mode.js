@@ -17,22 +17,32 @@
 
 MODE_LIST = null;
 
+$(function() {
+  $(".modeAttr, .expressionAttr").on('change', function() {
+    modifyWithoutSave = true
+  })
+})
+
 $('#bt_addMode').off('click').on('click', function () {
   bootbox.prompt("{{Nom du mode ?}}", function (result) {
     if (result !== null && result != '') {
       addMode({name: result});
+      modifyWithoutSave = true
     }
   });
 });
 
 $('body').off('click','.rename').on('click','.rename',  function () {
   var el = $(this);
-  bootbox.prompt("{{Nouveau nom ?}}", function (result) {
+  bootbox.prompt("{{Nouveau nom du mode ?}}", function (result) {
     if (result !== null && result != '') {
-      var previousName = el.text();
+      let mode = el.closest('.mode')
+      let previousName = el.text();
+      let title = mode.find('span.name').html().replace(previousName, result)
       el.text(result);
-      el.closest('.panel.panel-default').find('span.name').text(result);
+      mode.find('span.name').html(title);
       updateSelectMode({[previousName] : result});
+      modifyWithoutSave = true
     }
   });
 });
@@ -64,14 +74,17 @@ $("body").off('click','.listAction').on( 'click','.listAction',function () {
 $("body").off('click', '.bt_removeAction').on( 'click', '.bt_removeAction',function () {
   var type = $(this).attr('data-type');
   $(this).closest('.' + type).remove();
+  modifyWithoutSave = true
 });
 
 $("#div_modes").off('click','.bt_addInAction').on('click','.bt_addInAction',  function () {
-  addAction({}, 'inAction', '{{Action d\'entrée}}', $(this).closest('.mode'));
+  addAction({}, 'inAction', $(this).closest('.mode'));
+  modifyWithoutSave = true
 });
 
 $("#div_modes").off('click','.bt_addOutAction').on( 'click','.bt_addOutAction',function () {
-  addAction({}, 'outAction', '{{Action de sortie}}', $(this).closest('.mode'));
+  addAction({}, 'outAction', $(this).closest('.mode'));
+  modifyWithoutSave = true
 });
 
 $('body').off('focusout','.cmdAction.expressionAttr[data-l1key=cmd]').on( 'focusout', '.cmdAction.expressionAttr[data-l1key=cmd]',function (event) {
@@ -86,17 +99,23 @@ $('body').off('focusout','.cmdAction.expressionAttr[data-l1key=cmd]').on( 'focus
 
 $("#div_modes").off('click','.bt_removeMode').on('click', '.bt_removeMode',function () {
   $(this).closest('.mode').remove();
+  modifyWithoutSave = true
 });
 
 $('body').off('click','.mode .modeAction[data-l1key=chooseIcon]').on('click','.mode .modeAction[data-l1key=chooseIcon]',  function () {
   var mode = $(this).closest('.mode');
   chooseIcon(function (_icon) {
     mode.find('.modeAttr[data-l1key=icon]').empty().append(_icon);
+    mode.find('span.name').html(_icon + ' ' + mode.find('.modeAttr[data-l1key=name]').text());
+    modifyWithoutSave = true
   });
 });
 
 $('body').off('click','.mode .modeAttr[data-l1key=icon]').on( 'click','.mode .modeAttr[data-l1key=icon]', function () {
+  let mode = $(this).closest('.mode')
   $(this).empty();
+  mode.find('span.name').html('<i class="fas fa-th-list"></i> ' + mode.find('.modeAttr[data-l1key=name]').text());
+  modifyWithoutSave = true
 });
 
 $('.nav-tabs li a').off('click').on('click',function(){
@@ -220,21 +239,21 @@ function addMode(_mode,_updateMode) {
   $('#div_modes .mode').last().setValues(_mode, '.modeAttr');
   if (is_array(_mode.inAction)) {
     for (var i in _mode.inAction) {
-      addAction(_mode.inAction[i], 'inAction', '{{Action d\'entrée}}', $('#div_modes .mode').last());
+      addAction(_mode.inAction[i], 'inAction', $('#div_modes .mode').last());
     }
   } else {
     if ($.trim(_mode.inAction) != '') {
-      addAction(_mode.inAction[i], 'inAction', '{{Action d\'entrée}}', $('#div_modes .mode').last());
+      addAction(_mode.inAction[i], 'inAction', $('#div_modes .mode').last());
     }
   }
 
   if (is_array(_mode.outAction)) {
     for (var i in _mode.outAction) {
-      addAction(_mode.outAction[i], 'outAction', '{{Action de sortie}}', $('#div_modes .mode').last());
+      addAction(_mode.outAction[i], 'outAction', $('#div_modes .mode').last());
     }
   } else {
     if ($.trim(_mode.outAction) != '') {
-      addAction(_mode.outAction, 'outAction', '{{Action de sortie}}', $('#div_modes .mode').last());
+      addAction(_mode.outAction, 'outAction', $('#div_modes .mode').last());
     }
   }
   $('.collapse').collapse();
@@ -243,7 +262,7 @@ function addMode(_mode,_updateMode) {
   updateSelectMode();
 }
 
-function addAction(_action, _type, _name, _el) {
+function addAction(_action, _type, _el) {
   if (!isset(_action)) {
     _action = {};
   }
