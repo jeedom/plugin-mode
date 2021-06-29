@@ -164,7 +164,7 @@ function addMode(_mode,_updateMode) {
   div += '<div class="panel-heading">';
   div += '<h3 class="panel-title">';
   div += '<a class="accordion-toggle" data-toggle="collapse" data-parent="#div_modes" href="#collapse' + random + '">';
-  div += '<span class="name"><i class="fas fa-th-list"></i> ' + _mode.name + '</span>';
+  div += '<span class="name">' + (_mode.icon && _mode.icon != '' ? _mode.icon : '<i class="fas fa-th-list"></i>') + ' ' + _mode.name + '</span>';
   div += '</a>';
   div += '</h3>';
   div += '</div>';
