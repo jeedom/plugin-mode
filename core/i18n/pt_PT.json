@@ -30,7 +30,7 @@
     },
     "plugins\/mode\/desktop\/js\/mode.js": {
         "Nom du mode ?": "Nome do perfil?",
-        "Nouveau nom ?": "Novo nome?",
+        "Nouveau nom du mode ?": "Novo nome do modo?",
         "Action d\\'entrée": "Ação de entrada",
         "Action de sortie": "Ação de saída",
         "Supprimer": "Remover",

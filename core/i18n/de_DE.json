@@ -30,7 +30,7 @@
     },
     "plugins\/mode\/desktop\/js\/mode.js": {
         "Nom du mode ?": "Modus Name",
-        "Nouveau nom ?": "Neuer Name",
+        "Nouveau nom du mode ?": "Neuer Name des Modus?",
         "Action d\\'entrée": "Eingabeaktion",
         "Action de sortie": "Aktion beenden",
         "Supprimer": "Löschen",

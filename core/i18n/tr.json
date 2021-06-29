@@ -30,7 +30,7 @@
     },
     "plugins\/mode\/desktop\/js\/mode.js": {
         "Nom du mode ?": "Mod ismi ?",
-        "Nouveau nom ?": "Yeni isim ?",
+        "Nouveau nom du mode ?": "Nouveau nom du mode ?",
         "Action d\\'entrée": "Action d\\'entrée",
         "Action de sortie": "Action de sortie",
         "Supprimer": "Sil",
