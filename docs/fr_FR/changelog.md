@@ -3,6 +3,7 @@
 # 28/06/2021
 
 - Refonte de l'interface
+- Ajout de logs en debug
 
 # 25/05/2021
 
