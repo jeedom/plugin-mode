@@ -3,6 +3,7 @@
 # 28/06/2021
 
 - Redesenho de interface
+- Adicionar registros na depuração
 
 # 25/05/2021
 

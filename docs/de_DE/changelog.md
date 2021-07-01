@@ -3,6 +3,7 @@
 # 28.06.2021
 
 - Neugestaltung der Schnittstelle
+- Hinzufügen von Protokollen im Debugging
 
 # 25.05.2021
 

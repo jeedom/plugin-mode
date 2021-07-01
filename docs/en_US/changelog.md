@@ -3,6 +3,7 @@
 # 06/28/2021
 
 - Interface redesign
+- Adding logs in debug
 
 # 05/25/2021
 
