@@ -1,5 +1,7 @@
 # Changelog Mode
 
+- Ajout d'un bouton pour aller au mode suivant
+
 # 28/06/2021
 
 - Refonte de l'interface
