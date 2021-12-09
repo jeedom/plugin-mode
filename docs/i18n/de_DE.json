@@ -1,6 +1,7 @@
 {
     "changelog.md": {
         "Changelog Mode": "Änderungsprotokollmodus",
+        "Ajout d'un bouton pour aller au mode suivant": "Schaltfläche hinzugefügt, um zum nächsten Modus zu gelangen",
         "28\/06\/2021": "28.06.2021",
         "Refonte de l'interface": "Neugestaltung der Schnittstelle",
         "Ajout de logs en debug": "Hinzufügen von Protokollen im Debugging",

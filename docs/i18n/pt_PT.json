@@ -1,6 +1,7 @@
 {
     "changelog.md": {
         "Changelog Mode": "Modo de Registro de Alterações",
+        "Ajout d'un bouton pour aller au mode suivant": "Adicionado um botão para ir para o próximo modo",
         "28\/06\/2021": "28\/06\/2021",
         "Refonte de l'interface": "Redesenho de interface",
         "Ajout de logs en debug": "Adicionar registros na depuração",

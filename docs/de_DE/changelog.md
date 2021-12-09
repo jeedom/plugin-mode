@@ -1,5 +1,7 @@
 # Änderungsprotokollmodus
 
+- Schaltfläche hinzugefügt, um zum nächsten Modus zu gelangen
+
 # 28.06.2021
 
 - Neugestaltung der Schnittstelle

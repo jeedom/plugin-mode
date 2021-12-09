@@ -1,5 +1,7 @@
 # Changelog Mode
 
+- Added a button to go to the next mode
+
 # 06/28/2021
 
 - Interface redesign

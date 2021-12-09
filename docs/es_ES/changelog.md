@@ -1,5 +1,7 @@
 # Modo de registro de cambios
 
+- Se agregó un botón para ir al siguiente modo
+
 # 28/06/2021
 
 - Rediseño de la interfaz

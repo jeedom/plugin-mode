@@ -1,5 +1,7 @@
 # Modo de Registro de Alterações
 
+- Adicionado um botão para ir para o próximo modo
+
 # 28/06/2021
 
 - Redesenho de interface
