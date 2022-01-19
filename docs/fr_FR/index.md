@@ -33,11 +33,11 @@ En dessous, vous retrouvez la liste des modes existants :
 
 ![Modes](../images/mode_screenshot1.png)
 
-Cliquez sur la ligne d'un mode pour accéder à sa configuration et à la gestion des actions d'entrée/sortie. L'exécution de ces actions peut être conditionnée par le mode duquel on arrive *(mode précédent)* pour les actions d'entrée ou par le mode sur lequel on se rend *(mode suivant)* pour les actions de sortie.
+Cliquez sur la ligne d'un mode pour déployer sa configuration et accéder à la gestion des actions d'entrée/sortie. L'exécution de ces actions peut être conditionnée par le mode duquel on arrive *(mode précédent)* pour les actions d'entrée ou par le mode sur lequel on se rend *(mode suivant)* pour les actions de sortie (voir [les exemples](#Exemples)).
 
 >**INFORMATION**
 >
->Cliquez sur le nom du mode permet de le modifier. Attention, en cas de changement du nom d'un mode, il sera nécessaire de revoir tous les scénarios/équipements qui y faisaient référence sous son ancien nom.
+>Cliquez sur le nom du mode pour le changer. Attention, en cas de modification du nom d'un mode, il sera nécessaire de revoir tous les scénarios/équipements qui y faisaient référence sous son ancien nom.
 
 # Commandes
 
