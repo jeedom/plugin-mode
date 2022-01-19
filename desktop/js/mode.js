@@ -24,7 +24,7 @@ $(function() {
 })
 
 $('#bt_addMode').off('click').on('click', function () {
-  bootbox.prompt("{{Nom du mode ?}}", function (result) {
+  bootbox.prompt('{{Nom du mode}}'+' ?', function (result) {
     if (result !== null && result != '') {
       addMode({name: result});
       modifyWithoutSave = true
@@ -32,9 +32,9 @@ $('#bt_addMode').off('click').on('click', function () {
   });
 });
 
-$('body').off('click','.rename').on('click','.rename',  function () {
+$('.eqLogic').off('click','.rename').on('click','.rename',  function () {
   var el = $(this);
-  bootbox.prompt("{{Nouveau nom du mode ?}}", function (result) {
+  bootbox.prompt('{{Nouveau nom du mode}}'+' ?', function (result) {
     if (result !== null && result != '') {
       let mode = el.closest('.mode')
       let previousName = el.text();
@@ -87,7 +87,7 @@ $("#div_modes").off('click','.bt_addOutAction').on( 'click','.bt_addOutAction',f
   modifyWithoutSave = true
 });
 
-$('body').off('focusout','.cmdAction.expressionAttr[data-l1key=cmd]').on( 'focusout', '.cmdAction.expressionAttr[data-l1key=cmd]',function (event) {
+$('.eqLogic').off('focusout','.cmdAction.expressionAttr[data-l1key=cmd]').on( 'focusout', '.cmdAction.expressionAttr[data-l1key=cmd]',function (event) {
   var type = $(this).attr('data-type')
   var expression = $(this).closest('.' + type).getValues('.expressionAttr');
   var el = $(this);
@@ -102,7 +102,7 @@ $("#div_modes").off('click','.bt_removeMode').on('click', '.bt_removeMode',funct
   modifyWithoutSave = true
 });
 
-$('body').off('click','.mode .modeAction[data-l1key=chooseIcon]').on('click','.mode .modeAction[data-l1key=chooseIcon]',  function () {
+$('.eqLogic').off('click','.mode .modeAction[data-l1key=chooseIcon]').on('click','.mode .modeAction[data-l1key=chooseIcon]',  function () {
   var mode = $(this).closest('.mode');
   chooseIcon(function (_icon) {
     mode.find('.modeAttr[data-l1key=icon]').empty().append(_icon);
@@ -111,7 +111,7 @@ $('body').off('click','.mode .modeAction[data-l1key=chooseIcon]').on('click','.m
   });
 });
 
-$('body').off('click','.mode .modeAttr[data-l1key=icon]').on( 'click','.mode .modeAttr[data-l1key=icon]', function () {
+$('.eqLogic').off('click','.mode .modeAttr[data-l1key=icon]').on( 'click','.mode .modeAttr[data-l1key=icon]', function () {
   let mode = $(this).closest('.mode')
   $(this).empty();
   mode.find('span.name').html('<i class="fas fa-th-list"></i> ' + mode.find('.modeAttr[data-l1key=name]').text());
