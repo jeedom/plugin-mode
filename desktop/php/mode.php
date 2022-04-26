@@ -13,17 +13,17 @@ $eqLogics = eqLogic::byType($plugin->getId());
 		<div class="eqLogicThumbnailContainer">
 			<div class="cursor eqLogicAction logoPrimary" data-action="add">
 				<i class="fas fa-plus-circle"></i>
-				<br/>
+				<br>
 				<span>{{Ajouter}}</span>
 			</div>
 		</div>
 		<legend><i class="fas fa-th-large"></i> {{Mes Modes}}</legend>
 		<?php
 		if (count($eqLogics) == 0) {
-			echo '<br/><div class="text-center" style="font-size:1.2em;font-weight:bold;">{{Aucun mode n\'est paramétré, cliquer sur "Ajouter" pour commencer}}</div>';
+			echo '<br><div class="text-center" style="font-size:1.2em;font-weight:bold;">{{Aucun équipement Mode n\'est paramétré, cliquer sur "Ajouter" pour commencer}}</div>';
 		} else {
 			echo '<div class="input-group" style="margin:5px;">';
-			echo '<input class="form-control roundedLeft" placeholder="{{Rechercher}}" id="in_searchEqlogic"/>';
+			echo '<input class="form-control roundedLeft" placeholder="{{Rechercher}}" id="in_searchEqlogic">';
 			echo '<div class="input-group-btn">';
 			echo '<a id="bt_resetSearch" class="btn" style="width:30px"><i class="fas fa-times"></i></a>';
 			echo '<a class="btn roundedRight hidden" id="bt_pluginDisplayAsTable" data-coreSupport="1" data-state="0"><i class="fas fa-grip-lines"></i></a>';
@@ -33,9 +33,13 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			foreach ($eqLogics as $eqLogic) {
 				$opacity = ($eqLogic->getIsEnable()) ? '' : 'disableCard';
 				echo '<div class="eqLogicDisplayCard cursor '.$opacity.'" data-eqLogic_id="' . $eqLogic->getId() . '">';
-				echo '<img src="' . $plugin->getPathImgIcon() . '"/>';
+				echo '<img src="' . $plugin->getPathImgIcon() . '">';
 				echo '<br>';
 				echo '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
+				echo '<span class="hiddenAsCard displayTableRight hidden">';
+				echo '<span>'.count($eqLogic->getConfiguration('modes')).' {{modes}}</span>';
+				echo ($eqLogic->getIsVisible()) ? ' <i class="fas fa-eye" title="{{Equipement visible}}"></i>' : ' <i class="fas fa-eye-slash" title="{{Equipement non visible}}"></i>';
+				echo '</span>';
 				echo '</div>';
 			}
 			echo '</div>';
@@ -64,15 +68,15 @@ $eqLogics = eqLogic::byType($plugin->getId());
 						<div class="col-lg-6">
 							<legend><i class="fas fa-wrench"></i> {{Paramètres généraux}}</legend>
 							<div class="form-group">
-								<label class="col-sm-3 control-label">{{Nom de l'équipement Mode}}</label>
-								<div class="col-sm-7">
-									<input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display : none;" />
-									<input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement mode}}"/>
+								<label class="col-sm-4 control-label">{{Nom de l'équipement}}</label>
+								<div class="col-sm-6">
+									<input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display:none;">
+									<input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement Mode}}">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-3 control-label" >{{Objet parent}}</label>
-								<div class="col-sm-7">
+								<label class="col-sm-4 control-label" >{{Objet parent}}</label>
+								<div class="col-sm-6">
 									<select id="sel_object" class="eqLogicAttr form-control" data-l1key="object_id">
 										<option value="">{{Aucun}}</option>
 										<?php
@@ -86,32 +90,32 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-3 control-label">{{Catégorie}}</label>
-								<div class="col-sm-7">
+								<label class="col-sm-4 control-label">{{Catégorie}}</label>
+								<div class="col-sm-6">
 									<?php
 									foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
 										echo '<label class="checkbox-inline">';
-										echo '<input type="checkbox" class="eqLogicAttr" data-l1key="category" data-l2key="' . $key . '" />' . $value['name'];
+										echo '<input type="checkbox" class="eqLogicAttr" data-l1key="category" data-l2key="' . $key . '" >' . $value['name'];
 										echo '</label>';
 									}
 									?>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-3 control-label">{{Options}}</label>
-								<div class="col-sm-7">
-									<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>{{Activer}}</label>
-									<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
+								<label class="col-sm-4 control-label">{{Options}}</label>
+								<div class="col-sm-6">
+									<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked>{{Activer}}</label>
+									<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked>{{Visible}}</label>
 								</div>
 							</div>
 
 							<legend><i class="fas fa-cogs"></i> {{Paramètres spécifiques}}</legend>
 							<div class="form-group">
-								<label class="col-sm-3 control-label">{{Commande de verrouillage}}
+								<label class="col-sm-4 control-label">{{Commande de verrouillage}}
 									<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour afficher la commande de verrouillage sur le widget}}"></i></sup>
 								</label>
-								<div class="col-sm-7">
-									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="showLockCmd" />
+								<div class="col-sm-6">
+									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="showLockCmd">
 								</div>
 							</div>
 						</div>
@@ -119,8 +123,8 @@ $eqLogics = eqLogic::byType($plugin->getId());
 						<div class="col-lg-6">
 							<legend><i class="fas fa-info"></i> {{Informations}}</legend>
 							<div class="form-group">
-								<label class="col-sm-3 control-label">{{Description des modes}}</label>
-								<div class="col-sm-8">
+								<label class="col-sm-4 control-label">{{Description des modes}}</label>
+								<div class="col-sm-7">
 									<textarea data-l1key="comment" class="form-control eqLogicAttr autogrow" ></textarea>
 								</div>
 							</div>
@@ -131,7 +135,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			</div>
 
 			<div role="tabpanel" class="tab-pane" id="modetab">
-				<a class="btn btn-default col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-4" id="bt_addMode" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Ajouter un mode}}</a>
+				<a class="btn btn-primary col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-4" id="bt_addMode" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Ajouter un mode}}</a>
 				<br><br>
 				<div id="div_modes" class="panel-group" style="margin-top:5px;">
 				</div>
