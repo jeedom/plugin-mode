@@ -34,8 +34,8 @@
     "plugins\/mode\/desktop\/js\/mode.js": {
         "Nom du mode": "Modusname",
         "Nouveau nom du mode": "Neuer Modusname",
-        "Action d\\'entrée": "Eintrittsaktion",
-        "Action de sortie": "Exit-Aktion",
+        "Action d\\'entrée": "Eingabeaktion",
+        "Action de sortie": "Aktion beenden",
         "Supprimer": "Löschen",
         "Cliquer sur le nom du mode pour le modifier": "Klicken Sie auf den Namen des Modus, um ihn zu ändern",
         "Couleur du mode": "Modusfarbe",
@@ -60,6 +60,7 @@
         "Verrouillage": "Verriegeln",
         "Mode": "Modus",
         "Mode précédent": "Vorheriger Modus",
+        "Rejouer": "Wiederholung",
         "Retour mode précédent": "Kehren Sie zum vorherigen Modus zurück",
         "Aller au mode suivant": "Gehe zum nächsten Modus",
         "Entrée dans le mode": "Eingabemodus",
