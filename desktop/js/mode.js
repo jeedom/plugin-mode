@@ -182,13 +182,13 @@ function addMode(_mode,_updateMode) {
   var div = '<div class="mode panel panel-default">';
   div += '<div class="panel-heading">';
   div += '<h3 class="panel-title">';
-  div += '<a class="accordion-toggle" data-toggle="collapse" data-parent="#div_modes" href="#collapse' + random + '">';
+  div += '<a class="accordion-toggle " data-toggle="collapse" href="#collapse' + random + '">';
   div += '<span class="name">' + (_mode.icon && _mode.icon != '' ? _mode.icon : '<i class="fas fa-th-list"></i>') + ' ' + _mode.name + '</span>';
   div += '</a>';
   div += '</h3>';
   div += '</div>';
 
-  div += '<div id="collapse' + random + '" class="panel-collapse collapse in">';
+  div += '<div id="collapse' + random + '" class="panel-collapse collapse">';
   div += '<div class="panel-body">';
   div += '<form class="form-horizontal col-xs-12" role="form">';
 
@@ -256,7 +256,6 @@ function addMode(_mode,_updateMode) {
       addAction(_mode.outAction, 'outAction', $('#div_modes .mode').last());
     }
   }
-  $('.collapse').collapse();
   $("#div_modes .mode:last .div_inAction").sortable({axis: "y", cursor: "move", items: ".inAction", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
   $("#div_modes .mode:last .div_outAction").sortable({axis: "y", cursor: "move", items: ".outAction", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
   updateSelectMode();
