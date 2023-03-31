@@ -195,7 +195,7 @@ function addMode(_mode,_updateMode) {
   div += '<div class="pull-right">';
   div += '<div class="input-group pull-right" style="display:inline-flex">';
   div += '<span class="input-group-btn">';
-  div += '<a class="btn btn-sm btn-primary bt_addInAction roundedLeft"><i class="fas fa-plus-circle"></i> {{Action d\'entrée}}</a>';
+  div += '<a class="btn btn-sm btn-succes bt_addInAction roundedLeft"><i class="fas fa-plus-circle"></i> {{Action d\'entrée}}</a>';
   div += '<a class="btn btn-sm btn-warning bt_addOutAction"><i class="fas fa-plus-circle"></i> {{Action de sortie}}</a>';
   div += '<a class="btn btn-sm btn-danger bt_removeMode roundedRight"><i class="fas fa-minus-circle"></i> {{Supprimer}}</a>';
   div += '</span>';
@@ -271,12 +271,12 @@ function addAction(_action, _type, _el) {
   var input = '';
   var button = 'btn-default';
   if (_type == 'outAction') {
-    input = 'has-error';
+    input = 'has-warning';
     button = 'btn-warning';
   }
   if (_type == 'inAction') {
     input = 'has-success';
-    button = 'btn-primary';
+    button = 'btn-success';
   }
   var div = '<div class="' + _type + '">';
   div += '<div class="form-group ">';
