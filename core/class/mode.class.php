@@ -231,7 +231,7 @@ class mode extends eqLogic {
 						}
 						$options = $action['options'];
 					}
-					log::add(__CLASS__, 'debug', $this->getHumanName() . ' ' . __('Exécution de l\'action', __FILE__) . ' ' . $action['cmd'] . ' (' . __('options', __FILE__) . ' : ' . print_r($options, true) . ')');
+					log::add(__CLASS__, 'debug', $this->getHumanName() . ' ' . __('Exécution de l\'action', __FILE__) . ' ' . $action['cmd'] . ' (' . __('options', __FILE__) . ' : ' . json_encode($options) . ')');
 					scenarioExpression::createAndExec('action', $action['cmd'], $options);
 				} catch (Exception $e) {
 					log::add(__CLASS__, 'error', __('Erreur lors de l\'exécution de ', __FILE__) . $action['cmd'] . '. ' . __('Détails', __FILE__) . ' : ' . $e->getMessage());
