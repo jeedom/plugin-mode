@@ -295,7 +295,7 @@ class modeCmd extends cmd {
 					$return = str_replace('class="', 'class="' . $value['modecolor'] . ' ', $return);
 				}
 			} else if (isset($value['modecolor']) && $value['modecolor'] != '' && $value['modecolor'] != 'default') {
-				$return = '<span class="' . $value['modecolor'] . '">' . $return . '<span>';
+				$return = '<span class="' . $value['modecolor'] . '">' . $return . '</span>';
 			}
 			return $return;
 		}
