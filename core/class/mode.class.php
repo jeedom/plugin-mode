@@ -336,18 +336,20 @@ class modeCmd extends cmd {
 		if ($this->getLogicalId() == 'nextMode') {
 			$mode = $eqLogic->getCmd(null, 'currentMode')->execCmd();
 			$modes = $eqLogic->getConfiguration('modes');
-			$nextPosition = 0;
-			foreach ($modes as $key => $value) {
-				if ($mode == $value['name']) {
-					$nextPosition = $key + 1;
-					break;
-				}
-			}
-			if (count($modes) - 1 < $nextPosition) {
+			if(is_array($modes)){
 				$nextPosition = 0;
+				foreach ($modes as $key => $value) {
+					if ($mode == $value['name']) {
+						$nextPosition = $key + 1;
+						break;
+					}
+				}
+				if (count($modes) - 1 < $nextPosition) {
+					$nextPosition = 0;
+				}
+				$cmd = $eqLogic->getCmd('action', $modes[$nextPosition]['name']);
+				$cmd->execCmd();
 			}
-			$cmd = $eqLogic->getCmd('action', $modes[$nextPosition]['name']);
-			$cmd->execCmd();
 			return;
 		}
 		if ($this->getLogicalId() == 'replay') {
