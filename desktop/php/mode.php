@@ -37,7 +37,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				echo '<br>';
 				echo '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
 				echo '<span class="hiddenAsCard displayTableRight hidden">';
-				echo '<span>'.count($eqLogic->getConfiguration('modes')).' {{modes}}</span>';
+				echo '<span>'.count($eqLogic->getConfiguration('modes'),array()).' {{modes}}</span>';
 				echo ($eqLogic->getIsVisible()) ? ' <i class="fas fa-eye" title="{{Equipement visible}}"></i>' : ' <i class="fas fa-eye-slash" title="{{Equipement non visible}}"></i>';
 				echo '</span>';
 				echo '</div>';
