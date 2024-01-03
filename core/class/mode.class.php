@@ -62,8 +62,7 @@ class mode extends eqLogic {
 		$lock->setSubType('other');
 		if ($this->getConfiguration('showLockCmd') == 1) {
 			$lock->setIsVisible(1);
-		}
-		else {
+		} else {
 			$lock->setIsVisible(0);
 		}
 		$lock->setOrder(1);
@@ -83,8 +82,7 @@ class mode extends eqLogic {
 		$unlock->setSubType('other');
 		if ($this->getConfiguration('showLockCmd') == 1) {
 			$unlock->setIsVisible(1);
-		}
-		else {
+		} else {
 			$unlock->setIsVisible(0);
 		}
 		$unlock->setOrder(2);
@@ -121,6 +119,20 @@ class mode extends eqLogic {
 		$previousMode->setOrder(4);
 		$previousMode->save();
 
+		$replay = $this->getCmd(null, 'replay');
+		if (!is_object($replay)) {
+			$replay = new modeCmd();
+			$replay->setEqLogic_id($this->id);
+			$replay->setLogicalId('replay');
+			$replay->setName(__('Rejouer', __FILE__));
+		}
+		$replay->setType('action');
+		$replay->setSubType('other');
+		$replay->setDisplay('generic_type', 'MODE_SET_STATE');
+		$replay->setDisplay('icon', '<i class="fas fa-redo"></i>');
+		$replay->setOrder(5);
+		$replay->save();
+
 		$returnPreviousMode = $this->getCmd(null, 'returnPreviousMode');
 		if (!is_object($returnPreviousMode)) {
 			$returnPreviousMode = new modeCmd();
@@ -132,7 +144,7 @@ class mode extends eqLogic {
 		$returnPreviousMode->setSubType('other');
 		$returnPreviousMode->setDisplay('generic_type', 'MODE_SET_STATE');
 		$returnPreviousMode->setDisplay('icon', '<i class="fas fa-backward"></i>');
-		$returnPreviousMode->setOrder(5);
+		$returnPreviousMode->setOrder(6);
 		$returnPreviousMode->save();
 
 		$gotoNextMode = $this->getCmd(null, 'nextMode');
@@ -177,7 +189,7 @@ class mode extends eqLogic {
 		}
 
 		foreach ($this->getCmd() as $cmd) {
-			if ($cmd->getType() == 'action' && !in_array($cmd->getLogicalId(), $existing_mode) && !in_array($cmd->getLogicalId(), ['returnPreviousMode', 'lock', 'unlock', 'nextMode'])) {
+			if ($cmd->getType() == 'action' && !in_array($cmd->getLogicalId(), $existing_mode) && !in_array($cmd->getLogicalId(), ['returnPreviousMode', 'lock', 'unlock', 'nextMode', 'replay'])) {
 				$cmd->remove();
 			}
 		}
@@ -219,7 +231,7 @@ class mode extends eqLogic {
 						}
 						$options = $action['options'];
 					}
-					log::add(__CLASS__, 'debug', $this->getHumanName() . ' ' . __('Exécution de l\'action', __FILE__) . ' ' . $action['cmd'] . ' (' . __('options', __FILE__) . ' : ' . print_r($options, true) . ')');
+					log::add(__CLASS__, 'debug', $this->getHumanName() . ' ' . __('Exécution de l\'action', __FILE__) . ' ' . $action['cmd'] . ' (' . __('options', __FILE__) . ' : ' . json_encode($options) . ')');
 					scenarioExpression::createAndExec('action', $action['cmd'], $options);
 				} catch (Exception $e) {
 					log::add(__CLASS__, 'error', __('Erreur lors de l\'exécution de ', __FILE__) . $action['cmd'] . '. ' . __('Détails', __FILE__) . ' : ' . $e->getMessage());
@@ -283,7 +295,7 @@ class modeCmd extends cmd {
 					$return = str_replace('class="', 'class="' . $value['modecolor'] . ' ', $return);
 				}
 			} else if (isset($value['modecolor']) && $value['modecolor'] != '' && $value['modecolor'] != 'default') {
-				$return = '<span class="' . $value['modecolor'] . '">' . $return . '<span>';
+				$return = '<span class="' . $value['modecolor'] . '">' . $return . '</span>';
 			}
 			return $return;
 		}
@@ -324,18 +336,29 @@ class modeCmd extends cmd {
 		if ($this->getLogicalId() == 'nextMode') {
 			$mode = $eqLogic->getCmd(null, 'currentMode')->execCmd();
 			$modes = $eqLogic->getConfiguration('modes');
-			$nextPosition = 0;
-			foreach ($modes as $key => $value) {
-				if ($mode == $value['name']) {
-					$nextPosition = $key + 1;
-					break;
-				}
-			}
-			if (count($modes) - 1 < $nextPosition) {
+			if(is_array($modes)){
 				$nextPosition = 0;
+				foreach ($modes as $key => $value) {
+					if ($mode == $value['name']) {
+						$nextPosition = $key + 1;
+						break;
+					}
+				}
+				if (count($modes) - 1 < $nextPosition) {
+					$nextPosition = 0;
+				}
+				$cmd = $eqLogic->getCmd('action', $modes[$nextPosition]['name']);
+				$cmd->execCmd();
 			}
-			$cmd = $eqLogic->getCmd('action', $modes[$nextPosition]['name']);
-			$cmd->execCmd();
+			return;
+		}
+		if ($this->getLogicalId() == 'replay') {
+			$currentMode = $eqLogic->getCmd(null, 'currentMode');
+			if (!is_object($currentMode)) {
+				throw new Exception(__('La commande du mode courant est introuvable', __FILE__));
+			}
+			$mode = $currentMode->execCmd();
+			$eqLogic->doAction($mode, 'inAction', '');
 			return;
 		}
 		$currentMode = $eqLogic->getCmd(null, 'currentMode');

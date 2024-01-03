@@ -32,12 +32,12 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			echo '<div class="eqLogicThumbnailContainer">';
 			foreach ($eqLogics as $eqLogic) {
 				$opacity = ($eqLogic->getIsEnable()) ? '' : 'disableCard';
-				echo '<div class="eqLogicDisplayCard cursor '.$opacity.'" data-eqLogic_id="' . $eqLogic->getId() . '">';
+				echo '<div class="eqLogicDisplayCard cursor ' . $opacity . '" data-eqLogic_id="' . $eqLogic->getId() . '">';
 				echo '<img src="' . $plugin->getPathImgIcon() . '">';
 				echo '<br>';
 				echo '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
 				echo '<span class="hiddenAsCard displayTableRight hidden">';
-				echo '<span>'.count($eqLogic->getConfiguration('modes')).' {{modes}}</span>';
+				echo '<span>' . count($eqLogic->getConfiguration('modes', array())) . ' {{modes}}</span>';
 				echo ($eqLogic->getIsVisible()) ? ' <i class="fas fa-eye" title="{{Equipement visible}}"></i>' : ' <i class="fas fa-eye-slash" title="{{Equipement non visible}}"></i>';
 				echo '</span>';
 				echo '</div>';
@@ -75,7 +75,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label" >{{Objet parent}}</label>
+								<label class="col-sm-4 control-label">{{Objet parent}}</label>
 								<div class="col-sm-6">
 									<select id="sel_object" class="eqLogicAttr form-control" data-l1key="object_id">
 										<option value="">{{Aucun}}</option>
@@ -125,7 +125,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 							<div class="form-group">
 								<label class="col-sm-4 control-label">{{Description des modes}}</label>
 								<div class="col-sm-7">
-									<textarea data-l1key="comment" class="form-control eqLogicAttr autogrow" ></textarea>
+									<textarea data-l1key="comment" class="form-control eqLogicAttr autogrow"></textarea>
 								</div>
 							</div>
 						</div>
