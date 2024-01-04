@@ -2,6 +2,9 @@
     "changelog.md": {
         "Changelog Mode": "Changelog Mode",
         "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "As a reminder, if there is no information on the update, it means that it only concerns the update of documentation, translation or text",
+        "03\/01\/2024": "03\/01\/2024",
+        "Préparation pour jeedom 4.4": "Preparing for jeedom 4.4",
+        "Ajout d'une commande pour rejouer les actions du mode en cours (necessite de resauvegarder l'équipement": "Added a command to replay the actions of the current mode (need to resave equipment",
         "19\/01\/2022": "01\/19\/2022",
         "Optimisations V4.2": "V4.2 optimizations",
         "12\/12\/2021": "12\/12\/2021",
