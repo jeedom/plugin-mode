@@ -139,6 +139,7 @@ class mode extends eqLogic {
 			$returnPreviousMode->setEqLogic_id($this->id);
 			$returnPreviousMode->setLogicalId('returnPreviousMode');
 			$returnPreviousMode->setName(__('Retour mode précédent', __FILE__));
+			$returnPreviousMode->setIsVisible(0);
 		}
 		$returnPreviousMode->setType('action');
 		$returnPreviousMode->setSubType('other');
