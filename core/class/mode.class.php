@@ -54,10 +54,10 @@ class mode extends eqLogic {
 			$lock = new modeCmd();
 			$lock->setEqLogic_id($this->getId());
 			$lock->setLogicalId('lock');
+			$lock->setName(__('Verrouiller', __FILE__));
 			$lock->setTemplate('dashboard', 'lock');
 			$lock->setTemplate('mobile', 'lock');
 		}
-		$lock->setName('Lock');
 		$lock->setType('action');
 		$lock->setSubType('other');
 		if ($this->getConfiguration('showLockCmd') == 1) {
@@ -74,10 +74,10 @@ class mode extends eqLogic {
 			$unlock = new modeCmd();
 			$unlock->setEqLogic_id($this->getId());
 			$unlock->setLogicalId('unlock');
+			$unlock->setName(__('Déverrouiller', __FILE__));
 			$unlock->setTemplate('dashboard', 'lock');
 			$unlock->setTemplate('mobile', 'lock');
 		}
-		$unlock->setName('Unlock');
 		$unlock->setType('action');
 		$unlock->setSubType('other');
 		if ($this->getConfiguration('showLockCmd') == 1) {
@@ -125,11 +125,12 @@ class mode extends eqLogic {
 			$replay->setEqLogic_id($this->id);
 			$replay->setLogicalId('replay');
 			$replay->setName(__('Rejouer', __FILE__));
+			$replay->setDisplay('icon', '<i class="fas fa-redo"></i>');
+			$replay->setIsVisible(0);
 		}
 		$replay->setType('action');
 		$replay->setSubType('other');
 		$replay->setDisplay('generic_type', 'MODE_SET_STATE');
-		$replay->setDisplay('icon', '<i class="fas fa-redo"></i>');
 		$replay->setOrder(5);
 		$replay->save();
 
@@ -139,12 +140,12 @@ class mode extends eqLogic {
 			$returnPreviousMode->setEqLogic_id($this->id);
 			$returnPreviousMode->setLogicalId('returnPreviousMode');
 			$returnPreviousMode->setName(__('Retour mode précédent', __FILE__));
+			$returnPreviousMode->setDisplay('icon', '<i class="fas fa-backward"></i>');
 			$returnPreviousMode->setIsVisible(0);
 		}
 		$returnPreviousMode->setType('action');
 		$returnPreviousMode->setSubType('other');
 		$returnPreviousMode->setDisplay('generic_type', 'MODE_SET_STATE');
-		$returnPreviousMode->setDisplay('icon', '<i class="fas fa-backward"></i>');
 		$returnPreviousMode->setOrder(6);
 		$returnPreviousMode->save();
 
@@ -154,17 +155,18 @@ class mode extends eqLogic {
 			$gotoNextMode->setEqLogic_id($this->id);
 			$gotoNextMode->setLogicalId('nextMode');
 			$gotoNextMode->setName(__('Aller au mode suivant', __FILE__));
+			$gotoNextMode->setDisplay('icon', '<i class="fas fa-forward"></i>');
+			$gotoNextMode->setIsVisible(0);
 		}
 		$gotoNextMode->setType('action');
 		$gotoNextMode->setSubType('other');
 		$gotoNextMode->setDisplay('generic_type', 'MODE_SET_STATE');
-		$gotoNextMode->setDisplay('icon', '<i class="fas fa-forward"></i>');
 		$gotoNextMode->setOrder(99);
 		$gotoNextMode->save();
 
 		$existing_mode = array();
 		if (is_array($this->getConfiguration('modes'))) {
-			$i = 5;
+			$i = 7;
 			foreach ($this->getConfiguration('modes') as $key => $value) {
 				$existing_mode[] = $value['name'];
 				$cmd = $this->getCmd(null, $value['name']);
@@ -178,8 +180,8 @@ class mode extends eqLogic {
 				$cmd->setSubType('other');
 				$cmd->setDisplay('generic_type', 'MODE_SET_STATE');
 				$cmd->setValue($currentMode->getId());
-				$i++;
 				$cmd->setOrder($i);
+				$i++;
 				if (isset($value['icon'])) {
 					$cmd->setDisplay('icon', $value['icon']);
 				} else {
@@ -337,7 +339,7 @@ class modeCmd extends cmd {
 		if ($this->getLogicalId() == 'nextMode') {
 			$mode = $eqLogic->getCmd(null, 'currentMode')->execCmd();
 			$modes = $eqLogic->getConfiguration('modes');
-			if(is_array($modes)){
+			if (is_array($modes)) {
 				$nextPosition = 0;
 				foreach ($modes as $key => $value) {
 					if ($mode == $value['name']) {
