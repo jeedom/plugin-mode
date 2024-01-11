@@ -16,6 +16,11 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<br>
 				<span>{{Ajouter}}</span>
 			</div>
+			<div class="cursor eqLogicAction logoSecondary" data-action="gotoPluginConf">
+				<i class="fas fa-wrench"></i>
+				<br>
+				<span>{{Configuration}}</span>
+			</div>
 		</div>
 		<legend><i class="fas fa-th-large"></i> {{Mes Modes}}</legend>
 		<?php
@@ -125,7 +130,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 							<div class="form-group">
 								<label class="col-sm-4 control-label">{{Description des modes}}</label>
 								<div class="col-sm-7">
-									<textarea data-l1key="comment" class="form-control eqLogicAttr autogrow"></textarea>
+									<textarea data-l1key="comment" class="form-control eqLogicAttr ta_autosize"></textarea>
 								</div>
 							</div>
 						</div>
