@@ -267,19 +267,11 @@ function addMode(_mode) {
     for (var i in _mode.inAction) {
       addAction(_mode.inAction[i], 'inAction', currentMode)
     }
-  } else {
-    if (_mode.inAction.trim() != '') {
-      addAction(_mode.inAction[i], 'inAction', currentMode)
-    }
   }
 
   if (is_array(_mode.outAction)) {
     for (var i in _mode.outAction) {
       addAction(_mode.outAction[i], 'outAction', currentMode)
-    }
-  } else {
-    if (_mode.outAction.trim() != '') {
-      addAction(_mode.outAction, 'outAction', currentMode)
     }
   }
 
