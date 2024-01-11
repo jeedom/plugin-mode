@@ -234,10 +234,10 @@ class mode extends eqLogic {
 						}
 						$options = $action['options'];
 					}
-					log::add(__CLASS__, 'debug', $this->getHumanName() . ' ' . __('Exécution de l\'action', __FILE__) . ' ' . $action['cmd'] . ' (' . __('options', __FILE__) . ' : ' . json_encode($options) . ')');
+					log::add(__CLASS__, 'debug', $this->getHumanName() . ' ' . __("Exécution de l'action", __FILE__) . ' ' . $action['cmd'] . ' (' . __('options', __FILE__) . ' : ' . json_encode($options) . ')');
 					scenarioExpression::createAndExec('action', $action['cmd'], $options);
 				} catch (Exception $e) {
-					log::add(__CLASS__, 'error', __('Erreur lors de l\'exécution de ', __FILE__) . $action['cmd'] . '. ' . __('Détails', __FILE__) . ' : ' . $e->getMessage());
+					log::add(__CLASS__, 'error', __("Erreur lors de l'exécution de", __FILE__) . ' ' . $action['cmd'] . '. ' . __('Détails', __FILE__) . ' : ' . $e->getMessage());
 				}
 			}
 			return;
@@ -254,7 +254,7 @@ class mode extends eqLogic {
 					foreach ($matches[1] as $cmd_id) {
 						if (is_numeric($cmd_id)) {
 							if (!cmd::byId(str_replace('#', '', $cmd_id))) {
-								$return[] = array('detail' => __('Mode', __FILE__) . ' ' . $value['name'] . ' ' . __('dans l\'équipement', __FILE__) . ' ' . $mode->getName(), 'help' => __('Action d\'entrée', __FILE__), 'who' => $inAction['cmd']);
+								$return[] = array('detail' => __('Mode', __FILE__) . ' ' . $value['name'] . ' ' . __("dans l'équipement", __FILE__) . ' ' . $mode->getName(), 'help' => __("Action d'entrée", __FILE__), 'who' => $inAction['cmd']);
 							}
 						}
 					}
@@ -265,7 +265,7 @@ class mode extends eqLogic {
 					foreach ($matches[1] as $cmd_id) {
 						if (is_numeric($cmd_id)) {
 							if (!cmd::byId(str_replace('#', '', $cmd_id))) {
-								$return[] = array('detail' => __('Mode', __FILE__) . ' ' . $value['name'] . ' ' . __('dans l\'équipement', __FILE__) . ' ' . $mode->getName(), 'help' => __('Action de sortie', __FILE__), 'who' => $outAction['cmd']);
+								$return[] = array('detail' => __('Mode', __FILE__) . ' ' . $value['name'] . ' ' . __("dans l'équipement", __FILE__) . ' ' . $mode->getName(), 'help' => __('Action de sortie', __FILE__), 'who' => $outAction['cmd']);
 							}
 						}
 					}
@@ -311,18 +311,18 @@ class modeCmd extends cmd {
 		$lockState = $eqLogic->getCmd(null, 'lock_state');
 		if (is_object($lockState)) {
 			if ($this->getLogicalId() == 'lock') {
-				log::add('mode', 'debug', $eqLogic->getHumanName() . ' ' . __('L\'équipement est verrouillé : aucun changement de mode n\'est autorisé', __FILE__));
+				log::add('mode', 'debug', $eqLogic->getHumanName() . ' ' . __("L'équipement est verrouillé : aucun changement de mode n'est autorisé", __FILE__));
 				$lockState->event(1);
 				return;
 			} else if ($this->getLogicalId() == 'unlock') {
-				log::add('mode', 'debug', $eqLogic->getHumanName() . ' ' . __(' L\'équipement est déverrouillé : les changements de mode sont autorisés', __FILE__));
+				log::add('mode', 'debug', $eqLogic->getHumanName() . ' ' . __("L'équipement est déverrouillé : les changements de mode sont autorisés", __FILE__));
 				$lockState->event(0);
 				return;
 			} else if ($lockState->execCmd() == 1) {
-				log::add('mode', 'info', $eqLogic->getHumanName() . ' ' . __('L\'équipement est verrouillé : changement de mode interdit vers', __FILE__) . ' ' . $this->getName());
+				log::add('mode', 'info', $eqLogic->getHumanName() . ' ' . __("L'équipement est verrouillé : changement de mode interdit vers", __FILE__) . ' ' . $this->getName());
 				return;
 			} else {
-				log::add('mode', 'info', $eqLogic->getHumanName() . ' ' . __('L\'équipement est déverrouillé : changement de mode autorisé vers', __FILE__) . ' ' . $this->getName());
+				log::add('mode', 'info', $eqLogic->getHumanName() . ' ' . __("L'équipement est déverrouillé : changement de mode autorisé vers", __FILE__) . ' ' . $this->getName());
 			}
 		}
 		if ($this->getLogicalId() == 'returnPreviousMode') {
