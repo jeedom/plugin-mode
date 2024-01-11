@@ -1,4 +1,3 @@
-
 /* This file is part of Jeedom.
 *
 * Jeedom is free software: you can redistribute it and/or modify
@@ -15,7 +14,8 @@
 * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
 */
 
-MODE_LIST = null
+var MODE_LIST = null
+var actionOptions = null
 
 document.getElementById('modetab').addEventListener('click', function(event) {
   var _target = null
@@ -181,6 +181,7 @@ function printEqLogic(_eqLogic) {
         jeedomUtils.taAutosize()
       }
     })
+    actionOptions = null
   }
 }
 
@@ -371,9 +372,9 @@ function addAction(_action, _type, _el) {
     forceSingle: true
   })
 
-  if (actionOptions) {
+  if (is_array(actionOptions)) {
     actionOptions.push({
-      expression: init(_action.cmd, ''),
+      expression: init(_action.cmd),
       options: _action.options,
       id: actionOption_id
     })
