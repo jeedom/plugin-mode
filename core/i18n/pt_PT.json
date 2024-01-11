@@ -58,6 +58,8 @@
     },
     "plugins\/mode\/core\/class\/mode.class.php": {
         "Verrouillage": "Trancando",
+        "Verrouiller": "Trancar",
+        "Déverrouiller": "Desbloquear",
         "Mode": "Modo",
         "Mode précédent": "Modo anterior",
         "Rejouer": "Repetir",

@@ -58,6 +58,8 @@
     },
     "plugins\/mode\/core\/class\/mode.class.php": {
         "Verrouillage": "Cierre",
+        "Verrouiller": "Cerrar",
+        "Déverrouiller": "Desbloquear",
         "Mode": "Modo",
         "Mode précédent": "Modo anterior",
         "Rejouer": "Repetición",

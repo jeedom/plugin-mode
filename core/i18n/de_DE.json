@@ -58,6 +58,8 @@
     },
     "plugins\/mode\/core\/class\/mode.class.php": {
         "Verrouillage": "Verriegeln",
+        "Verrouiller": "Sperren",
+        "Déverrouiller": "Freischalten",
         "Mode": "Modus",
         "Mode précédent": "Vorheriger Modus",
         "Rejouer": "Wiederholung",
