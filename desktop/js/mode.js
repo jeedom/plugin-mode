@@ -23,6 +23,7 @@ document.getElementById('modetab').addEventListener('click', function(event) {
     jeeDialog.prompt('{{Nom du mode}}' + ' ?', function(result) {
       if (result !== null) {
         addMode({ name: result })
+        updateSelectMode()
         jeeFrontEnd.modifyWithoutSave = true
       }
     })
@@ -44,7 +45,10 @@ document.getElementById('modetab').addEventListener('click', function(event) {
   }
 
   if (_target = event.target.closest('.bt_removeMode')) {
-    _target.closest('.mode').remove()
+    let mode = _target.closest('.mode')
+    let modeName = mode.querySelector('.rename').innerText
+    mode.remove()
+    updateSelectMode({ [modeName]: 'all' })
     jeeFrontEnd.modifyWithoutSave = true
     return
   }
@@ -129,7 +133,6 @@ document.getElementById('modetab').addEventListener('click', function(event) {
     }, 50)
     return
   }
-
 })
 
 document.getElementById('div_modes').addEventListener('focusout', function(event) {
@@ -280,7 +283,7 @@ function addMode(_mode) {
     delay: 50,
     delayOnTouchOnly: true,
     draggable: '.inAction',
-    filter: '.expressionAttr',
+    filter: '.expressionAttr:not([type="checkbox"])',
     direction: 'vertical',
     onUpdate: function(evt) {
       jeeFrontEnd.modifyWithoutSave = true
@@ -291,14 +294,14 @@ function addMode(_mode) {
     delay: 50,
     delayOnTouchOnly: true,
     draggable: '.outAction',
-    filter: '.expressionAttr',
+    filter: '.expressionAttr:not([type="checkbox"])',
     direction: 'vertical',
     onUpdate: function(evt) {
       jeeFrontEnd.modifyWithoutSave = true
     }
   })
 
-  currentMode.addEventListener('input', function(event) {
+  currentMode.addEventListener('change', function(event) {
     if (_target = event.target.closest('.modeAttr')) {
       jeeFrontEnd.modifyWithoutSave = true
       return
@@ -360,7 +363,7 @@ function addAction(_action, _type, _el) {
   div += '</div>'
   div += '</div>'
   var actionOption_id = jeedomUtils.uniqId()
-  div += '<div class="col-sm-6 col-lg-5 actionOptions" id="' + actionOption_id + '">'
+  div += '<div class="col-sm-6 actionOptions" id="' + actionOption_id + '">'
   div += '</div>'
   div += '</div>'
 
@@ -394,7 +397,7 @@ function updateSelectMode(_convert) {
       }
     })
     _select.innerHTML = options
-    if (isset(_convert[value])) {
+    if (isset(_convert) && isset(_convert[value])) {
       value = _convert[value]
     }
     _select.jeeValue(value)
