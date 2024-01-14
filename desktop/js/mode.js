@@ -151,6 +151,7 @@ new Sortable(document.getElementById('div_modes'), {
   delay: 50,
   draggable: '.mode',
   direction: 'vertical',
+  chosenClass: 'dragSelected',
   onUpdate: function(evt) {
     jeeFrontEnd.modifyWithoutSave = true
   }
@@ -283,8 +284,10 @@ function addMode(_mode) {
     delay: 50,
     delayOnTouchOnly: true,
     draggable: '.inAction',
-    filter: '.expressionAttr:not([type="checkbox"])',
+    filter: '.expressionAttr',
+    preventOnFilter: false,
     direction: 'vertical',
+    chosenClass: 'dragSelected',
     onUpdate: function(evt) {
       jeeFrontEnd.modifyWithoutSave = true
     }
@@ -294,8 +297,10 @@ function addMode(_mode) {
     delay: 50,
     delayOnTouchOnly: true,
     draggable: '.outAction',
-    filter: '.expressionAttr:not([type="checkbox"])',
+    filter: '.expressionAttr',
+    preventOnFilter: false,
     direction: 'vertical',
+    chosenClass: 'dragSelected',
     onUpdate: function(evt) {
       jeeFrontEnd.modifyWithoutSave = true
     }
