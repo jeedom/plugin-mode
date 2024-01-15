@@ -38,6 +38,7 @@ document.getElementById('modetab').addEventListener('click', function(event) {
         modeTitle.innerHTML = modeTitle.innerHTML.replace(previousName, result)
         _target.innerText = result
         updateSelectMode({ [previousName]: result })
+        _target.closest('.mode').setAttribute('renamed', previousName)
         jeeFrontEnd.modifyWithoutSave = true
       }
     })
@@ -196,6 +197,7 @@ function saveEqLogic(_eqLogic) {
   _eqLogic.configuration.modes = []
   document.querySelectorAll('.mode').forEach(_mode => {
     let mode = _mode.getJeeValues('.modeAttr')[0]
+    mode.renamed = _mode.getAttribute('renamed')
     mode.inAction = _mode.querySelectorAll('.inAction').getJeeValues('.expressionAttr')
     mode.outAction = _mode.querySelectorAll('.outAction').getJeeValues('.expressionAttr')
     _eqLogic.configuration.modes.push(mode)

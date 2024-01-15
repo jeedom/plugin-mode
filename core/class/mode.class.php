@@ -167,14 +167,18 @@ class mode extends eqLogic {
 		$existing_mode = array();
 		if (is_array($this->getConfiguration('modes'))) {
 			$i = 7;
-			foreach ($this->getConfiguration('modes') as $key => $value) {
+			foreach (array_values($this->getConfiguration('modes')) as $value) {
 				$existing_mode[] = $value['name'];
-				$cmd = $this->getCmd(null, $value['name']);
+				if (!isset($value['renamed'])) {
+					$cmd = $this->getCmd(null, $value['name']);
+				} else {
+					$cmd = $this->getCmd(null, $value['renamed']);
+				}
 				if (!is_object($cmd)) {
 					$cmd = new modeCmd();
 					$cmd->setEqLogic_id($this->id);
-					$cmd->setLogicalId($value['name']);
 				}
+				$cmd->setLogicalId($value['name']);
 				$cmd->setName($value['name']);
 				$cmd->setType('action');
 				$cmd->setSubType('other');
