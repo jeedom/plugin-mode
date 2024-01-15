@@ -33,12 +33,15 @@ document.getElementById('modetab').addEventListener('click', function(event) {
   if (_target = event.target.closest('.rename')) {
     jeeDialog.prompt('{{Nouveau nom du mode}}' + ' ?', function(result) {
       if (result !== null) {
-        let modeTitle = _target.closest('.mode').querySelector('.name')
+        let mode = _target.closest('.mode')
+        let modeTitle = mode.querySelector('.name')
         let previousName = _target.innerText
         modeTitle.innerHTML = modeTitle.innerHTML.replace(previousName, result)
         _target.innerText = result
         updateSelectMode({ [previousName]: result })
-        _target.closest('.mode').setAttribute('renamed', previousName)
+        if (mode.getAttribute('renamed') == null) {
+          mode.setAttribute('renamed', previousName)
+        }
         jeeFrontEnd.modifyWithoutSave = true
       }
     })
