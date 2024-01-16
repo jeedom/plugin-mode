@@ -155,6 +155,8 @@ new Sortable(document.getElementById('div_modes'), {
   delay: 50,
   draggable: '.mode',
   direction: 'vertical',
+  filter: '.inAction, .outAction',
+  preventOnFilter: false,
   chosenClass: 'dragSelected',
   onUpdate: function(evt) {
     jeeFrontEnd.modifyWithoutSave = true
