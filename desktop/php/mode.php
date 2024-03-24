@@ -117,10 +117,34 @@ $eqLogics = eqLogic::byType($plugin->getId());
 							<legend><i class="fas fa-cogs"></i> {{Paramètres spécifiques}}</legend>
 							<div class="form-group">
 								<label class="col-sm-4 control-label">{{Commande de verrouillage}}
-									<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour afficher la commande de verrouillage sur le widget}}"></i></sup>
+									<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour creer la commande de verrouillage sur le widget}}"></i></sup>
 								</label>
 								<div class="col-sm-6">
 									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="showLockCmd">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">{{Commande rejouer}}
+									<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour creer la commande rejouer sur le widget}}"></i></sup>
+								</label>
+								<div class="col-sm-6">
+									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="showReplayCmd">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">{{Commande mode précédent}}
+									<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour creer la commande mode précédent sur le widget}}"></i></sup>
+								</label>
+								<div class="col-sm-6">
+									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="showPreviousCmd">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">{{Commande mode suivant}}
+									<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour creer la commande mode suivant sur le widget}}"></i></sup>
+								</label>
+								<div class="col-sm-6">
+									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="showNextCmd">
 								</div>
 							</div>
 						</div>
