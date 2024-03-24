@@ -4,6 +4,10 @@
 >
 >Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+# 24/03/2024
+
+- Ajout des options de configuration sur l'équipement pour afficher les commandes 'Rejouer', 'Précédent' et 'Suivant' sur le widget
+
 # 15/01/2024
 
 - La commande correspondante est mise à jour lors du renommage d'un mode au lieu d'être supprimée
