@@ -126,10 +126,14 @@ class mode extends eqLogic {
 			$replay->setLogicalId('replay');
 			$replay->setName(__('Rejouer', __FILE__));
 			$replay->setDisplay('icon', '<i class="fas fa-redo"></i>');
-			$replay->setIsVisible(0);
 		}
 		$replay->setType('action');
 		$replay->setSubType('other');
+		if ($this->getConfiguration('showReplayCmd') == 1) {
+			$replay->setIsVisible(1);
+		} else {
+			$replay->setIsVisible(0);
+		}
 		$replay->setDisplay('generic_type', 'MODE_SET_STATE');
 		$replay->setOrder(5);
 		$replay->save();
@@ -141,10 +145,14 @@ class mode extends eqLogic {
 			$returnPreviousMode->setLogicalId('returnPreviousMode');
 			$returnPreviousMode->setName(__('Retour mode précédent', __FILE__));
 			$returnPreviousMode->setDisplay('icon', '<i class="fas fa-backward"></i>');
-			$returnPreviousMode->setIsVisible(0);
 		}
 		$returnPreviousMode->setType('action');
 		$returnPreviousMode->setSubType('other');
+		if ($this->getConfiguration('showPreviousCmd') == 1) {
+			$returnPreviousMode->setIsVisible(1);
+		} else {
+			$returnPreviousMode->setIsVisible(0);
+		}
 		$returnPreviousMode->setDisplay('generic_type', 'MODE_SET_STATE');
 		$returnPreviousMode->setOrder(6);
 		$returnPreviousMode->save();
@@ -156,10 +164,14 @@ class mode extends eqLogic {
 			$gotoNextMode->setLogicalId('nextMode');
 			$gotoNextMode->setName(__('Aller au mode suivant', __FILE__));
 			$gotoNextMode->setDisplay('icon', '<i class="fas fa-forward"></i>');
-			$gotoNextMode->setIsVisible(0);
 		}
 		$gotoNextMode->setType('action');
 		$gotoNextMode->setSubType('other');
+		if ($this->getConfiguration('showNextCmd') == 1) {
+			$gotoNextMode->setIsVisible(1);
+		} else {
+			$gotoNextMode->setIsVisible(0);
+		}
 		$gotoNextMode->setDisplay('generic_type', 'MODE_SET_STATE');
 		$gotoNextMode->setOrder(99);
 		$gotoNextMode->save();
