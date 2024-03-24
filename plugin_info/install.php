@@ -20,14 +20,13 @@ require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 
 function mode_update() {
 	foreach (mode::byType('mode') as $mode) {
+		is_object($mode->getCmd(null, 'lock_state')) && $mode->setConfiguration('showLockCmd', '1');
+		is_object($mode->getCmd(null, 'lock')) && $mode->setConfiguration('showLockCmd', '1');
+		is_object($mode->getCmd(null, 'unlock')) && $mode->setConfiguration('showLockCmd', '1');
+		is_object($mode->getCmd(null, 'replay')) && $mode->setConfiguration('showReplayCmd', '1');
+		is_object($mode->getCmd(null, 'returnPreviousMode')) && $mode->setConfiguration('showPreviousCmd', '1');
+		is_object($mode->getCmd(null, 'nextMode')) && $mode->setConfiguration('showNextCmd', '1');
 		$mode->save();
-		
-		$previousMode = $mode->getCmd(null, 'previousMode');
-		if(is_object($previousMode)){
-			$previousMode->setDisplay('generic_type', 'DONT');
-			$previousMode->setGeneric_type('DONT');
-			$previousMode->save();
-		}
 	}
 }
 ?>
