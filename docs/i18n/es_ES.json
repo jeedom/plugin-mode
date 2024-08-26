@@ -2,7 +2,9 @@
     "changelog.md": {
         "Changelog Mode": "Modo de registro de cambios",
         "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Como recordatorio, si no hay información sobre la actualización, significa que solo se trata de la actualización de la documentación, la traducción o el texto",
-        "POssibilité d'avoir ou non les commandes suivante, precedent et rejouter": "Posibilidad de tener o no los comandos siguiente, anterior y repetir",
+        "26\/08\/2024": "26\/08\/2024",
+        "Support des images d'équipement personnalisées (Jeedom 4.5": "Soporte para imágenes de equipos personalizados (Jeedom 4.5",
+        "Possibilité d'avoir ou non les commandes suivante, precedent et rejouter": "Posibilidad de tener o no los comandos siguiente, anterior y repetir",
         "15\/01\/2024": "15\/01\/2024",
         "La commande correspondante est mise à jour lors du renommage d'un mode au lieu d'être supprimée": "El comando correspondiente se actualiza al cambiar el nombre de un modo en lugar de eliminarse",
         "11\/01\/2024": "01\/11\/2024",

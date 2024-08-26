@@ -2,7 +2,9 @@
     "changelog.md": {
         "Changelog Mode": "Changelog Mode",
         "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "As a reminder, if there is no information on the update, it means that it only concerns the update of documentation, translation or text",
-        "POssibilité d'avoir ou non les commandes suivante, precedent et rejouter": "Possibility of having or not the next, previous and replay commands",
+        "26\/08\/2024": "08\/26\/2024",
+        "Support des images d'équipement personnalisées (Jeedom 4.5": "Support for custom equipment images (Jeedom 4.5",
+        "Possibilité d'avoir ou non les commandes suivante, precedent et rejouter": "Possibility of having or not the next, previous and replay commands",
         "15\/01\/2024": "01\/15\/2024",
         "La commande correspondante est mise à jour lors du renommage d'un mode au lieu d'être supprimée": "The corresponding command is updated when renaming a mode instead of being deleted",
         "11\/01\/2024": "01\/11\/2024",

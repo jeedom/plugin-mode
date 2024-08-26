@@ -2,7 +2,9 @@
     "changelog.md": {
         "Changelog Mode": "Änderungsprotokollmodus",
         "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Zur Erinnerung: Wenn es keine Informationen über die Aktualisierung gibt, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt",
-        "POssibilité d'avoir ou non les commandes suivante, precedent et rejouter": "Möglichkeit, die nächsten, vorherigen und Wiederholungsbefehle zu haben oder nicht",
+        "26\/08\/2024": "26.08.2024",
+        "Support des images d'équipement personnalisées (Jeedom 4.5": "Unterstützung für benutzerdefinierte Gerätebilder (Jeedom 4.5",
+        "Possibilité d'avoir ou non les commandes suivante, precedent et rejouter": "Möglichkeit, die nächsten, vorherigen und Wiederholungsbefehle zu haben oder nicht",
         "15\/01\/2024": "15.01.2024",
         "La commande correspondante est mise à jour lors du renommage d'un mode au lieu d'être supprimée": "Der entsprechende Befehl wird beim Umbenennen eines Modus aktualisiert und nicht gelöscht",
         "11\/01\/2024": "11.01.2024",
