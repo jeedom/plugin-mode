@@ -16,11 +16,16 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<br>
 				<span>{{Ajouter}}</span>
 			</div>
+			<div class="cursor eqLogicAction logoSecondary" data-action="gotoPluginConf">
+				<i class="fas fa-wrench"></i>
+				<br>
+				<span>{{Configuration}}</span>
+			</div>
 		</div>
 		<legend><i class="fas fa-th-large"></i> {{Mes Modes}}</legend>
 		<?php
 		if (count($eqLogics) == 0) {
-			echo '<br><div class="text-center" style="font-size:1.2em;font-weight:bold;">{{Aucun équipement Mode n\'est paramétré, cliquer sur "Ajouter" pour commencer}}</div>';
+			echo '<br><div class="text-center" style="font-size:1.2em;font-weight:bold;">{{Aucun équipement Mode trouvé, cliquer sur "Ajouter" pour commencer}}</div>';
 		} else {
 			echo '<div class="input-group" style="margin:5px;">';
 			echo '<input class="form-control roundedLeft" placeholder="{{Rechercher}}" id="in_searchEqlogic">';
@@ -33,7 +38,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			foreach ($eqLogics as $eqLogic) {
 				$opacity = ($eqLogic->getIsEnable()) ? '' : 'disableCard';
 				echo '<div class="eqLogicDisplayCard cursor ' . $opacity . '" data-eqLogic_id="' . $eqLogic->getId() . '">';
-				echo '<img src="' . $plugin->getPathImgIcon() . '">';
+				echo '<img src="' . $eqLogic->getImage() . '"/>';
 				echo '<br>';
 				echo '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
 				echo '<span class="hiddenAsCard displayTableRight hidden">';
@@ -112,10 +117,34 @@ $eqLogics = eqLogic::byType($plugin->getId());
 							<legend><i class="fas fa-cogs"></i> {{Paramètres spécifiques}}</legend>
 							<div class="form-group">
 								<label class="col-sm-4 control-label">{{Commande de verrouillage}}
-									<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour afficher la commande de verrouillage sur le widget}}"></i></sup>
+									<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour creer la commande de verrouillage sur le widget}}"></i></sup>
 								</label>
 								<div class="col-sm-6">
 									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="showLockCmd">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">{{Commande rejouer}}
+									<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour creer la commande rejouer sur le widget}}"></i></sup>
+								</label>
+								<div class="col-sm-6">
+									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="showReplayCmd">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">{{Commande mode précédent}}
+									<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour creer la commande mode précédent sur le widget}}"></i></sup>
+								</label>
+								<div class="col-sm-6">
+									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="showPreviousCmd">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">{{Commande mode suivant}}
+									<sup><i class="fas fa-question-circle tooltips" title="{{Cocher la case pour creer la commande mode suivant sur le widget}}"></i></sup>
+								</label>
+								<div class="col-sm-6">
+									<input type="checkbox" class="eqLogicAttr" data-l1key="configuration" data-l2key="showNextCmd">
 								</div>
 							</div>
 						</div>
@@ -125,7 +154,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 							<div class="form-group">
 								<label class="col-sm-4 control-label">{{Description des modes}}</label>
 								<div class="col-sm-7">
-									<textarea data-l1key="comment" class="form-control eqLogicAttr autogrow"></textarea>
+									<textarea data-l1key="comment" class="form-control eqLogicAttr ta_autosize"></textarea>
 								</div>
 							</div>
 						</div>
