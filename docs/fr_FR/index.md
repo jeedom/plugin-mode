@@ -53,6 +53,12 @@ La liste des commandes est consultable en cliquant sur le bouton **Configuration
 - **Retour mode précédent** : Permet de revenir au mode précédemment actif.
 - **Aller au mode suivant** : Permet d'aller au mode suivant dans la liste.
 
+# Mode
+
+Chacun mode créé créé une commande action du nom du mode créé.
+Cette commande dispose de 3 paramètres d'affichage #active_color#, #inactive_color#, #current_color#.
+Vous pouvez adapter vos widgets en utilisant la notion de #current_color# qui prendra la valeur soit de #active_color#, soit de #inactive_color#, en fonction de si la command est celle du mode actif ou non.
+
 # Exemples
 
 ## Modes Volet

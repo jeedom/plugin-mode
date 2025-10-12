@@ -4,6 +4,10 @@
 >
 >Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+# 12/10/2025
+
+- Ajout de 3 paramètres #active_color#, #inactive_color#, #current_color# pour la gestion de la customisée des boutons modes
+
 # 26/08/2024
 
 - Support des images d'équipement personnalisées (Jeedom 4.5)
@@ -81,3 +85,4 @@
 
 - Correction d'un bug sur la sélection d'action condition sur mode
 - Correction de bug lors du renommage des modes
+
