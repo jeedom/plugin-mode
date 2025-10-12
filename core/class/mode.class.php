@@ -223,6 +223,14 @@ class mode extends eqLogic {
 				} else {
 					$cmd->setDisplay('icon', '');
 				}
+				$parameters = $cmd->getDisplay('parameters');
+                if (!is_array($parameters)) {
+                    $parameters = array();
+                }
+				if (!isset($parameters['active_color']))   $parameters['active_color'] = 'var(--bt-success-color)';
+              	if (!isset($parameters['inactive_color'])) $parameters['inactive_color'] = 'var(--al-danger-color)';
+              	if (!isset($parameters['current_color']))  $parameters['current_color'] = $parameters['inactive_color'];
+                $cmd->setDisplay('parameters', $parameters);
 				$cmd->save();
 			}
 		}
@@ -232,7 +240,26 @@ class mode extends eqLogic {
 				$cmd->remove();
 			}
 		}
+
+		$this->refreshModeColors();
 	}
+
+    public function refreshModeColors() {
+        $currentMode = $this->getCmd(null, 'currentMode');
+        if (!is_object($currentMode)) return;
+
+        $value = $currentMode->execCmd();
+
+        foreach ($this->getCmd() as $cmd) {
+            if ($cmd->getType() != 'action') continue;
+            if (in_array($cmd->getLogicalId(), ['returnPreviousMode','lock','unlock','nextMode','replay'])) continue;
+
+            $arr = $cmd->getDisplay('parameters');
+            $arr['current_color'] = ($cmd->getLogicalId() == $value) ? $arr['active_color'] : $arr['inactive_color'];
+            $cmd->setDisplay('parameters', $arr);
+            $cmd->save();
+        }
+    }
 
 	public function doAction($_mode, $_type, $_previousMode = '') {
 		if (!is_array($this->getConfiguration('modes'))) {
@@ -416,6 +443,7 @@ class modeCmd extends cmd {
 			$eqLogic->doAction($mode, 'outAction', $newMode);
 		}
 		$eqLogic->doAction($newMode, 'inAction', $mode);
+		$eqLogic->refreshModeColors();
 		return;
 	}
 }
